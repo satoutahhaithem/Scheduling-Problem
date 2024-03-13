@@ -6,9 +6,6 @@ from pysat.card import *
 from pysat.solvers import *
 from pysat.examples.rc2 import RC2
 from pysat.formula import WCNF
-
-
-
 # Conference scheduling parameters
 conference_sessions = 40
 slots = 7
