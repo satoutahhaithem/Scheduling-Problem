@@ -199,4 +199,22 @@ with RC2(constraints, solver="Cadical153") as solver:
         display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions)
         break  # Process only the first model
 
+def convert_cnf_format(old_file_path, new_file_path):
+    with open(old_file_path, 'r') as old_file, open(new_file_path, 'w') as new_file:
+        for line in old_file:
+            # Check if the line starts with 'p wcnf'
+            if line.startswith('p wcnf'):
+                # Remove 'p wcnf' from the line and prepend 'h'
+                new_line = 'h ' + line.split(' ', 2)[2]
+                new_file.write(new_line)
+            else:
+                # Write the line to the new file as is
+                new_file.write(line)
+
+# Specify the old and new file paths
+old_file_path = 'file.cnf'
+new_file_path = 'file_new_format.cnf'
+
+# Call the function to convert the file format
+convert_cnf_format(old_file_path, new_file_path)
 
