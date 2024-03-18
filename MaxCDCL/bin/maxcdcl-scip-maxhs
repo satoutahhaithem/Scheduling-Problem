@@ -3,7 +3,7 @@ FNAME=$1
 TSCIP=$2
 TMHS=$3
 
-timeout $TSCIP ./uwrmaxsat -v0 -no-bin -no-sat -no-par -scip-cpu=$TSCIP -m -bm $FNAME > outSCIP.txt
+timeout $TSCIP ~/Desktop/Scheduling_Problem/MaxCDCL/bin/uwrmaxsat -v0 -no-bin -no-sat -no-par -scip-cpu=$TSCIP -m -bm $FNAME > outSCIP.txt
 CODE=$?
 
 if [ $CODE -eq 124 ] || [ $CODE -eq 133 ]; then

@@ -10,14 +10,12 @@ from pysat.formula import WCNF
 conference_sessions = 40
 slots = 7
 papers_range = [3,4,5,6]
-max_parallel_sessions = 11
+max_parallel_sessions = 10
 working_groups = 20 
 np= [14,23,12,9,9,6,10,4,10,7,6,5,3,5,6,4,3,12,7,16,4,5,14,11,4,3,10,6,6,4,13,3,4,9,5,4,11,6,6,8]
 npMax = [4, 6, 6, 4, 4, 5,  3]
 length_of_paper_range = len(papers_range)
 globalEncType = EncType.sortnetwrk
-
-
 
 
 # Define the working groups associated with each session
@@ -169,7 +167,7 @@ for i in range (1,5):
     constraints.append([var_z(34,i)])
 ####################################################################################
 
-constraints.to_file("file.cnf")
+constraints.to_file("instance/"+str(max_parallel_sessions)+"_session_file.cnf")
 
 
 
@@ -210,8 +208,8 @@ def convert_cnf_format(old_file_path, new_file_path):
                 new_file.write(line)
 
 # Specify the old and new file paths
-old_file_path = 'file.cnf'
-new_file_path = 'file_new_format.cnf'
+old_file_path = "./instance/"+str(max_parallel_sessions)+"_session_file.cnf"
+new_file_path = "./instance/"+str(max_parallel_sessions)+'_session_file_new_format.cnf'
 
 # Call the function to convert the file format
 convert_cnf_format(old_file_path, new_file_path)
