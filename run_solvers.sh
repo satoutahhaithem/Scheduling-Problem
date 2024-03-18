@@ -1,6 +1,6 @@
 #!/bin/bash
 
-max_parallel_sessions="11"
+max_parallel_sessions="10"
 cnf_file="instance/${max_parallel_sessions}_session_file_new_format.cnf"
 cnf_file_old_format="instance/${max_parallel_sessions}_session_file.cnf"
 
@@ -26,7 +26,6 @@ chmod +x "$maxcdclFolder"
 {
     time "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
 } 2> "$output_dir/${max_parallel_sessions}_time_maxcdcl.txt"
-
 
 
 {
