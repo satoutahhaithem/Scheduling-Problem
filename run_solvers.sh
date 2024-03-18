@@ -16,13 +16,6 @@ chmod +x "$evalMaxSatFolder"
 chmod +x "$maxcdclFolder"
 
 
-{
-    time "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-} 2> "$output_dir/${max_parallel_sessions}_time_EvalMaxSAT.txt"
-
-# {
-#     time "$evalMaxSatFolder" --timeUB 0 --minRefTime 5 "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT-SCIPT_output.txt"
-# } 2> "$output_dir/${max_parallel_sessions}_time_EvalMaxSAT-SCIPT.txt"
 
 
 {
@@ -33,5 +26,15 @@ chmod +x "$maxcdclFolder"
 {
     time "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
 } 2> "$output_dir/${max_parallel_sessions}_time_maxcdcl.txt"
+
+
+
+{
+    time "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+} 2> "$output_dir/${max_parallel_sessions}_time_EvalMaxSAT.txt"
+
+# {
+#     time "$evalMaxSatFolder" --timeUB 0 --minRefTime 5 "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT-SCIPT_output.txt"
+# } 2> "$output_dir/${max_parallel_sessions}_time_EvalMaxSAT-SCIPT.txt"
 
 echo "Execution times and outputs recorded in respective files."
