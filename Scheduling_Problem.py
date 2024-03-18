@@ -10,12 +10,13 @@ from pysat.formula import WCNF
 conference_sessions = 40
 slots = 7
 papers_range = [3,4,5,6]
-max_parallel_sessions = 11  
+max_parallel_sessions = 11
 working_groups = 20 
 np= [14,23,12,9,9,6,10,4,10,7,6,5,3,5,6,4,3,12,7,16,4,5,14,11,4,3,10,6,6,4,13,3,4,9,5,4,11,6,6,8]
 npMax = [4, 6, 6, 4, 4, 5,  3]
 length_of_paper_range = len(papers_range)
-globalEncType = EncType.cardnetwrk
+globalEncType = EncType.sortnetwrk
+
 
 
 
@@ -87,7 +88,7 @@ for s in range(1, conference_sessions +1):
         for l in range(1,length_of_paper_range+1):
             aux_vars.append(var_x(s, c, l))
             aux_weight.append(papers_range[l-1])
-    eq_clause = PBEnc.equals(lits=aux_vars, weights=aux_weight,bound=np[s-1], top_id=y_var, encoding=globalEncType)
+    eq_clause = PBEnc.equals(lits=aux_vars, weights=aux_weight,bound=np[s-1], top_id=y_var, encoding=pbenc.sortnetwrk)
     y_var=eq_clause.nv
     constraints.extend(eq_clause.clauses)
 ####################################################################################
