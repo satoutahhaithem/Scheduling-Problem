@@ -7,12 +7,12 @@ c |                                                                             
 c initial UB: 9223372036854775807
 c |  Number of variables:         45112                                         |
 c |  Number of clauses:           66067                                         |
-c |  Parse time:                   0.03 s                                       |
+c |  Parse time:                   0.02 s                                       |
 c Mono: 0, fixed: 0
 c |  Eliminated clauses:           0.50 Mb                                      |
 c Reduced to 8416 vars, 19744 cls (c/v ratio==2.3, grow=0)
 c No iterative elimination performed. (vars=8416, c/v ratio=2.3)
-c |  Simplification time:          0.09 s                                       |
+c |  Simplification time:          0.06 s                                       |
 c |                                                                             |
 c ============================[ Search Statistics ]==============================
 c | Conflicts |          ORIGINAL         |          LEARNT          | Progress |
@@ -94,12 +94,12 @@ c ==============================================================================
 c initCost: 0, fixedBySearch: 0, optimal: 4, maxsat: 304, hardConflicts: 13246
 c nbLK: 6164, nbSuccLK: 3658(59.34%), nbLKup: 2359913(106.49%), hardens 1588 (fixed 426333), dynVars 1279, shorten: 0
 c restarts              : 94
-c conflicts             : 17188          (12971 /sec)
-c decisions             : 49253          (0.00 % random) (37170 /sec)
-c propagations          : 2216085        (1672416 /sec)
+c conflicts             : 17188          (16163 /sec)
+c decisions             : 49253          (0.00 % random) (46316 /sec)
+c propagations          : 2216085        (2083925 /sec)
 c conflict literals     : 382583         (31.67 % deleted)
 c Memory used           : 35.00 MB
-c CPU time              : 1.32508 s
+c CPU time              : 1.06342 s
 c nbSimplifyAll         : 5
 c s_propagations        : 4111773     
 c s_cost_ratio          : 185.54%
