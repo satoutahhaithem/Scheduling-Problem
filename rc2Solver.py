@@ -12,6 +12,5 @@ wcnf = WCNF(from_file=instance_file)
 
 with RC2(wcnf, solver="Cadical153") as solver:
     for model in solver.enumerate():
-        print('model {0} has cost {1}'.format(model, solver.cost))
-        # print('Model:', solver.model)
-    print('Model has cost:', solver.cost)
+        print('Model has cost:', solver.cost)
+        break  
