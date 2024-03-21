@@ -7,7 +7,7 @@ cnf_file_old_format="instance/${max_parallel_sessions}_session_file.cnf"
 timeout_duration="5s"
 solver_dir="Solvers"
 output_dir="outputs"
-evalMaxSatFolder="./EvalMaxSAT/bin/EvalMaxSAT"
+evalMaxSatFolder="EvalMaxSAT/bin/EvalMaxSAT"
 maxcdclFolder="./MaxCDCL/bin/maxcdcl-scip-maxhs"
 
 chmod +x "$solver_dir/EvalMaxSAT"
@@ -30,5 +30,13 @@ chmod +x "$maxcdclFolder"
 { 
     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
 } 2> "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+
+{ 
+    time timeout "$timeout_duration" python3 "rc2Solver.py" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+} 2> "$output_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+
+{ 
+    time timeout "$timeout_duration" "$evalMaxSatFolder" --timeUB 0 --minRefTime 5 "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_SCIP_output.txt"
+} 2> "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_SCIP_time.txt"
 
 echo "Execution times and outputs recorded in respective files."
