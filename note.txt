@@ -1,0 +1,19 @@
+vitual envirement name is venv
+
+do this for virtualenv
+virtualenv venv
+source venv/bin/activate
+pip install python-sat
+
+
+
+
+sudo apt install python3-pip
+sudo apt install python3-numpy
+# create virtual envirement 
+sudo apt-get install python3 python3-venv
+# to use haithem virtual envirement 
+python3 -m venv ~/haithemVirtualEnv
+source ~/haithemVirtualEnv/bin/activate
+# install pysat libraries
+pip install python-sat[pblib,aiger]
