@@ -1,6 +1,6 @@
 #!/bin/bash
 
-max_parallel_sessions="11"
+max_parallel_sessions="15"
 cnf_file="instance/${max_parallel_sessions}_session_file_new_format.cnf"
 cnf_file_old_format="instance/${max_parallel_sessions}_session_file.cnf"
 
@@ -18,9 +18,9 @@ chmod +x "$evalMaxSatFolder"
 chmod +x "$maxcdclFolder"
 
 
-# { 
-#     time timeout "$timeout_duration" python3 "rc2Solver.py" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+{ 
+    time timeout "$timeout_duration" python3 "rc2Solver.py" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+} 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
 
 
 { 
