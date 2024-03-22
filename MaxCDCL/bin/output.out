@@ -1,3 +1,5 @@
-0.00/0.00	exec failed: No such file or directory
-0.00/0.00	Solver command line was: 11_session_file.cnf 600 1200 
-0.00/0.00	
+30.91/31.01	c Solved by SCIP
+30.91/31.01	c Using COMiniSatPS SAT solver by Chanseok Oh (2016)
+30.91/31.01	c Using SCIP solver, version 8.0.0, https://www.scipopt.org
+30.91/31.01	c Starting SCIP solver  (with time-limit = 600s) ...
+30.91/31.01	s UNKNOWN
