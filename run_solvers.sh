@@ -1,14 +1,16 @@
 #!/bin/bash
 
-max_parallel_sessions="15"
+max_parallel_sessions="10"
 cnf_file="instance/${max_parallel_sessions}_session_file_new_format.cnf"
 wcnf_file="instance/${max_parallel_sessions}_session_file.wcnf"
 cnf_file_old_format="instance/${max_parallel_sessions}_session_file.cnf"
 
 timeout_duration="3600s"
 solver_dir="Solvers"
-output_dir="outputs"
-time_dir="TimeSover"
+# output_dir="outputs"
+# time_dir="TimeSover"
+output_dir="outputsPcHeythem"
+time_dir="TimeSoverPcHeythem"
 evalMaxSatFolder="EvalMaxSAT/bin/EvalMaxSAT"
 maxcdclFolder="./MaxCDCL/bin/maxcdcl-scip-maxhs"
 
@@ -42,13 +44,13 @@ chmod +x "$maxcdclFolder"
 } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
 
 
-{ 
-    time timeout "$timeout_duration" "$evalMaxSatFolder" --timeUB 0 --minRefTime 5 "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_SCIP_output.txt"
-} 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_SCIP_time.txt"
+# { 
+#     time timeout "$timeout_duration" "$evalMaxSatFolder" --timeUB 0 --minRefTime 5 "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_SCIP_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_SCIP_time.txt"
 
-{ 
-    time timeout "$timeout_duration" "$maxcdclFolder" "$wcnf_file" 600 1200 > "$output_dir/${max_parallel_sessions}_session_WMaxCDCL-S6-HS12_output.txt"
-} 2> "$time_dir/${max_parallel_sessions}_session_WMaxCDCL-S6-HS12_time.txt"
+# { 
+#     time timeout "$timeout_duration" "$maxcdclFolder" "$wcnf_file" 600 1200 > "$output_dir/${max_parallel_sessions}_session_WMaxCDCL-S6-HS12_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_WMaxCDCL-S6-HS12_time.txt"
 
 
 echo "Execution times and outputs recorded in respective files."
