@@ -10,7 +10,7 @@ instance_file = sys.argv[1]
 
 wcnf = WCNF(from_file=instance_file)
 
-with RC2(wcnf, solver="Cadical153") as solver:
+with RC2(wcnf, solver="cd") as solver:
     for model in solver.enumerate():
         print('Model has cost:', solver.cost)
         break  

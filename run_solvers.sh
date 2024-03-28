@@ -1,6 +1,6 @@
 #!/bin/bash
 
-max_parallel_sessions="9"
+max_parallel_sessions="15"
 cnf_file="instance/${max_parallel_sessions}_session_file_new_format.cnf"
 wcnf_file="instance/${max_parallel_sessions}_session_file.wcnf"
 cnf_file_old_format="instance/${max_parallel_sessions}_session_file.cnf"
@@ -18,10 +18,14 @@ chmod +x "$solver_dir/open-wbo"
 chmod +x "$evalMaxSatFolder"
 chmod +x "$maxcdclFolder"
 
-
-{ 
-    time timeout "$timeout_duration" python3 "rc2Solver.py" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+# The first command of rc2 is "rc2.py -s 'cd' instance/10_session_file.wcnf" for 10 par exemple work with rc2.py
+# and the second command of rc2 work with python script  rc2Solver.py i write it 
+  { 
+    time timeout "$timeout_duration" rc2.py -s 'cd' "$wcnf_file"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
 } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+# { 
+#     time timeout "$timeout_duration" python3 "rc2Solver.py" "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
 
 
 { 

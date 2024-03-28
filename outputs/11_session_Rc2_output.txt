@@ -1,1 +1,2 @@
-Model has cost: 4
+s OPTIMUM FOUND
+o 4
