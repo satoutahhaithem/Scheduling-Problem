@@ -6,36 +6,58 @@ from pysat.card import *
 from pysat.solvers import *
 from pysat.examples.rc2 import RC2
 from pysat.formula import WCNF
-# Conference scheduling parameters
-# conference_sessions = 40
-# slots = 7
-# papers_range = [3,4,5,6]
-# max_parallel_sessions = 15
-# working_groups = 20 
-# np= [14,23,12,9,9,6,10,4,10,7,6,5,3,5,6,4,3,12,7,16,4,5,14,11,4,3,10,6,6,4,13,3,4,9,5,4,11,6,6,8]
-# npMax = [4, 6, 6, 4, 4, 5,  3]
 
-# # Define the working groups associated with each session
-# session_groups = [
-#     [1], [2], [3], [], [], [], [6], [7], [7, 8], [10], [8], [8, 11], [5, 8], 
-#     [3, 8], [7], [13], [13], [14], [], [8], [16], [16], [20], [17], [13], 
-#     [], [9], [11], [11, 12], [9], [6, 19], [], [], [18], [10], [5], [16], 
-#     [4, 5], [8, 12], [7, 15]
-# ]
-conference_sessions = 48
-slots = 7
-papers_range = [2,3,4,5,6]
-max_parallel_sessions = 14
-working_groups = 23 
-np= [6,3,7,8,8,4,12,4,15,10,11,12,14,12,8,10,8,5,3,12,3,11,11,3,11,3,6,3,3,3,10,4,6,4,4,5,3,7,3,6,7,12,8,17,6,10,17,2]
-npMax = [5,4,4,6,5,4,4]
+import numpy as np
+from pysat.formula import *
+from pysat.pb import EncType as pbenc
+from pysat.pb import *
+from pysat.card import *
+from pysat.solvers import *
+from pysat.examples.rc2 import RC2
+from pysat.formula import WCNF
 
-# Define the working groups associated with each session
-session_groups = [  
-    [18,6],[7],[13],[5],[4],[],[],[19,6],[8],[9],[5],[],[],[7],[16],
-    [],[13],[4],[],[],[9,5],[2],[],[11],[3],[19],[19,6],[5,8],
-    [16,3],[20],[14],[5],[21,15,23],[10],[10],[13],[2,5],[],[],[5],[8,9],[7],[13],[5,4],[19,6],[9],[1],[]
-]
+yearRoadef = "2023"
+
+
+def read_conference_parameters(file_path):
+    params = {}
+    with open(file_path, 'r') as file:
+        for line in file:
+            key, value = line.strip().split(':')
+            if ',' in value:
+                params[key] = [int(v) for v in value.split(',')]
+            else:
+                params[key] = int(value)
+    return params
+
+def read_np_data(file_path):
+    with open(file_path, 'r') as file:
+        return [int(np) for np in file.read().strip().split(',')]
+
+def read_session_groups(file_path):
+    session_groups = []
+    with open(file_path, 'r') as file:
+        for line in file:
+            groups = line.strip().split(';')
+            session_groups.append([list(map(int, g.split(','))) if g else [] for g in groups])
+    return session_groups[0]
+def read_npMax_data(file_path):
+    with open(file_path, 'r') as file:
+        return [int(np) for np in file.read().strip().split(',')]
+
+# Reading data from files
+conference_params = read_conference_parameters("Input_data/Roadef_"+yearRoadef+"_Data/conference_parameters.txt")
+np = read_np_data("Input_data/Roadef_"+yearRoadef+"_Data/np_data.txt")
+session_groups = read_session_groups("Input_data/Roadef_"+yearRoadef+"_Data/session_groups.txt")
+npMax = read_npMax_data("Input_data/Roadef_"+yearRoadef+"_Data/npMax_data.txt")
+# Assigning values from the read data
+conference_sessions = conference_params['conference_sessions']
+working_groups = conference_params['working_groups']
+slots = conference_params['slots']
+papers_range = conference_params['papers_range']
+max_parallel_sessions = conference_params['max_parallel_sessions']
+
+
 
 
 length_of_paper_range = len(papers_range)
@@ -184,7 +206,7 @@ for i in range (1,5):
     constraints.append([var_z(34,i)])
 ####################################################################################
 
-constraints.to_file("instance/"+str(max_parallel_sessions)+"_session_file.cnf")
+constraints.to_file("instanceYears/instance"+yearRoadef+"/"+str(max_parallel_sessions)+"_session_file_"+yearRoadef+".wcnf")
 
 
 
@@ -225,8 +247,8 @@ def convert_cnf_format(old_file_path, new_file_path):
                 new_file.write(line)
 
 # Specify the old and new file paths
-old_file_path = "./instance/"+str(max_parallel_sessions)+"_session_file.cnf"
-new_file_path = "./instance/"+str(max_parallel_sessions)+'_session_file_new_format.cnf'
+old_file_path = "./instanceYears/instance"+yearRoadef+"/"+str(max_parallel_sessions)+"_session_file_"+yearRoadef+".wcnf"
+new_file_path = "./instanceYears/instance"+yearRoadef+"/"+str(max_parallel_sessions)+"_session_file_new_format_"+yearRoadef+".wcnf"
 
 # Call the function to convert the file format
 convert_cnf_format(old_file_path, new_file_path)

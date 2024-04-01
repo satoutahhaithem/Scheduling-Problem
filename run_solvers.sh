@@ -1,11 +1,11 @@
 #!/bin/bash
 
-max_parallel_sessions="10"
+max_parallel_sessions="9"
 cnf_file="instance/${max_parallel_sessions}_session_file_new_format.cnf"
 wcnf_file="instance/${max_parallel_sessions}_session_file.wcnf"
 cnf_file_old_format="instance/${max_parallel_sessions}_session_file.cnf"
 
-timeout_duration="3600s"
+timeout_duration="5000s"
 solver_dir="Solvers"
 # output_dir="outputs"
 # time_dir="TimeSover"

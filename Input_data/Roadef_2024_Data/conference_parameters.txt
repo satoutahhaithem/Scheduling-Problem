@@ -1,0 +1,5 @@
+conference_sessions:40
+working_groups:20
+slots:7
+papers_range:3,4,5,6
+max_parallel_sessions:11
