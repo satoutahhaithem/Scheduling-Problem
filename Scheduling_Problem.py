@@ -97,7 +97,8 @@ elif data_set_choice == "2023":
         [1,24]
     ]
 else :
-    print(data_set_choice)
+    print("The data available for 2024 and 2023 only")
+    sys.exit(1)
 
 
 
