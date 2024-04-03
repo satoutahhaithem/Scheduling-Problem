@@ -25,7 +25,7 @@ if data_set_choice == "2024":
     conference_sessions = 40
     slots = 7
     papers_range = [3,4,5,6]
-    max_parallel_sessions = 14
+    max_parallel_sessions = 9
     working_groups = 20 
     np= [14,23,12,9,9,6,10,4,10,7,6,5,3,5,6,4,3,12,7,16,4,5,14,11,4,3,10,6,6,4,13,3,4,9,5,4,11,6,6,8]
     npMax = [4, 6, 6, 4, 4, 5,  3]
@@ -41,7 +41,7 @@ elif data_set_choice == "2023":
     conference_sessions = 47
     slots = 7
     papers_range = [3,4,5,6]
-    max_parallel_sessions = 15
+    max_parallel_sessions = 9
     working_groups = 24 
     np= [6,3,7,8,8,4,12,4,15,10,11,12,14,12,8,10,8,5,3,12,3,11,11,3,11,3,6,3,3,3,10,4,6,4,4,5,3,7,3,6,7,12,8,17,6,10,17,2]
     npMax = [5,4,4,6,5,4,4]
@@ -56,7 +56,7 @@ elif data_set_choice == "2022":
     conference_sessions = 43
     slots = 8
     papers_range = [2,3,4,5]
-    max_parallel_sessions = 12
+    max_parallel_sessions = 11
     working_groups = 16 
     np= [ 4,5,5,5,5,9,9,5,4,12,16,20,4,7,11,4,4,8,12,11,6,6,6,5,6,7,7,4,12,4,4,8,7,9,3,3,6,7,12,4,4,4,4]
     npMax = [5,4,3,4,3,4,4,4]
@@ -298,7 +298,7 @@ for i in range (1,5):
     constraints.append([var_z(34,i)])
 ####################################################################################
 
-constraints.to_file("instance/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.cnf")
+constraints.to_file("instance/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.wcnf")
 
 
 
@@ -318,13 +318,13 @@ def display_assignments_by_slot_with_counts(model, slots, papers_range, conferen
 
 
 
-with RC2(constraints, solver="Cadical153") as solver:
-    for model in solver.enumerate():
-        print('Model has cost:', solver.cost)
-        # print('Model:', solver.model)
+# with RC2(constraints, solver="Cadical153") as solver:
+#     for model in solver.enumerate():
+#         print('Model has cost:', solver.cost)
+#         # print('Model:', solver.model)
 
-        display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions)
-        break  # Process only the first model
+#         display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions)
+#         break  # Process only the first model
 
 def convert_cnf_format(old_file_path, new_file_path):
     with open(old_file_path, 'r') as old_file, open(new_file_path, 'w') as new_file:
@@ -339,8 +339,8 @@ def convert_cnf_format(old_file_path, new_file_path):
                 new_file.write(line)
 
 # Specify the old and new file paths
-old_file_path = "./instance/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.cnf"
-new_file_path = "./instance/"+data_set_choice+"/"+str(max_parallel_sessions)+'_session_file_new_format.cnf'
+old_file_path = "./instance/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.wcnf"
+new_file_path = "./instance/"+data_set_choice+"/"+str(max_parallel_sessions)+'_session_file_new_format.wcnf'
 
 # Call the function to convert the file format
 convert_cnf_format(old_file_path, new_file_path)

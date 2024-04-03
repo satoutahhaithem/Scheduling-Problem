@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/mis/.local/bin/rc2.py", line 134, in <module>
+    from pysat.formula import CNFPlus, WCNFPlus, IDPool
+  File "/home/mis/.local/lib/python3.10/site-packages/pysat/__init__.py", line 6
+    print ''.join(('Creating .pysat directory. Run pysat.utils.set_data_dir to set the path',
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+
+real	0m0,081s
+user	0m0,073s
+sys	0m0,008s
