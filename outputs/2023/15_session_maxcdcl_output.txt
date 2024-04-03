@@ -130,3 +130,26 @@ c 421 clauses modified by 1 eqLits (debut 46, total 47) with 1 eqUse and 0 rmSof
 c original clauses 17307, learnts_core 6709, learnts_tier2 2075, learnts_local 21237
 c 1884 clauses modified by 1 eqLits (debut 47, total 48) with 2 eqUse and 0 rmSoft, 0 eqSoft
 c LRB phase 5: conflicts 159040, phase 20000000, starts 428, UP 20002087
+c UB=12 succs, confls=1230250, hconfls=241622, core 10654, tier2 461, local 20781,  11 soft cls unsat (0 at L0), 12476 fixed vars at L0, softCnfl 35628, nbFlyRd 15354, nbFixedLH 21926, nbCompL 0
+c nbHardens 92409 (fixed 88398492), shorten: 0, prunedLB 5.08, dev 1.54, succRate 0.70, nbSucc 150771, lk: 214096
+
+c shorten: 0, quasiC: 330757 (fixed: 80188009), fsblEq 48, nbEqUse 184, nbSoftEq 0
+
+o 11
+
+c Cardinality: 5107 for UB 11
+c UB=11 succs, confls=1230564, hconfls=241742, core 10647, tier2 455, local 20955,  10 soft cls unsat (0 at L0), 12476 fixed vars at L0, softCnfl 35632, nbFlyRd 15358, nbFixedLH 21930, nbCompL 0
+c nbHardens 92453 (fixed 88418443), shorten: 0, prunedLB 3.56, dev 1.62, succRate 0.75, nbSucc 190, lk: 255
+
+c shorten: 0, quasiC: 330803 (fixed: 80199948), fsblEq 48, nbEqUse 184, nbSoftEq 0
+
+o 10
+
+c Cardinality: 5107 for UB 10
+c original clauses 17259, learnts_core 13860, learnts_tier2 1143, learnts_local 24695
+c 2273 clauses modified by 1 eqLits (debut 48, total 49) with 3 eqUse and 0 rmSoft, 0 eqSoft
+c original clauses 17193, learnts_core 15671, learnts_tier2 255, learnts_local 21198
+c 4357 clauses modified by 3 eqLits (debut 49, total 52) with 12 eqUse and 0 rmSoft, 0 eqSoft
+c original clauses 17022, learnts_core 15359, learnts_tier2 801, learnts_local 24298
+c 7229 clauses modified by 1 eqLits (debut 52, total 53) with 2 eqUse and 0 rmSoft, 0 eqSoft
+c VSIDS phase 3: conflicts 164707, phase 20000000, starts 925, UP 20019865
