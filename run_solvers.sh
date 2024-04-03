@@ -7,10 +7,10 @@ cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file
 
 timeout_duration="3600s"
 solver_dir="Solvers"
-output_dir="outputs/${yearRodef}"
-time_dir="TimeSolver/${yearRodef}"
-# output_dir="outputsPcHeythem/${yearRodef}"
-# time_dir="TimeSolverPcHeythem/${yearRodef}"
+# output_dir="outputs/${yearRodef}"
+# time_dir="TimeSolver/${yearRodef}"
+output_dir="outputsPcHeythem/${yearRodef}"
+time_dir="TimeSolverPcHeythem/${yearRodef}"
 evalMaxSatFolder="EvalMaxSAT/bin/EvalMaxSAT"
 maxcdclFolder="./MaxCDCL/bin/maxcdcl-scip-maxhs"
 
@@ -27,18 +27,18 @@ chmod +x "$maxcdclFolder"
 } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
 
 
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
+{ 
+    time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
+} 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
 
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+{ 
+    time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+} 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
 
 
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
+{ 
+    time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
+} 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
 
 
 
