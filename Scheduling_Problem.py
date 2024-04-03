@@ -41,70 +41,44 @@ elif data_set_choice == "2023":
     conference_sessions = 47
     slots = 7
     papers_range = [3,4,5,6]
-    max_parallel_sessions = 14
+    max_parallel_sessions = 15
     working_groups = 24 
     np= [6,3,7,8,8,4,12,4,15,10,11,12,14,12,8,10,8,5,3,12,3,11,11,3,11,3,6,3,3,3,10,4,6,4,4,5,3,7,3,6,7,12,8,17,6,10,17,2]
     npMax = [5,4,4,6,5,4,4]
 
     # Define the working groups associated with each session
     session_groups = [  
-        [17],
-        [7],
-        [13],
-        [5],
-        [4],
-        [],
-        [18,6,22],
-        [18,6],
-        [8],
-        [9],
-        [5],
-        [12],
-        [],
-        [7],
-        [16],    
-        [23],
-        [13],
-        [4],
-        [],
-        [],
-        [9,5],
-        [2,18],
-        [],
-        [11],
-        [3],
-        [18],
-        [18,6],
-        [5,8],
-        [16,3],
-        [19],
-        [14],
-        [5],
-        [20,15,21],
-        [10],
-        [10],
-        [13],
-        [2,5],
-        [],
-        [],
-        [5],
-        [8,9],
-        [7],
-        [13],
-        [5,4],
-        [18,6],
-        [9],
-        [1,24]
+        [17],[7],[13],[5],[4],[],[18,6,22],[18,6],[8],[9],[5],[12],[],[7],[16],[23],[13],[4],[],[],[9,5],
+        [2,18],[],[11],[3],[18],[18,6],[5,8],[16,3],[19],[14],[5],[20,15,21],[10],[10],[13],[2,5],[],[],
+        [5],[8,9],[7],[13],[5,4],[18,6],[9],[1,24]
     ]
+elif data_set_choice == "2022":
+    conference_sessions = 43
+    slots = 8
+    papers_range = [2,3,4,5]
+    max_parallel_sessions = 12
+    working_groups = 16 
+    np= [ 4,5,5,5,5,9,9,5,4,12,16,20,4,7,11,4,4,8,12,11,6,6,6,5,6,7,7,4,12,4,4,8,7,9,3,3,6,7,12,4,4,4,4]
+    npMax = [5,4,3,4,3,4,4,4]
+
+    # Define the working groups associated with each session
+    session_groups = [
+    [6], [8,5], [], [], [], [5], [5], [13], [], [7], 
+    [5], [15], [11], [3], [16], [], [1], [8], [12], 
+    [4], [], [2], [], [5], [10], [6], [14], [11], 
+    [9], [5], [], [], [], [], [], [], [4], [6], 
+    [11], [13], [2,5], [13,3], []
+]
+
 else :
-    print("The data available for 2024 and 2023 only")
+    print("The data available for 2024 , 2023 and 2022 only")
     sys.exit(1)
 
 
 
 # Conference scheduling parameters
 # conference_sessions = 40
-# slots = 7
+# slots = 7 
 # papers_range = [3,4,5,6]
 # max_parallel_sessions = 14
 # working_groups = 20 
