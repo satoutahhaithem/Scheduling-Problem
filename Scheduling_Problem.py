@@ -71,7 +71,7 @@ elif data_set_choice == "2021":
     conference_sessions = 28
     slots = 11
     papers_range = [2,3,4,5]
-    max_parallel_sessions = 8
+    max_parallel_sessions = 3
     working_groups = 15 
     np= [11, 11, 8, 8, 8, 8, 10, 10, 13, 7, 4, 7, 10, 6, 5, 4, 5, 5, 5, 7, 4, 4, 6, 3, 2, 3, 4, 4]
     npMax = [4,5,3,3,4,3,5,4,4,3,4]
