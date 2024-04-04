@@ -1,6 +1,6 @@
 #!/bin/bash
 
-max_parallel_sessions="14"
+max_parallel_sessions="13"
 yearRodef="2023"
 cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
 cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
