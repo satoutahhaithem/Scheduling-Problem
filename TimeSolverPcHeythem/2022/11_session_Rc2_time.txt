@@ -6,6 +6,6 @@ Traceback (most recent call last):
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
 
-real	0m0,089s
-user	0m0,081s
+real	0m0,092s
+user	0m0,076s
 sys	0m0,008s

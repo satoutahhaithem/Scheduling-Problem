@@ -7,5 +7,5 @@ Traceback (most recent call last):
 SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
 
 real	0m0,089s
-user	0m0,081s
-sys	0m0,008s
+user	0m0,077s
+sys	0m0,012s

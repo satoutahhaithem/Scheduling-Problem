@@ -56,9 +56,9 @@ elif data_set_choice == "2022":
     conference_sessions = 43
     slots = 8
     papers_range = [2,3,4,5]
-    max_parallel_sessions = 11
-    working_groups = 16 
-    np= [ 4,5,5,5,5,9,9,5,4,12,16,20,4,7,11,4,4,8,12,11,6,6,6,5,6,7,7,4,12,4,4,8,7,9,3,3,6,7,12,4,4,4,4]
+    max_parallel_sessions = 9
+    working_groups = 15 
+    np= [4,5,5,5,5,9,9,5,4,12,16,20,4,7,11,4,4,8,12,11,6,6,6,5,6,7,7,4,12,4,4,8,7,9,3,3,6,7,12,4,4,4,4]
     npMax = [5,4,3,4,3,4,4,4]
 
     # Define the working groups associated with each session
