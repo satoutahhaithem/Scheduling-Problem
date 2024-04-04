@@ -25,7 +25,7 @@ if data_set_choice == "2024":
     conference_sessions = 40
     slots = 7
     papers_range = [3,4,5,6]
-    max_parallel_sessions = 9
+    max_parallel_sessions = 11
     working_groups = 20 
     np= [14,23,12,9,9,6,10,4,10,7,6,5,3,5,6,4,3,12,7,16,4,5,14,11,4,3,10,6,6,4,13,3,4,9,5,4,11,6,6,8]
     npMax = [4, 6, 6, 4, 4, 5,  3]
@@ -71,7 +71,7 @@ elif data_set_choice == "2021":
     conference_sessions = 28
     slots = 11
     papers_range = [2,3,4,5]
-    max_parallel_sessions = 5
+    max_parallel_sessions = 8
     working_groups = 15 
     np= [11, 11, 8, 8, 8, 8, 10, 10, 13, 7, 4, 7, 10, 6, 5, 4, 5, 5, 5, 7, 4, 4, 6, 3, 2, 3, 4, 4]
     npMax = [4,5,3,3,4,3,5,4,4,3,4]
