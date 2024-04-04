@@ -63,11 +63,9 @@ elif data_set_choice == "2022":
 
     # Define the working groups associated with each session
     session_groups = [
-    [6], [8,5], [], [], [], [5], [5], [13], [], [7], 
-    [5], [15], [11], [3], [16], [], [1], [8], [12], 
-    [4], [], [2], [], [5], [10], [6], [14], [11], 
-    [9], [5], [], [], [], [], [], [], [4], [6], 
-    [11], [13], [2,5], [13,3], []
+    [6,17], [8,5,17], [], [14], [21], [5,17], [5,17], [13], [], [7,20], [5,17], [15,23], [11,20], [3,22], 
+    [16,22], [], [1,19], [8,20], [12,23], [4,24], [], [2,17], [], [5,17], [10,24], [6,17], [14,18],
+    [11,20], [9,19], [5,17], [], [], [], [], [], [], [4,24], [6,17], [11,20], [13], [2,5,17], [13,3], []
 ]
 
 else :
@@ -318,13 +316,13 @@ def display_assignments_by_slot_with_counts(model, slots, papers_range, conferen
 
 
 
-# with RC2(constraints, solver="Cadical153") as solver:
-#     for model in solver.enumerate():
-#         print('Model has cost:', solver.cost)
-#         # print('Model:', solver.model)
+with RC2(constraints, solver="Cadical153") as solver:
+    for model in solver.enumerate():
+        print('Model has cost:', solver.cost)
+        # print('Model:', solver.model)
 
-#         display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions)
-#         break  # Process only the first model
+        display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions)
+        break  
 
 def convert_cnf_format(old_file_path, new_file_path):
     with open(old_file_path, 'r') as old_file, open(new_file_path, 'w') as new_file:
