@@ -43,7 +43,7 @@ def data_for_2022():
     slots = 8
     papers_range = [3,4,5]
     max_parallel_sessions = 20
-    working_groups = 15 
+    working_groups = 24
     np= [4,5,5,5,5,9,9,5,4,12,16,20,4,7,11,4,4,8,12,11,6,6,6,5,6,7,7,4,12,4,4,8,7,9,3,3,6,7,12,4,4,4,4]
     npMax = [5,4,3,4,3,4,4,4]
 
@@ -57,20 +57,18 @@ def data_for_2022():
 
 
 def data_for_2021():
-    conference_sessions = 43
-    slots = 8
+    conference_sessions = 27
+    slots = 11
     papers_range = [3,4,5]
-    max_parallel_sessions = 20
-    working_groups = 15 
-    np= [4,5,5,5,5,9,9,5,4,12,16,20,4,7,11,4,4,8,12,11,6,6,6,5,6,7,7,4,12,4,4,8,7,9,3,3,6,7,12,4,4,4,4]
-    npMax = [5,4,3,4,3,4,4,4]
+    max_parallel_sessions = 5
+    working_groups = 17 
+    np= [11, 11, 8, 8, 8, 8, 10, 10, 13, 7, 4, 7, 10, 6, 5, 4, 5, 5, 5, 7, 4, 4, 6, 3, 2, 3, 4, 4]
+    npMax = [4,5,3,3,4,3,5,4,4,3,5]
 
     # Define the working groups associated with each session
     session_groups = [
-    [6,17], [8,5,17], [], [14], [21], [5,17], [5,17], [13], [], [7,20], [5,17], [15,23], [11,20], [3,22], 
-    [16,22], [], [1,19], [8,20], [12,23], [4,24], [], [2,17], [], [5,17], [10,24], [6,17], [14,18],
-    [11,20], [9,19], [5,17], [], [], [], [], [], [], [4,24], [6,17], [11,20], [13], [2,5,17], [13,3], []
-    ]
+    [9], [4], [9], [2], [3], [14], [10], [4], [12], [11], [4], [6], [7], [4], [1], [16], 
+    [13], [4], [17], [16], [17], [16], [9], [], [3, 8], [15,5], [6, 4]]
     return conference_sessions, slots, papers_range, max_parallel_sessions, working_groups, np, npMax, session_groups
 
 
