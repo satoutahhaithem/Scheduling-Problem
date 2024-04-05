@@ -1,15 +1,14 @@
 #!/bin/bash
 
 
-yearRodef="2022"
 
 
-timeout_duration="5400"
+
+timeout_duration="7200"
 solver_dir="Solvers"
-# output_dir="outputs/${yearRodef}"
-# time_dir="TimeSolver/${yearRodef}"
-output_dir="outputsPcHeythem/${yearRodef}"
-time_dir="TimeSolverPcHeythem/${yearRodef}"
+
+# output_dir="outputsPcHeythem/${yearRodef}"
+# time_dir="TimeSolverPcHeythem/${yearRodef}"
 evalMaxSatFolder="EvalMaxSAT/bin/EvalMaxSAT"
 maxcdclFolder="./MaxCDCL/bin/maxcdcl-scip-maxhs"
 
@@ -19,32 +18,121 @@ chmod +x "$solver_dir/open-wbo"
 chmod +x "$evalMaxSatFolder"
 chmod +x "$maxcdclFolder"
 
-for max_parallel_sessions in 15 14 13 12; do
-    cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
-    cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
-    # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
 
-      { 
-        time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-    } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+# Loop through the years and loop through all the instance 
+for yearRodef in {2022..2024}; do
+    output_dir="outputs/${yearRodef}"
+    time_dir="TimeSolver/${yearRodef}"
 
-    { 
-        time timeout "$timeout_duration" rc2.py -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
-    } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+    # Ensure directories exist
+    mkdir -p "$output_dir"
+    mkdir -p "$time_dir"
 
-    # { 
-    #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
-    # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
+    # all the instance of one year
+    for max_parallel_sessions in 15 14 13 12 11 10 9; do
+        cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
+        cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
-    { 
-        time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
-    } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
+        # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
+        { 
+            time timeout "$timeout_duration" rc2.py -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+        } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
 
+        { 
+            time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
+        } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
+
+        { 
+            time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+        } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+
+        { 
+            time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
+        } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
+
+    done
+
+    echo "Execution times and outputs for year $yearRodef recorded in respective files."
 done
 
 
+
+
+
+
+# all the instance of one year
+############################################################################################################
+# yearRodef="2021"
+# output_dir="outputs/${yearRodef}"
+# time_dir="TimeSolver/${yearRodef}"
+# for max_parallel_sessions in 15 14 13 12; do
+#     cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
+#     cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
+
+#     # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
+
+#     { 
+#         time timeout "$timeout_duration" rc2.py -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+#     } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+
+#     # { 
+#     #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
+#     # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
+
+
+#     { 
+#         time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+#     } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+
+
+#     { 
+#         time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
+#     } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
+
+# done
+
+
 echo "Execution times and outputs recorded in respective files."
+
+
+############################################################################################################
+
+
+
+
+# one year , one instance
+############################################################################################################
+# yearRodef="2021"
+# output_dir="outputs/${yearRodef}"
+# time_dir="TimeSolver/${yearRodef}"
+# max_parallel_sessions=5
+# cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
+# cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
+
+#     # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
+
+#     { 
+#         time timeout "$timeout_duration" rc2.py -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+#     } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+
+#     { 
+#         time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
+#     } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
+
+
+#     { 
+#         time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+#     } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+
+
+#     { 
+#         time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
+#     } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
+
+# ############################################################################################################
+
+
 
 
 
