@@ -11,9 +11,9 @@ c ========================================[ Problem Statistics ]================
 c |                                                                                                       |
 c |  Problem Format:             MaxSAT                                                                   |
 c |  Problem Type:           Unweighted                                                                   |
-c |  Number of variables:         49917                                                                   |
-c |  Number of hard clauses:      74926                                                                   |
-c |  Number of soft clauses:        518                                                                   |
+c |  Number of variables:         42576                                                                   |
+c |  Number of hard clauses:      63796                                                                   |
+c |  Number of soft clauses:        264                                                                   |
 c |  Number of cardinality:           0                                                                   |
 c |  Number of PB :                   0                                                                   |
 c |  Parse time:                   0.01 s                                                                 |
@@ -22,4 +22,5 @@ c ==========================================[ Solver Settings ]=================
 c |                                                                                                       |
 c |  Algorithm:                    MSU3                                                                   |
 c |  Cardinality Encoding:    Totalizer                                                                   |
+found 264 unit cores @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 s UNKNOWN

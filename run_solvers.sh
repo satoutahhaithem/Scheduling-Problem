@@ -77,23 +77,23 @@ for max_parallel_sessions in {20..12}; do
 
     # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
 
+    # { 
+    #     time timeout "$timeout_duration" rc2.py -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+    # } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+
     { 
-        time timeout "$timeout_duration" rc2.py -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
-    } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+        time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
+    } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
+
 
     # { 
-    #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
-    # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
+    #     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+    # } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
 
 
-    { 
-        time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-    } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
-
-
-    { 
-        time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
-    } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
+    # { 
+    #     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
+    # } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
 
 done
 
@@ -107,11 +107,13 @@ echo "Execution times and outputs recorded in respective files."
 
 
 # one year , one instance
-############################################################################################################
-# yearRodef="2021"
-# output_dir="outputs/${yearRodef}"
-# time_dir="TimeSolver/${yearRodef}"
-# max_parallel_sessions=5
+###########################################################################################################
+# yearRodef="2022"
+# max_parallel_sessions=20
+# # output_dir="outputs/${yearRodef}"
+# # time_dir="TimeSolver/${yearRodef}"
+# output_dir="outputsPcHeythem/${yearRodef}"
+# time_dir="TimeSolverPcHeythem/${yearRodef}"
 # cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
 # cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
@@ -135,7 +137,7 @@ echo "Execution times and outputs recorded in respective files."
 #         time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
 #     } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
 
-# ############################################################################################################
+############################################################################################################
 
 
 
