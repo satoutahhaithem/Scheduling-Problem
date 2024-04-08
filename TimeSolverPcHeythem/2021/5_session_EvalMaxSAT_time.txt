@@ -1,0 +1,8 @@
+timeout: failed to run command ‘./loandra’: No such file or directory
+timeout: failed to run command ‘./nuwls’: No such file or directory
+timeout: the monitored command dumped core
+./run_solvers.sh: line 133: 22956 Segmentation fault      timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+
+real	0m0.159s
+user	0m0.040s
+sys	0m0.016s

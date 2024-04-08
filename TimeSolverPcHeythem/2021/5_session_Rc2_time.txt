@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/home/haithem-sattoutah/haithemVirtualEnv/bin/rc2.py", line 1735, in <module>
+    formula = WCNFPlus(from_file=files[0])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haithem-sattoutah/haithemVirtualEnv/lib/python3.11/site-packages/pysat/formula.py", line 4720, in __init__
+    super(WCNFPlus, self).__init__(from_file=from_file, from_fp=from_fp,
+  File "/home/haithem-sattoutah/haithemVirtualEnv/lib/python3.11/site-packages/pysat/formula.py", line 3611, in __init__
+    self.from_file(from_file, comment_lead, compressed_with='use_ext')
+  File "/home/haithem-sattoutah/haithemVirtualEnv/lib/python3.11/site-packages/pysat/formula.py", line 3659, in from_file
+    self.from_fp(fobj.fp, comment_lead)
+  File "/home/haithem-sattoutah/haithemVirtualEnv/lib/python3.11/site-packages/pysat/formula.py", line 4809, in from_fp
+    self.nv = max(map(lambda cl: max(map(abs, cl)), itertools.chain.from_iterable([[[self.nv]], self.hard, self.soft])))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haithem-sattoutah/haithemVirtualEnv/lib/python3.11/site-packages/pysat/formula.py", line 4809, in <lambda>
+    self.nv = max(map(lambda cl: max(map(abs, cl)), itertools.chain.from_iterable([[[self.nv]], self.hard, self.soft])))
+                                 ^^^^^^^^^^^^^^^^^
+ValueError: max() arg is an empty sequence
+
+real	0m0.209s
+user	0m0.191s
+sys	0m0.017s
