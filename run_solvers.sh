@@ -85,9 +85,9 @@ for max_parallel_sessions in {20..12}; do
         time timeout "$timeout_duration" rc2.py -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
     } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
 
-    { 
-        time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
-    } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
+    # { 
+    #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
+    # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
 
 
     { 
