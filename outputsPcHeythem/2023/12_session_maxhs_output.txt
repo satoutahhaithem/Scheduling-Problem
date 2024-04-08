@@ -88,4 +88,66 @@ c Elapsed time 179.1735
 c Init Bnds: SAT Time 179.1618
 c Init Bnds: LB =0 UB = 25
 c Init Bnds: Forced 2271 literals.
-c Eqseed start: sat solver has 134898 clauses: 120412 redun
+c Eqseed start: sat solver has 134898 clauses: 120412 redundant, 14486 irredundant.
+c cadical simplify took 0.0035
+c fixed = 0 substitued = 0 eliminated = 0 total variables removed = 0 clauses in solver = 140232 clauses removed = 1751
+c EqSeed: found 0 seedable constraints.
+c EqSeed: 0 cores 0 non-cores 0 mixed-cores 0 ordinary clauses
+c EqSeed: #seeded constraints 0
+c EqSeed: cores            0 Ave length 0.0000
+c EqSeed: non-cores        0 Ave length 0.0000
+c EqSeed: mixed cores      0 Ave length 0.0000
+c EqSeed: ordinary clauses 0 Ave length 0.0000
+c Disjoint Phase
+c Dsjnt: #Cores 4 with total weight 4 LB 4 UB 25
+c Dsjnt: Avg Core Size 57.2500
+c Dsjnt: Time 109.5420
+c **********Iter: 0 Elapsed Time = 288.7633
+c CPLEX: += 4 Average size = 57.2500
+c Cplex solve passed UB = 25.000000 current LB = 0.000000
+c CPLEX returns incumbent with cost 4 and lower bound of 4 time = 0.0005
+c CPLEX found optimal solution to its current model
+c after CPLEX bnds: LB = 4 UB = 25 GAP =21
+c LP Bound delta = 4.000000 ub-lb gap = 21.000000 this iteration is bad.
+c Abstraction: computing an abstraction with 4 new cores
+c Abstraction: added 8203 new edges.
+c Abstraction: Cluster Iter 1. 4 clusters (mod 0.5753)
+c Abstraction: processing cluster of size 19
+c build_sum_1 found conflict. Size = 19
+c build_sum_1. assumps = [ ] (0) conflict = [ 35652 35653 35654 35655 35656 35657 35694 35695 35696 35697 35698 35699 35700 35883 35884 35885 35886 35887 35888 ] (19)
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(36309,SRef(0))
+c Abstraction: 1. built sum 19 inputs, 1 true
+c Abstraction: processing cluster of size 41
+c build_sum_1 found conflict. Size = 41
+c build_sum_1. assumps = [ ] (0) conflict = [ 35715 35717 35719 35721 35723 35725 35727 35729 35730 35731 35732 35733 35734 35735 35743 35745 35747 35749 35751 35753 35755 35771 35772 35773 35774 35775 35776 35777 35785 35787 ...] (41)
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(36921,SRef(1))
+c Abstraction: 2. built sum 41 inputs, 1 true
+c Abstraction: processing cluster of size 97
+c build_sum_1 found conflict. Size = 94
+c build_sum_1. assumps = [ -35859 -35866 -35877 ] (3) conflict = [ 35848 35849 35850 35851 35852 35853 35855 35856 35857 35858 35860 35862 35863 35864 35865 35867 35876 35878 35879 35880 35881 35882 35889 35918 35921 35922 35925 35926 35927 35928 ...] (94)
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(38943,SRef(2))
+c added to build_sum_1: assumps = [ -35859 -35866 -35877 -38943 ] (4)
+c Abstraction: 3. built sum 97 inputs, 1 true
+c Abstraction: processing cluster of size 72
+c build_sum_1 found conflict. Size = 69
+c build_sum_1. assumps = [ -35804 -35808 -35810 ] (3) conflict = [ 35716 35718 35720 35722 35724 35726 35728 35736 35737 35738 35739 35740 35741 35742 35744 35746 35748 35750 35752 35754 35756 35757 35759 35761 35763 35765 35767 35769 35778 35779 ...] (69)
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(40921,SRef(5))
+c added to build_sum_1: assumps = [ -35804 -35808 -35810 -40921 ] (4)
+c Abstraction: 4. built sum 72 inputs, 1 true
+c Abstraction: combining 4 clusters of size 256
+c examining cluster #0 of size 19
+c combining with cluster #1 of size 41
+c combining with cluster #2 of size 97
+c combining with cluster #3 of size 72
+c final clusters before erase [ [ 35887 35886 35885 35884 35883 35882 35699 35698 35697 35696 35695 35694 35693 35656 35655 35654 35651 35652 35653 35985 35984 35983 35982 35981 35980 35796 35794 35792 35790 35788 ...] (229) [ ] (0) [ ] (0) [ ] (0) ] (4)
+c final clusters after erase [ [ 35887 35886 35885 35884 35883 35882 35699 35698 35697 35696 35695 35694 35693 35656 35655 35654 35651 35652 35653 35985 35984 35983 35982 35981 35980 35796 35794 35792 35790 35788 ...] (229) ] (1)
+c Abstraction: Cluster Iter 2. 1 clusters (mod 0.0000)
+c Abstraction: processing cluster of size 229
+c Abstraction: 1. built sum 229 inputs, 4 true
+c Abstraction: top_level exhaust with pre exhaust timelimit 60.0000s.
+c exhaustSum exhausted sum SRef(3) lb = 0
+c Abstraction: top_level exhaust 1 top level exhausts attempted. 11 low level exhau

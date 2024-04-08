@@ -64,7 +64,7 @@ def data_for_2021():
     conference_sessions = 27
     slots = 11
     papers_range = [3,4,5]
-    max_parallel_sessions = 5
+    max_parallel_sessions = 10
     working_groups = 17 
     np= [11, 11, 8, 8, 8, 8, 10, 10, 13, 7, 4, 7, 10, 6, 5, 4, 5, 5, 5, 7, 4, 4, 6, 3,4, 4, 5]
 
