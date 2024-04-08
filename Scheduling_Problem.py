@@ -28,12 +28,11 @@ elif data_set_choice == "2023":
     conference_sessions, slots, papers_range, max_parallel_sessions, working_groups, np, npMax, session_groups = data_for_2023()
 elif data_set_choice == "2022":
     conference_sessions, slots, papers_range, max_parallel_sessions, working_groups, np, npMax, session_groups = data_for_2022()
-elif data_set_choice == "2021":
+elif  data_set_choice == "2021":
     conference_sessions, slots, papers_range, max_parallel_sessions, working_groups, np, npMax, session_groups = data_for_2021()
 else:
     print("The data available for 2024 , 2023 , 2022 and 2021 only")
     sys.exit(1)
-
 
 
 
@@ -193,6 +192,7 @@ for s1 in range(1, conference_sessions + 1):
 # Assuming other parts of your code (constraint definitions, SAT model setup) are correctly implemented
 
 def display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions):
+    print("enter display assignement")
     slot_assignments = {c: {} for c in range(1, slots + 1)}  # Initialize dictionaries for each slot
 
     # Processing the model to populate slot assignments
@@ -204,6 +204,12 @@ def display_assignments_by_slot_with_counts(model, slots, papers_range, conferen
         
 
 
+# print(constraints)
+# with RC2(constraints, solver="Cadical153") as solver:
+#     for model in solver.enumerate():
+#         print ("enter solver")
+#         print('Model has cost:', solver.cost)
+#         # print('Model:', solver.model)
 
 # with RC2(constraints, solver="Cadical153") as solver:
 #     for model in solver.enumerate():
