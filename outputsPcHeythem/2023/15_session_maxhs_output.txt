@@ -55,7 +55,7 @@ c Total Soft Clause Weight (+ basecost): 518 (+ 0)
 c SOFT%: 0.6762%
 c #distinct weights: 1, mean = 1.0000, std. dev = 0.0000, min = 1, max = 1
 c Total Clauses: 76602
-c Parse time: 0.002981
+c Parse time: 0.006099
 c Wcnf Space Required: 0.0000MB
 c ================================
 c transitionWts = [ ] (0)
@@ -84,8 +84,8 @@ c ================================
 c Using IBM CPLEX version 22.1.1.0 under IBM's Academic Initiative licencing program
 c Before solving sat solver has 51407 clauses: 0 redundant, 51407 irredundant.
 c New UB found 21
-c Elapsed time 0.0553
-c Init Bnds: SAT Time 0.0442
+c Elapsed time 0.0538
+c Init Bnds: SAT Time 0.0430
 c Init Bnds: LB =0 UB = 21
 c Init Bnds: Forced 159 literals.
 c Eqseed start: sat solver has 52069 clauses: 833 redundant, 51236 irredundant.
@@ -101,8 +101,8 @@ c EqSeed: ordinary clauses 0 Ave length 0.0000
 c Disjoint Phase
 c Dsjnt: #Cores 4 with total weight 4 LB 4 UB 21
 c Dsjnt: Avg Core Size 49.7500
-c Dsjnt: Time 0.9333
-c **********Iter: 0 Elapsed Time = 0.9936
+c Dsjnt: Time 0.9194
+c **********Iter: 0 Elapsed Time = 0.9781
 c CPLEX: += 4 Average size = 49.7500
 c Cplex solve passed UB = 21.000000 current LB = 0.000000
 c CPLEX returns incumbent with cost 4 and lower bound of 4 time = 0.0005
@@ -161,106 +161,120 @@ c Cplex abstract solution yielded 2 new conflicts
 c Cplex concrete solution yielded 3 new conflicts
 c finding conflicts from greedy
 c New UB found 20
-c Elapsed time 15.2304
+c Elapsed time 38.9053
 c New UB found 19
-c Elapsed time 23.3232
+c Elapsed time 39.3430
+c New UB found 16
+c Elapsed time 42.4563
+c New UB found 15
+c Elapsed time 59.2535
+c New UB found 14
+c Elapsed time 63.9059
 c New UB found 12
-c Elapsed time 37.2939
-c New UB found 11
-c Elapsed time 95.7662
-c Greedy: iters=164 concrete conflicts=255 abstract conflicts=23
-c **********Iter: 1 Elapsed Time = 201.5127
+c Elapsed time 98.0016
+c Greedy: iters=186 concrete conflicts=271 abstract conflicts=24
+c **********Iter: 1 Elapsed Time = 171.3190
 c CPLEX: += 4 forced bvars; (4 forced summation outputs)
-c CPLEX: += 283 Average size = 76.6360
-c Cplex solve passed UB = 11.000000 current LB = 4.000000
-c CPLEX returns incumbent with cost 7 and lower bound of 7 time = 0.0836
+c CPLEX: += 300 Average size = 75.5867
+c Cplex solve passed UB = 12.000000 current LB = 4.000000
+c CPLEX returns incumbent with cost 7 and lower bound of 7 time = 0.2762
 c CPLEX found optimal solution to its current model
-c after CPLEX bnds: LB = 7 UB = 11 GAP =4
-c LP Bound delta = 1.260391 ub-lb gap = 4.000000 this iteration is good.
+c after CPLEX bnds: LB = 7 UB = 12 GAP =5
+c LP Bound delta = 0.813174 ub-lb gap = 5.000000 this iteration is bad.
+c previous iteration was good.
 c finding conflicts from cplex solution
 c Cplex abstract solution yielded 1 new conflicts
-c Cplex concrete solution yielded 2 new conflicts
+c Cplex concrete solution yielded 1 new conflicts
 c finding conflicts from greedy
 c New UB found 9
-c Elapsed time 363.6646
-c Greedy: iters=92 concrete conflicts=122 abstract conflicts=37
-c **********Iter: 2 Elapsed Time = 403.8169
-c CPLEX: += 162 Average size = 94.7654
+c Elapsed time 311.2333
+c Greedy: iters=106 concrete conflicts=130 abstract conflicts=30
+c **********Iter: 2 Elapsed Time = 372.5370
+c CPLEX: += 162 Average size = 95.4568
 c Cplex solve passed UB = 9.000000 current LB = 7.000000
-c CPLEX returns incumbent with cost 8 and lower bound of 8 time = 0.7254
-c CPLEX found optimal solution to its current model
-c after CPLEX bnds: LB = 8 UB = 9 GAP =1
-c LP Bound delta = 0.054005 ub-lb gap = 1.000000 this iteration is bad.
+c Cplex found better incumbent than UB (8.000000 < 9.000000)
+c Cplex found better incumbent than UB (8.000000 < 9.000000)
+c found incumbent of cost better than UB (= 9)
+c CPLEX returns incumbent with cost 8 and lower bound of 7 time = 4.0082
+c after CPLEX bnds: LB = 7 UB = 9 GAP =2
+c LP Bound delta = 0.326900 ub-lb gap = 2.000000 this iteration is bad.
 c previous iteration was bad.
-c Abstraction: computing an abstraction with 445 new cores
-c Abstraction: added 1748781 new edges.
-c Abstraction: Cluster Iter 1. 5 clusters (mod 0.1198)
-c Abstraction: processing cluster of size 238
+c Abstraction: computing an abstraction with 462 new cores
+c Abstraction: added 1769633 new edges.
+c Abstraction: Cluster Iter 1. 5 clusters (mod 0.1109)
+c Abstraction: processing cluster of size 239
 c build_sum_1 found conflict. Size = 22
-c build_sum_1. assumps = [ -35295 -35532 -35555 -35557 -35559 -35563 -35565 -35567 -35337 -35509 -35508 -35510 -35507 -35511 -35505 -35506 -35519 -35522 ] (18) conflict = [ 35289 35291 35293 35297 35299 35301 35331 35333 35335 35339 35341 35343 35518 35526 35527 35528 35529 35530 35531 35561 35566 42196 ] (22)
+c build_sum_1. assumps = [ -35295 -35532 -35555 -35557 -35559 -35563 -35565 -35567 -35337 -35507 -35509 -35510 -35506 -35511 -35505 -35508 -35522 -35519 -35523 ] (19) conflict = [ 35289 35291 35293 35297 35299 35301 35331 35333 35335 35339 35341 35343 35518 35526 35527 35528 35529 35530 35531 35561 35566 42196 ] (22)
 c exhaustSum exhausted sum SRef(7) lb = 0
 c exhaustSum exhausted sum SRef(8) lb = 5
 c exhaustSum found 1 addition true outputs
-c Sum from conflict = SOut(367378,SRef(8))
-c added to build_sum_1: assumps = [ -35295 -35532 -35555 -35557 -35559 -35563 -35565 -35567 -35337 -35509 -35508 -35510 -35507 -35511 -35505 -35506 -35519 -35522 -367378 ] (19)
+c Sum from conflict = SOut(386087,SRef(8))
+c added to build_sum_1: assumps = [ -35295 -35532 -35555 -35557 -35559 -35563 -35565 -35567 -35337 -35507 -35509 -35510 -35506 -35511 -35505 -35508 -35522 -35519 -35523 -386087 ] (20)
 c exhaustSum exhausted sum SRef(9) lb = 0
 c exhaustSum exhausted sum SRef(10) lb = 5
-c Abstraction: 1. built sum 238 inputs, 5 true
-c Abstraction: processing cluster of size 151
+c Abstraction: 1. built sum 239 inputs, 5 true
+c Abstraction: processing cluster of size 64
 c exhaustSum exhausted sum SRef(11) lb = 0
-c Abstraction: 2. built sum 151 inputs, 0 true
-c Abstraction: processing cluster of size 4
+c Abstraction: 2. built sum 64 inputs, 0 true
+c Abstraction: processing cluster of size 87
 c exhaustSum exhausted sum SRef(12) lb = 0
-c Abstraction: 3. built sum 4 inputs, 0 true
-c Abstraction: processing cluster of size 18
+c Abstraction: 3. built sum 87 inputs, 0 true
+c Abstraction: processing cluster of size 12
 c exhaustSum exhausted sum SRef(13) lb = 0
-c Abstraction: 4. built sum 18 inputs, 0 true
-c Abstraction: processing cluster of size 6
+c Abstraction: 4. built sum 12 inputs, 0 true
+c Abstraction: processing cluster of size 2
 c exhaustSum exhausted sum SRef(14) lb = 0
-c Abstraction: 5. built sum 6 inputs, 0 true
-c Abstraction: Cluster Iter 2. 2 clusters (mod 0.0063)
-c Abstraction: processing cluster of size 238
-c Abstraction: processing cluster of size 179
+c Abstraction: 5. built sum 2 inputs, 0 true
+c Abstraction: Cluster Iter 2. 3 clusters (mod 0.0006)
+c Abstraction: processing cluster of size 239
+c Abstraction: processing cluster of size 64
+c Abstraction: processing cluster of size 101
 c exhaustSum exhausted sum SRef(15) lb = 0
 c exhaustSum exhausted sum SRef(16) lb = 0
-c exhaustSum exhausted sum SRef(17) lb = 0
-c Abstraction: 1. built sum 179 inputs, 0 true
-c Abstraction: combining 2 clusters of size 512
-c examining cluster #0 of size 238
-c combining with cluster #1 of size 179
-c final clusters before erase [ [ 35418 35182 35183 35184 35185 35186 35187 35224 35225 35226 35227 35228 35229 35230 35413 35414 35415 35416 35417 35646 35455 35456 35457 35458 35459 35460 35461 35462 35463 35464 ...] (417) [ ] (0) ] (2)
-c final clusters after erase [ [ 35418 35182 35183 35184 35185 35186 35187 35224 35225 35226 35227 35228 35229 35230 35413 35414 35415 35416 35417 35646 35455 35456 35457 35458 35459 35460 35461 35462 35463 35464 ...] (417) ] (1)
+c Abstraction: 1. built sum 101 inputs, 0 true
+c Abstraction: combining 3 clusters of size 512
+c examining cluster #0 of size 239
+c combining with cluster #1 of size 64
+c combining with cluster #2 of size 101
+c final clusters before erase [ [ 35418 35182 35183 35184 35185 35186 35187 35224 35225 35226 35227 35228 35229 35230 35413 35414 35415 35416 35417 35646 35455 35456 35457 35458 35459 35460 35461 35462 35463 35464 ...] (404) [ ] (0) [ ] (0) ] (3)
+c final clusters after erase [ [ 35418 35182 35183 35184 35185 35186 35187 35224 35225 35226 35227 35228 35229 35230 35413 35414 35415 35416 35417 35646 35455 35456 35457 35458 35459 35460 35461 35462 35463 35464 ...] (404) ] (1)
 c Abstraction: Cluster Iter 3. 1 clusters (mod 0.0000)
-c Abstraction: processing cluster of size 417
+c Abstraction: processing cluster of size 404
 c build_sum_1 found conflict. Size = 2
-c build_sum_1. assumps = [ ] (0) conflict = [ 369088 375760 ] (2)
-c exhaustSum found 3 addition true outputs
-c Sum from conflict = SOut(379757,SRef(18))
-c Abstraction: 1. built sum 417 inputs, 8 true
+c build_sum_1. assumps = [ -391671 ] (1) conflict = [ 387821 388819 ] (2)
+c exhaustSum exhausted sum SRef(17) lb = 6
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(394084,SRef(17))
+c added to build_sum_1: assumps = [ -391671 -394084 ] (2)
+c build_sum_1 found conflict. Size = 2
+c build_sum_1. assumps = [ ] (0) conflict = [ 391671 394084 ] (2)
+c exhaustSum found 2 addition true outputs
+c Sum from conflict = SOut(397116,SRef(18))
+c Abstraction: 1. built sum 404 inputs, 8 true
 c Abstraction: top_level exhaust with pre exhaust timelimit 120.0000s.
 c exhaustSum exhausted sum SRef(18) lb = 9
 c exhaustSum found 1 addition true outputs
 c Abstraction: top_level exhaust 1 top level exhausts attempted. 1 low level exhausts attempted.
-c Abstraction: 1 summations over 417 soft clauses with 9 true outputs, and 1 exhausted. Summation lower bound wt = 9.000000
+c Abstraction: 1 summations over 404 soft clauses with 9 true outputs, and 1 exhausted. Summation lower bound wt = 9.000000
 c Solved by building summations.
 o 9
 s OPTIMUM FOUND
 c Solved: Number of falsified softs = 9
-c SAT: #calls 43404
-c SAT: Total time 793.6732
-c SAT: #muser calls 454 (84.8018 % successful)
-c SAT: Minimize time 385.7838 (48.6074%)
-c SAT: Avg constraint minimization 61.6236
-c SAT: number of variables substituted 30
-c GREEDY: #calls 256
-c GREEDY: Total time 0.0941
+c SAT: #calls 46343
+c SAT: Total time 732.3447
+c SAT: #muser calls 471 (88.7473 % successful)
+c SAT: Minimize time 355.8325 (48.5881%)
+c SAT: Avg constraint minimization 62.4742
+c SAT: number of variables substituted 31
+c GREEDY: #calls 292
+c GREEDY: Total time 0.1130
 c CPLEX: #calls 3
-c CPLEX: Total time 0.8095
-c CPLEX: #constraints 449
-c CPLEX: Avg constraint size 82.9376
+c CPLEX: Total time 4.2848
+c CPLEX: #constraints 466
+c CPLEX: Avg constraint size 82.2725
 c CPLEX: #non-core constraints 0
-c LP-Bounds: Total time 0.0235
+c LP-Bounds: Total time 0.0179
 c LP-Bounds: #calls 3
 c LP-Bounds: Forced 0 variables
-c MEM MB: 306.0000
-c CPU: 409.7447
+c MEM MB: 271.0000
+c CPU: 381.8238

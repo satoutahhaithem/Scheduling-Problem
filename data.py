@@ -66,7 +66,7 @@ def data_for_2021():
     papers_range = [3,4,5]
     max_parallel_sessions = 5
     working_groups = 17 
-    np= [11, 11, 8, 8, 8, 8, 10, 10, 13, 7, 4, 7, 10, 6, 5, 4, 5, 5, 5, 7, 4, 4, 6, 3, 2, 3, 4, 4]
+    np= [11, 11, 8, 8, 8, 8, 10, 10, 13, 7, 4, 7, 10, 6, 5, 4, 5, 5, 5, 7, 4, 4, 6, 3,4, 4, 5]
     npMax = [4,5,3,3,4,3,5,4,4,3,5]
 
     # Define the working groups associated with each session

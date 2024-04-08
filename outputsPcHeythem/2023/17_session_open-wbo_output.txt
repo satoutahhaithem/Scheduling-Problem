@@ -16,7 +16,7 @@ c |  Number of hard clauses:      74926                                         
 c |  Number of soft clauses:        518                                                                   |
 c |  Number of cardinality:           0                                                                   |
 c |  Number of PB :                   0                                                                   |
-c |  Parse time:                   0.01 s                                                                 |
+c |  Parse time:                   0.00 s                                                                 |
 c |                                                                                                       |
 c ==========================================[ Solver Settings ]============================================
 c |                                                                                                       |
