@@ -5,9 +5,9 @@ c initial LB: 0
 c ============================[ Problem Statistics ]=============================
 c |                                                                             |
 c initial UB: 9223372036854775807
-c |  Number of variables:         42576                                         |
-c |  Number of clauses:           53472                                         |
-c |  Parse time:                   0.02 s                                       |
+c |  Number of variables:         44568                                         |
+c |  Number of clauses:           64674                                         |
+c |  Parse time:                   0.03 s                                       |
 c Mono: 0, fixed: 0
 c |  Simplification time:          0.01 s                                       |
 c |                                                                             |
@@ -16,10 +16,10 @@ c Solved by simplification
 c restarts              : 0
 c conflicts             : 0              (0 /sec)
 c decisions             : 0              (-nan % random) (0 /sec)
-c propagations          : 3761           (125988 /sec)
+c propagations          : 9531           (278847 /sec)
 c conflict literals     : 0              (-nan % deleted)
-c Memory used           : 31.00 MB
-c CPU time              : 0.029852 s
+c Memory used           : 32.00 MB
+c CPU time              : 0.03418 s
 c nbSimplifyAll         : 0
 c s_propagations        : 0           
 c s_cost_ratio          : 0.00%

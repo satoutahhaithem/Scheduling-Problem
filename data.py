@@ -1,19 +1,19 @@
 def data_for_2024():
-    conference_sessions = 40
-    slots = 7
-    papers_range = [3,4,5,6]
-    max_parallel_sessions = 11
-    working_groups = 20
-    np = [14,23,12,9,9,6,10,4,10,7,6,5,3,5,6,4,3,12,7,16,4,5,14,11,4,3,10,6,6,4,13,3,4,9,5,4,11,6,6,8]
-    npMax = [4, 6, 6, 4, 4, 5, 3]
+    conference_sessions = 27
+    slots = 11
+    papers_range = [3,4,5]
+    max_parallel_sessions = 5
+    working_groups = 17
+    np= [11,11,8,8,8,8,10,10,13,7,4,7,10,6,5,4,5,5,5,7,4,4,6,3,4,4,5]
+    npMax = [4,5,3,3,4,3,5,4,4,3,5]
+
+    # Define the working groups associated with each session
     session_groups = [
-        [1], [2], [3], [], [], [], [6], [7], [7, 8], [10], [8], [8, 11], [5, 8], 
-        [3, 8], [7], [13], [13], [14], [], [8], [16], [16], [20], [17], [13], 
-        [], [9], [11], [11, 12], [9], [6, 19], [], [], [18], [10], [5], [16], 
-        [4, 5], [8, 12], [7, 15]
+    [9], [4], [9], [2], [3], [14], [10], [4], [12], [11], [4], [6], [7], [4],[1],[16],
+    [13] , [4] , [17] , [16] ,[17] , [17] , [9] , [] ,[3,8] ,[15,5] , [6,4]
     ]
     return conference_sessions, slots, papers_range, max_parallel_sessions, working_groups, np, npMax, session_groups
-
+    
 
 def data_for_2023():
     conference_sessions = 47
@@ -56,15 +56,17 @@ def data_for_2021():
     slots = 11
     papers_range = [3,4,5]
     max_parallel_sessions = 5
-    working_groups = 17 
-    np= [11, 11, 8, 8, 8, 8, 10, 10, 13, 7, 4, 7, 10, 6, 5, 4, 5, 5, 5, 7, 4, 4, 6, 3, 2, 3, 4, 4]
+    working_groups = 17
+    np= [11,11,8,8,8,8,10,10,13,7,4,7,10,6,5,4,5,5,5,7,4,4,6,3,4,4,5]
     npMax = [4,5,3,3,4,3,5,4,4,3,5]
 
     # Define the working groups associated with each session
     session_groups = [
-    [9], [4], [9], [2], [3], [14], [10], [4], [12], [11], [4], [6], [7], [4], [1], [16], 
-    [13], [4], [17], [16], [17], [16], [9], [], [3, 8], [15,5], [6, 4]]
+    [9], [4], [9], [2], [3], [14], [10], [4], [12], [11], [4], [6], [7], [4],[1],[16],
+    [13] , [4] , [17] , [16] ,[17] , [17] , [9] , [] ,[3,8] ,[15,5] , [6,4]
+    ]
     return conference_sessions, slots, papers_range, max_parallel_sessions, working_groups, np, npMax, session_groups
+    
 
 
 

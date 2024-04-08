@@ -117,8 +117,8 @@ chmod +x "$maxcdclFolder"
 
 # one year , one instance
 ###########################################################################################################
-yearRodef="2024"
-max_parallel_sessions=11
+yearRodef="2021"
+max_parallel_sessions=5
 # output_dir="outputs/${yearRodef}"
 # time_dir="TimeSolver/${yearRodef}"
 output_dir="outputsPcHeythem/${yearRodef}"
@@ -132,9 +132,9 @@ cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file
     #     time timeout "$timeout_duration" rc2.py -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
     # } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
 
-    # { 
-    #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
-    # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
+    { 
+        time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
+    } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
 
 
     # { 
@@ -147,9 +147,9 @@ cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file
     # } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
 
 
-    { 
-        time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
-    } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
+    # { 
+    #     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
+    # } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
 
 
 ############################################################################################################
