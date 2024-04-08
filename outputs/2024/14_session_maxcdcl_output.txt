@@ -12,7 +12,7 @@ c Mono: 0, fixed: 0
 c |  Eliminated clauses:           0.51 Mb                                      |
 c Reduced to 8434 vars, 19740 cls (c/v ratio==2.3, grow=0)
 c No iterative elimination performed. (vars=8434, c/v ratio=2.3)
-c |  Simplification time:          0.08 s                                       |
+c |  Simplification time:          0.06 s                                       |
 c |                                                                             |
 c ============================[ Search Statistics ]==============================
 c | Conflicts |          ORIGINAL         |          LEARNT          | Progress |
@@ -99,12 +99,12 @@ c ==============================================================================
 c initCost: 0, fixedBySearch: 0, optimal: 4, maxsat: 304, hardConflicts: 7568
 c nbLK: 3740, nbSuccLK: 2092(55.94%), nbLKup: 1731477(118.22%), hardens 1055 (fixed 276146), dynVars 1279, shorten: 0
 c restarts              : 59
-c conflicts             : 9872           (10436 /sec)
-c decisions             : 24511          (0.00 % random) (25911 /sec)
-c propagations          : 1464609        (1548257 /sec)
+c conflicts             : 9872           (12307 /sec)
+c decisions             : 24511          (0.00 % random) (30557 /sec)
+c propagations          : 1464609        (1825902 /sec)
 c conflict literals     : 166574         (35.81 % deleted)
 c Memory used           : 35.00 MB
-c CPU time              : 0.945973 s
+c CPU time              : 0.802129 s
 c nbSimplifyAll         : 4
 c s_propagations        : 3666515     
 c s_cost_ratio          : 250.34%

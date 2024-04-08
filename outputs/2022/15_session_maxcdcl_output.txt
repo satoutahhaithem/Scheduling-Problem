@@ -7,7 +7,7 @@ c |                                                                             
 c initial UB: 9223372036854775807
 c |  Number of variables:         59045                                         |
 c |  Number of clauses:           86560                                         |
-c |  Parse time:                   0.02 s                                       |
+c |  Parse time:                   0.04 s                                       |
 c Mono: 0, fixed: 0
 c |  Eliminated clauses:           0.68 Mb                                      |
 c Reduced to 14876 vars, 33324 cls (c/v ratio==2.2, grow=0)
@@ -18,7 +18,7 @@ c |  Eliminated clauses:           0.92 Mb                                      
 c Reduced to 9248 vars, 52359 cls (grow=16)
 c cl_inc_rate=1.202, var_dec_rate=1.120
 c No. effective iterative eliminations: 2
-c |  Simplification time:          0.23 s                                       |
+c |  Simplification time:          0.27 s                                       |
 c |                                                                             |
 c ============================[ Search Statistics ]==============================
 c | Conflicts |          ORIGINAL         |          LEARNT          | Progress |
@@ -75,3 +75,10 @@ c ends of initiationization by VSIDS at 106554 conflicts with init 0
 c LRB phase 2: conflicts 90105, phase 20000000, starts 254, UP 20091773
 c VSIDS phase 1: conflicts 95866, phase 20000000, starts 471, UP 20030175
 c LRB phase 3: conflicts 219036, phase 40000000, starts 504, UP 40012870
+c VSIDS phase 2: conflicts 210939, phase 40000000, starts 604, UP 40101054
+c original clauses 28002, learnts_core 43981, learnts_tier2 1013, learnts_local 16435
+c 27 clauses modified by 1 eqLits (debut 9, total 10) with 2 eqUse and 0 rmSoft, 0 eqSoft
+c LRB phase 4: conflicts 451256, phase 80000000, starts 837, UP 80062955
+c VSIDS phase 3: conflicts 442632, phase 80000000, starts 1307, UP 80039106
+c LRB phase 5: conflicts 941398, phase 160000000, starts 1648, UP 160071737
+c VSIDS phase 4: conflicts 926809, phase 160000000, starts 1927, UP 160896761

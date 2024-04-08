@@ -1,9 +1,6 @@
 #!/bin/bash
 
 
-
-
-
 timeout_duration="7200"
 solver_dir="Solvers"
 
@@ -93,7 +90,7 @@ done
 # done
 
 
-echo "Execution times and outputs recorded in respective files."
+# echo "Execution times and outputs recorded in respective files."
 
 
 ############################################################################################################

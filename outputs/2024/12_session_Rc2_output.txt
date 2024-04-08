@@ -1,2 +1,0 @@
-s OPTIMUM FOUND
-o 4
