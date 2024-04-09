@@ -11,42 +11,25 @@ import sys
 
 
 
-if len(sys.argv) < 3:
-    print("You must write the year roadef as a second parameter and maxparrallel session as third parameter 'for exemple python3 Scheduling_Problem.py 2024 11'")
+if len(sys.argv) < 2:
+    print("You must write the year of roadef as a second parameter 'for exemple python3 Scheduling_Problem.py 2024'")
     sys.exit(1)  # Exit the script with an error code
 
 # Extract the year of roadef from the command-line arguments
 data_set_choice = sys.argv[1]
-max_parallel_sessions = int(sys.argv[2])
 # Check if a command line argument is provided
 if len(sys.argv) > 1:
     data_set_choice = sys.argv[1]
 
 # Choose data set based on the argument
 if data_set_choice == "2024":
-    if (max_parallel_sessions < 9 ): 
-        print ("max_parallel_sessions must more than 9")
-        sys.exit(1) 
-    else:
-        conference_sessions, slots, papers_range, working_groups, np, npMax, session_groups = data_for_2024() 
+    conference_sessions, slots, papers_range, max_parallel_sessions, working_groups, np, npMax, session_groups = data_for_2024()
 elif data_set_choice == "2023":
-    if (max_parallel_sessions < 12 ): 
-        print ("max_parallel_sessions must be more than 12")
-        sys.exit(1) 
-    else:
-        conference_sessions, slots, papers_range, working_groups, np, npMax, session_groups = data_for_2023() 
+    conference_sessions, slots, papers_range, max_parallel_sessions, working_groups, np, npMax, session_groups = data_for_2023()
 elif data_set_choice == "2022":
-    if (max_parallel_sessions < 11 ): 
-        print ("max_parallel_sessions must be more than 11")
-        sys.exit(1) 
-    else:
-        conference_sessions, slots, papers_range, working_groups, np, npMax, session_groups = data_for_2022() 
+    conference_sessions, slots, papers_range, max_parallel_sessions, working_groups, np, npMax, session_groups = data_for_2022()
 elif  data_set_choice == "2021":
-    if (max_parallel_sessions < 5 ): 
-        print ("max_parallel_sessions must be more than 5")
-        sys.exit(1) 
-    else:
-        conference_sessions, slots, papers_range, working_groups, np, npMax, session_groups = data_for_2021()  
+    conference_sessions, slots, papers_range, max_parallel_sessions, working_groups, np, npMax, session_groups = data_for_2021()
 else:
     print("The data available for 2024 , 2023 , 2022 and 2021 only")
     sys.exit(1)
@@ -86,14 +69,8 @@ def decode_var_x(x, slots, papers_range_length):
 max_var_x = var_x(conference_sessions, slots, length_of_paper_range)
 
 
-# Function to compute variable index for session-slot (z variable)
-def var_z(s, c): 
-    return max_var_x + (s - 1) * slots + c
 
-# Define the last variable 
-max_var_z = var_z(conference_sessions, slots)   
-
-y_var = max_var_z  
+y_var = max_var_x  
 
 
 
@@ -143,10 +120,11 @@ for s in range(1, conference_sessions + 1):
 
 # Fourth Constraint: Number of parallel sessions is not exceeded for each slot
 for c in range(1, slots + 1):
-    neg_z_vars = []
+    x_vars = []
     for s in range(1, conference_sessions + 1):
-        neg_z_vars.append(-var_z(s, c))
-    atmost_clause = CardEnc.atmost(lits=neg_z_vars, bound=max_parallel_sessions, top_id=y_var, encoding=globalEncType)
+        for l in range(1,length_of_paper_range+1):
+            x_vars.append(var_x(s,c,l))
+    atmost_clause = CardEnc.atmost(lits=x_vars, bound=max_parallel_sessions, top_id=y_var, encoding=globalEncType)
     y_var=atmost_clause.nv
     constraints.extend(atmost_clause.clauses)
 ####################################################################################
@@ -155,30 +133,17 @@ for c in range(1, slots + 1):
 
 
 # Implementing the equivalence transformation for session-slot (z variable)
-for s in range(1, conference_sessions + 1):
-    for c in range(1, slots + 1):
-        z_var = var_z(s, c)
-        x_vars=[]
-        for l in range(1,length_of_paper_range+1):
-            x_vars.append(var_x(s, c, l))
-        or_clause = x_vars + [z_var]
-        constraints.append(or_clause)
+# for s in range(1, conference_sessions + 1):
+#     for c in range(1, slots + 1):
+#         z_var = var_z(s, c)
+#         x_vars=[]
+#         for l in range(1,length_of_paper_range+1):
+#             x_vars.append(var_x(s, c, l))
+#         or_clause = x_vars + [z_var]
+#         constraints.append(or_clause)
 
-        for x in x_vars:
-            constraints.append([-z_var, -x])
-####################################################################################
-
-
-
-
-# constraint test
-####################################################################################
-# for s in range(1, conference_sessions+1):
-#     if (np[s-1]<6): 
-#         for c in range(1,slots+1):
-#             for l in range(1,length_of_paper_range+1):
-#                 if (papers_range[l-1]!=np[s-1]):
-#                     constraints.append([-var_x(s,c,l)])
+#         for x in x_vars:
+#             constraints.append([-z_var, -x])
 ####################################################################################
             
 
@@ -197,23 +162,22 @@ for s1 in range(1, conference_sessions + 1):
         # For each slot, check if the common groups between these two sessions lead to a conflict
         for c in range(1, slots + 1):
             for g in common_groups:
-                # Create a new variable for each potential conflict (increment y_var)
-                y_var = y_var + 1
-                # Add a soft constraint for this potential conflict with a weight of 1.
-                # This means the solver will try to avoid this situation but can still accept it at a cost
-                constraints.append([-y_var], weight=1)  
-                # Hard Constraint : Add a constraint to indicate a conflict if both sessions s1 and s2 are scheduled in the same slot c. 
-                constraints.append([var_z(s1,c),var_z(s2,c),y_var])
+                for l in range(1 , length_of_paper_range + 1):
+                    # Create a new variable for each potential conflict (increment y_var)
+                    y_var = y_var + 1
+                    # Add a soft constraint for this potential conflict with a weight of 1.
+                    # This means the solver will try to avoid this situation but can still accept it at a cost
+                    constraints.append([-y_var], weight=1)  
+                    # Hard Constraint : Add a constraint to indicate a conflict if both sessions s1 and s2 are scheduled in the same slot c. 
+                    constraints.append([var_x(s1,c,l),var_x(s2,c,l),y_var])
 ####################################################################################
 
 
 
 # Specific Constraint for Session 34:
 # This constraint ensures that session 34 is assigned only to slots 5, 6, or 7.
-if (data_set_choice=="2024"):
-    print((data_set_choice=="2024"))
-    for i in range (1,5):
-        constraints.append([var_z(34,i)])
+# for i in range (1,5):
+#     constraints.append([var_z(34,i)])
 # ####################################################################################
 
 constraints.to_file("instance/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.wcnf")
@@ -243,13 +207,13 @@ def display_assignments_by_slot_with_counts(model, slots, papers_range, conferen
 #         print('Model has cost:', solver.cost)
 #         # print('Model:', solver.model)
 
-# with RC2(constraints, solver="Cadical153") as solver:
-#     for model in solver.enumerate():
-#         print('Model has cost:', solver.cost)
-#         # print('Model:', solver.model)
+with RC2(constraints, solver="Cadical153") as solver:
+    for model in solver.enumerate():
+        print('Model has cost:', solver.cost)
+        # print('Model:', solver.model)
 
-#         display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions)
-#         break  
+        display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions)
+        break  
 
 def convert_cnf_format(old_file_path, new_file_path):
     with open(old_file_path, 'r') as old_file, open(new_file_path, 'w') as new_file:

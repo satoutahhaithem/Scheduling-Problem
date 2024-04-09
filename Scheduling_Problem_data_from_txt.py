@@ -217,8 +217,8 @@ for s1 in range(1, conference_sessions + 1):
 
 # Specific Constraint for Session 34:
 # This constraint ensures that session 34 is assigned only to slots 5, 6, or 7.
-for i in range (1,5):
-    constraints.append([var_z(34,i)])
+# for i in range (1,5):
+#     constraints.append([var_z(34,i)])
 ####################################################################################
 
 constraints.to_file("instanceYears_data_from_txt/instance"+yearRoadef+"/"+str(max_parallel_sessions)+"_session_file_"+yearRoadef+".wcnf")

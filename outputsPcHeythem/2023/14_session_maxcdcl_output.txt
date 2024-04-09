@@ -12,7 +12,7 @@ c Mono: 0, fixed: 0
 c |  Eliminated clauses:           0.56 Mb                                      |
 c Reduced to 9332 vars, 21409 cls (c/v ratio==2.3, grow=0)
 c No iterative elimination performed. (vars=9332, c/v ratio=2.3)
-c |  Simplification time:          0.07 s                                       |
+c |  Simplification time:          0.08 s                                       |
 c |                                                                             |
 c ============================[ Search Statistics ]==============================
 c | Conflicts |          ORIGINAL         |          LEARNT          | Progress |
