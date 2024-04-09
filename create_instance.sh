@@ -1,10 +1,10 @@
 #!/bin/bash
-yearRodef="2022"
+yearRodef="2021"
 source /home/haithem-sattoutah/haithemVirtualEnv/bin/activate
 
 # Define the session ranges for each year
 max_parallel_sessions_range_2024=($(seq 16 -1 9))
-max_parallel_sessions_range_2023=($(seq 20 -1 11))
+max_parallel_sessions_range_2023=($(seq 20 -1 12))
 max_parallel_sessions_range_2022=($(seq 15 -1 11))
 max_parallel_sessions_range_2021=($(seq 11 -1 3))
 
