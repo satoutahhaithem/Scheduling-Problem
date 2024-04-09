@@ -7,7 +7,7 @@ c |                                                                             
 c initial UB: 9223372036854775807
 c |  Number of variables:         49917                                         |
 c |  Number of clauses:           72984                                         |
-c |  Parse time:                   0.02 s                                       |
+c |  Parse time:                   0.01 s                                       |
 c Mono: 0, fixed: 0
 c |  Eliminated clauses:           0.56 Mb                                      |
 c Reduced to 9406 vars, 21531 cls (c/v ratio==2.3, grow=0)
@@ -188,12 +188,12 @@ c ==============================================================================
 c initCost: 0, fixedBySearch: 0, optimal: 9, maxsat: 509, hardConflicts: 1266101
 c nbLK: 11872085, nbSuccLK: 8458848(71.25%), nbLKup: 6848028870(644.14%), hardens 670787 (fixed 652152691), dynVars 2339, shorten: 0
 c restarts              : 32028
-c conflicts             : 9927726        (2879 /sec)
-c decisions             : 16614303       (0.00 % random) (4818 /sec)
-c propagations          : 1063133491     (308328 /sec)
+c conflicts             : 9927726        (2941 /sec)
+c decisions             : 16614303       (0.00 % random) (4921 /sec)
+c propagations          : 1063133491     (314917 /sec)
 c conflict literals     : 625980986      (22.82 % deleted)
 c Memory used           : 227.00 MB
-c CPU time              : 3448.06 s
+c CPU time              : 3375.92 s
 c nbSimplifyAll         : 128
 c s_propagations        : 27319861    
 c s_cost_ratio          : 2.57%

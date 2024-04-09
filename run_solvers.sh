@@ -119,7 +119,7 @@ yearRodef="2021"
 # time_dir="TimeSolver/${yearRodef}"
 output_dir="outputsPcHeythem/${yearRodef}"
 time_dir="TimeSolverPcHeythem/${yearRodef}"
-for max_parallel_sessions in {10..3}; do
+for max_parallel_sessions in {10..4}; do
     cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
     cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
