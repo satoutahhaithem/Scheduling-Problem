@@ -1,0 +1,1 @@
+This excutable of maxcdcl is from maxsat evaluation 2023

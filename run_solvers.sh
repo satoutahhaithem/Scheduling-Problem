@@ -14,7 +14,7 @@ evalMaxSatFolder="EvalMaxSAT/bin/EvalMaxSAT"
 maxcdclFolder="./MaxCDCL/bin/maxcdcl-scip-maxhs"
 
 chmod +x "$solver_dir/EvalMaxSAT"
-chmod +x "$solver_dir/maxcdcl_static"
+chmod +x "$solver_dir/maxcdcl"
 chmod +x "$solver_dir/open-wbo"
 chmod +x "$evalMaxSatFolder"
 chmod +x "$maxcdclFolder"
@@ -63,7 +63,7 @@ chmod +x "$maxcdclFolder"
 #         } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
 
 #         { 
-#             time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
+#             time timeout "$timeout_duration" "$solver_dir/maxcdcl" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
 #         } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
 
 #         { 
@@ -125,7 +125,7 @@ for max_parallel_sessions in "${max_parallel_sessions_range[@]}";  do
     # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
 
     { 
-        time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
+        time timeout "$timeout_duration" "$solver_dir/maxcdcl" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
     } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
 
 
