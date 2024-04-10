@@ -1,5 +1,5 @@
 #!/bin/bash
-yearRodef="2021"
+yearRodef="2022"
 source /home/haithem-sattoutah/haithemVirtualEnv/bin/activate
 
 # Define the session ranges for each year

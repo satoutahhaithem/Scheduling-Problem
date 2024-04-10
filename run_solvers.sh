@@ -81,9 +81,9 @@ for max_parallel_sessions in {15..11}; do
 
     # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
 
-    { 
-        time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
-    } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
+    # { 
+    #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
+    # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
 
 
     { 
