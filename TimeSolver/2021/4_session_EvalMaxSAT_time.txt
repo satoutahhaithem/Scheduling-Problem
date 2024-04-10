@@ -1,0 +1,6 @@
+file: File does not exist: instance/2021/4_session_file_new_format.wcnf
+Run with --help for more information.
+
+real	0m0.009s
+user	0m0.007s
+sys	0m0.001s

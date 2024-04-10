@@ -22,16 +22,38 @@ chmod +x "$maxcdclFolder"
 
 
 # Loop through the years and loop through all the instance 
-# for yearRodef in {2022..2024}; do
+# for yearRodef in {2021..2024}; do
 #     output_dir="outputs/${yearRodef}"
 #     time_dir="TimeSolver/${yearRodef}"
+#     max_parallel_sessions_range_2024=($(seq 16 -1 9))
+#     max_parallel_sessions_range_2023=($(seq 20 -1 12))
+#     max_parallel_sessions_range_2022=($(seq 15 -1 11))
+#     max_parallel_sessions_range_2021=($(seq 11 -1 3))
+#     case $yearRodef in
+#         2024)
+#             max_parallel_sessions_range=("${max_parallel_sessions_range_2024[@]}")
+#             ;;
+#         2023)
+#             max_parallel_sessions_range=("${max_parallel_sessions_range_2023[@]}")
+#             ;;
+#         2022)
+#             max_parallel_sessions_range=("${max_parallel_sessions_range_2022[@]}")
+#             ;;
+#         2021)
+#             max_parallel_sessions_range=("${max_parallel_sessions_range_2021[@]}")
+#             ;;
+#         *)
+#             echo "Year not supported"
+#             exit 1
+#     esac
+
 
 #     # Ensure directories exist
-#     mkdir -p "$output_dir"
-#     mkdir -p "$time_dir"
+#     # mkdir -p "$output_dir"
+#     # mkdir -p "$time_dir"
 
 #     # all the instance of one year
-#     for max_parallel_sessions in 15 14 13 12 11 10 9; do
+#     for max_parallel_sessions in "${max_parallel_sessions_range[@]}"; do
 #         cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
 #         cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
@@ -70,20 +92,41 @@ chmod +x "$maxcdclFolder"
 
 # all the instance of one year
 ############################################################################################################
-yearRodef="2022"
-# output_dir="outputs/${yearRodef}"
-# time_dir="TimeSolver/${yearRodef}"
-output_dir="outputsPcHeythem/${yearRodef}"
-time_dir="TimeSolverPcHeythem/${yearRodef}"
-for max_parallel_sessions in {15..11}; do
+yearRodef="2021"
+max_parallel_sessions_range_2024=($(seq 16 -1 9))
+max_parallel_sessions_range_2023=($(seq 20 -1 12))
+max_parallel_sessions_range_2022=($(seq 15 -1 11))
+max_parallel_sessions_range_2021=($(seq 11 -1 5))
+case $yearRodef in
+    2024)
+        max_parallel_sessions_range=("${max_parallel_sessions_range_2024[@]}")
+        ;;
+    2023)
+        max_parallel_sessions_range=("${max_parallel_sessions_range_2023[@]}")
+        ;;
+    2022)
+        max_parallel_sessions_range=("${max_parallel_sessions_range_2022[@]}")
+        ;;
+    2021)
+        max_parallel_sessions_range=("${max_parallel_sessions_range_2021[@]}")
+        ;;
+    *)
+        echo "Year not supported"
+        exit 1
+esac
+output_dir="outputs/${yearRodef}"
+time_dir="TimeSolver/${yearRodef}"
+# output_dir="outputsPcHeythem/${yearRodef}"
+# time_dir="TimeSolverPcHeythem/${yearRodef}"
+for max_parallel_sessions in "${max_parallel_sessions_range[@]}";  do
     cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
     cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
     # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
 
-    # { 
-    #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
-    # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
+    { 
+        time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_output.txt"
+    } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
 
 
     { 

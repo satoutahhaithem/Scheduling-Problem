@@ -52,11 +52,11 @@ case $yearRodef in
 esac
 # output_dir="outputs/${yearRodef}"
 # time_dir="TimeSolver/${yearRodef}"
-output_dir="outputsPcHeythem/${yearRodef}/sansZ"
-time_dir="TimeSolverPcHeythem/${yearRodef}/sansZ"
+output_dir="outputsPcHeythemSansZ/${yearRodef}"
+time_dir="TimeSolverPcHeythemSansZ/${yearRodef}"
 for max_parallel_sessions in "${max_parallel_sessions_range[@]}"; do
-    cnf_file="instance/${yearRodef}/sansZ/${max_parallel_sessions}_session_file_new_format.wcnf"
-    cnf_file_old_format="instance/${yearRodef}/sansZ/${max_parallel_sessions}_session_file.wcnf"
+    cnf_file="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
+    cnf_file_old_format="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
     # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
 

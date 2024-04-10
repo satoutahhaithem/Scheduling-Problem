@@ -200,7 +200,7 @@ if (data_set_choice=="2024"):
             constraints.append([-var_x(34,i,l)])
 # ####################################################################################
 
-constraints.to_file("instance/"+data_set_choice+"/sansZ/"+str(max_parallel_sessions)+"_session_file.wcnf")
+constraints.to_file("instanceSansZ/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.wcnf")
 
 
 
@@ -248,8 +248,8 @@ def convert_cnf_format(old_file_path, new_file_path):
                 new_file.write(line)
 
 # Specify the old and new file paths
-old_file_path = "./instance/"+data_set_choice+"/sansZ/"+str(max_parallel_sessions)+"_session_file.wcnf"
-new_file_path = "./instance/"+data_set_choice+"/sansZ/"+str(max_parallel_sessions)+'_session_file_new_format.wcnf'
+old_file_path = "./instanceSansZ/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.wcnf"
+new_file_path = "./instanceSansZ/"+data_set_choice+"/"+str(max_parallel_sessions)+'_session_file_new_format.wcnf'
 
 # Call the function to convert the file format
 convert_cnf_format(old_file_path, new_file_path)

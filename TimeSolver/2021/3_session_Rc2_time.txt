@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/home/haithem-sattoutah/haithemVirtualEnv/bin/rc2.py", line 1735, in <module>
+    formula = WCNFPlus(from_file=files[0])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haithem-sattoutah/haithemVirtualEnv/lib/python3.11/site-packages/pysat/formula.py", line 4720, in __init__
+    super(WCNFPlus, self).__init__(from_file=from_file, from_fp=from_fp,
+  File "/home/haithem-sattoutah/haithemVirtualEnv/lib/python3.11/site-packages/pysat/formula.py", line 3611, in __init__
+    self.from_file(from_file, comment_lead, compressed_with='use_ext')
+  File "/home/haithem-sattoutah/haithemVirtualEnv/lib/python3.11/site-packages/pysat/formula.py", line 3658, in from_file
+    with FileObject(fname, mode='r', compression=compressed_with) as fobj:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/haithem-sattoutah/haithemVirtualEnv/lib/python3.11/site-packages/pysat/_fileio.py", line 108, in __init__
+    self.open(name, mode=mode, compression=compression)
+  File "/home/haithem-sattoutah/haithemVirtualEnv/lib/python3.11/site-packages/pysat/_fileio.py", line 123, in open
+    self.fp = open(name, mode)
+              ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'instance/2021/3_session_file.wcnf'
+
+real	0m0.120s
+user	0m0.116s
+sys	0m0.004s
