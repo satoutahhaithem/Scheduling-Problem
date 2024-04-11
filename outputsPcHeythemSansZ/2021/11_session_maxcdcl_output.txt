@@ -1,0 +1,69 @@
+c This is COMiniSatPS.
+c WARNING: for repeatability, setting FPU to use double precision
+c initial UB: 9223372036854775807
+c initial LB: 0
+c ============================[ Problem Statistics ]=============================
+c |                                                                             |
+c initial UB: 9223372036854775807
+c |  Number of variables:         72475                                         |
+c |  Number of clauses:          105560                                         |
+c |  Parse time:                   0.03 s                                       |
+c Mono: 0, fixed: 0
+c |  Eliminated clauses:           0.75 Mb                                      |
+c Reduced to 9991 vars, 23388 cls (c/v ratio==2.3, grow=0)
+c No iterative elimination performed. (vars=9991, c/v ratio=2.3)
+c |  Simplification time:          0.08 s                                       |
+c |                                                                             |
+c ============================[ Search Statistics ]==============================
+c | Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+c |           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+c ===============================================================================
+c nb soft clauses: 264, of which 264 unit, 0 nonUnit and 0 empty
+c total nb of literals: 83807
+c conflLits 0, conflLits2 0, nbFailedLits 0, fixedVarsBypreproc 0, totalFixedVars 11807
+c 0 isets by partition with total size 0 among the 0 soft lits with nonNeibors
+c finally, there are 0 isets (nb unitIsets: 0) with derived cost 0
+c 0 conflict sets found with length 0
+c fixedCostBySearch 0, nbSatSoftLits 0, derivedCost 0,ttlFixedVars 11807(72475), objForSearch: 264
+
+c variable elimination before search: fixedVars 11807(over 72475), clauses 20722, softLits 264
+
+c provided LB: 0
+c no UB provided, search from scratch...
+
+c fixedCostBySearch 0, nbSatSoftLits 0, derivedCost 0,ttlFixedVars 11964(72475), objForSearch: 264
+c starting search with 14236 original clauses and 264 softLits...
+
+c UB=1 succs, confls=1229, hconfls=1229, core 327, tier2 256, local 751,  0 soft cls unsat (0 at L0), 12236 fixed vars at L0, softCnfl 0, nbFlyRd 980, nbFixedLH 0, nbCompL 0
+c nbHardens 1 (fixed 264), shorten: 0, prunedLB 0.00, dev 0.00, succRate 0.00, nbSucc 0, lk: 1
+c shorten: 0, quasiC: 0 (fixed: 0), fsblEq 0, nbEqUse 0, nbSoftEq 0
+
+
+c ttl#Cnfls 0, avgL 0.00, ttl#CnflFl 0, avgLFl 0.00(ttl 0), ttl#CnflsL 0(0.000), ttl#CnflsFlL 0(0.000)
+
+o 0
+c ends of initiationization by VSIDS at 1229 conflicts with init 8771
+
+c UB=0 succ, confls=1229 and hconfls=1229 with 0 soft clauses unsat (0 at level 0) and 12236 fixed vars at level 0,  prunedLB 0.00, dev 0.00, succRate 0.00, nbSucc 0, shortened : 0
+
+c ttl#Cnfls 0, avgL 0.00, ttl#CnflFl 0, avgLFl 0.00(ttl 0), ttl#CnflsL 0(0.000), ttl#CnflsFlL 0(0.000)
+
+c ===============================================================================
+c initCost: 0, fixedBySearch: 0, optimal: 0, maxsat: 264, hardConflicts: 1229
+c nbLK: 1, nbSuccLK: 0(0.00%), nbLKup: 264(0.28%), hardens 1 (fixed 264), dynVars 0, shorten: 0
+c ttl nbCnfls 0, avgL 0.00, ttlnbCnflFl 0, avgLFl 0.00, ttl nbCnflsL 0(0.00), ttlNbCnflsFlL 0(0.000)
+c #skip 0, #skipBypr 0, skipLA2 0, #FurtherLA 0, #SuccFurtherLA 0, avgConfls2find 0.00, avgcConflsFound 0.00
+c restarts              : 3
+c conflicts             : 1229           (5386 /sec)
+c decisions             : 3325           (0.00 % random) (14571 /sec)
+c propagations          : 95328          (417753 /sec)
+c conflict literals     : 21365          (47.35 % deleted)
+c Memory used           : 53.00 MB
+c CPU time              : 0.228192 s
+c nbSimplifyAll         : 0
+c s_propagations        : 1477578     
+c s_cost_ratio          : 1549.99%
+
+s OPTIMUM FOUND
+v 
+c solution checked against the original DIMACS file with correct cost 0 over the total cost 264

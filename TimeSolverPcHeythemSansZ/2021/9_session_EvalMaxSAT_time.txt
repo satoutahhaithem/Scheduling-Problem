@@ -1,6 +1,6 @@
 timeout: failed to run command ‘./loandra’: No such file or directory
 timeout: failed to run command ‘./nuwls’: No such file or directory
 
-real	0m1.447s
-user	0m1.330s
-sys	0m0.117s
+real	0m1.401s
+user	0m1.234s
+sys	0m0.165s
