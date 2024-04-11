@@ -1,0 +1,138 @@
+c This is COMiniSatPS.
+c WARNING: for repeatability, setting FPU to use double precision
+c initial UB: 9223372036854775807
+c initial LB: 0
+c ============================[ Problem Statistics ]=============================
+c |                                                                             |
+c initial UB: 9223372036854775807
+c |  Number of variables:         45112                                         |
+c |  Number of clauses:           66067                                         |
+c |  Parse time:                   0.02 s                                       |
+c Mono: 0, fixed: 0
+c |  Eliminated clauses:           0.51 Mb                                      |
+c Reduced to 8515 vars, 19896 cls (c/v ratio==2.3, grow=0)
+c No iterative elimination performed. (vars=8515, c/v ratio=2.3)
+c |  Simplification time:          0.08 s                                       |
+c |                                                                             |
+c ============================[ Search Statistics ]==============================
+c | Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+c |           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+c ===============================================================================
+c nb soft clauses: 308, of which 308 unit, 0 nonUnit and 0 empty
+c total nb of literals: 71618
+c conflLits 0, conflLits2 0, nbFailedLits 0, fixedVarsBypreproc 0, totalFixedVars 10476
+c 0 isets by partition with total size 0 among the 0 soft lits with nonNeibors
+c finally, there are 0 isets (nb unitIsets: 0) with derived cost 0
+c 0 conflict sets found with length 0
+c fixedCostBySearch 0, nbSatSoftLits 0, derivedCost 0,ttlFixedVars 10476(45112), objForSearch: 308
+
+c variable elimination before search: fixedVars 10476(over 45112), clauses 17631, softLits 308
+c original clauses 16927, learnts_core 0, learnts_tier2 0, learnts_local 0
+c 435 clauses modified by 41 eqLits (debut 0, total 41) with 82 eqUse and 0 rmSoft, 0 eqSoft
+
+c provided LB: 0
+c no UB provided, search from scratch...
+
+c fixedCostBySearch 0, nbSatSoftLits 0, derivedCost 0,ttlFixedVars 10559(45112), objForSearch: 308
+c starting search with 13808 original clauses and 308 softLits...
+
+c ends of initiationization by VSIDS at 577 conflicts with init 9423
+
+c UB=1 fails, cnfls=577, hcnfls=577, core 365, tier2 131, local 156, quasiC: 0 (fixed: 0), nbCompL 0
+c prunedLB 0.00, dev 0.00, succRate 0.00, nbSucc 0, nbHardens 1 (fixed 308), lk: 1, shorten: 0, pureSo 0, nbFlyRd 742, nbFixedLH 0
+
+c ttl#Cnfls 0, avgL 0.00, ttl#CnflFl 0, avgLFl 0.00(ttl 0), ttl#CnflsL 0(0.000), ttl#CnflsFlL 0(0.000)
+
+
+c activeSoftLits 308, Cardinality clauses: 921 for UB 2, nbFalse 0
+c ends of initiationization by VSIDS at 1380 conflicts with init 9197
+
+c UB=2 fails, cnfls=1380, hcnfls=1330, core 637, tier2 150, local 331, quasiC: 77 (fixed: 10986), nbCompL 0
+c prunedLB 2.00, dev 0.00, succRate 0.24, nbSucc 50, nbHardens 44 (fixed 11294), lk: 210, shorten: 0, pureSo 0, nbFlyRd 766, nbFixedLH 27
+
+c ttl#Cnfls 100, avgL 5.05, ttl#CnflFl 0, avgLFl 0.00(ttl 0), ttl#CnflsL 1(0.010), ttl#CnflsFlL 0(0.000)
+
+
+c activeSoftLits 308, Cardinality clauses: 1967 for UB 4, nbFalse 0
+c original clauses 13770, learnts_core 531, learnts_tier2 179, learnts_local 636
+c 117 clauses modified by 8 eqLits (debut 41, total 49) with 30 eqUse and 0 rmSoft, 0 eqSoft
+c original clauses 13094, learnts_core 1503, learnts_tier2 601, learnts_local 1875
+c 2238 clauses modified by 10 eqLits (debut 49, total 59) with 18 eqUse and 0 rmSoft, 0 eqSoft
+c ***** 
+c ends of initiationization by VSIDS at 7452 conflicts with init 3928
+
+c UB=4 fails, cnfls=7452, hcnfls=4270, core 6690, tier2 1988, local 2176, quasiC: 1385 (fixed: 244085), nbCompL 0
+c prunedLB 2.65, dev 0.65, succRate 0.58, nbSucc 2834, nbHardens 919 (fixed 354536), lk: 4847, shorten: 0, pureSo 298, nbFlyRd 834, nbFixedLH 291
+
+c ttl#Cnfls 7499, avgL 4.18, ttl#CnflFl 440, avgLFl 8.85(ttl 3895), ttl#CnflsL 748(0.100), ttl#CnflsFlL 19(0.043)
+
+
+c activeSoftLits 308, Cardinality clauses: 2692 for UB 8, nbFalse 0
+c UB=8 succs, confls=8063, hconfls=4881, core 258, tier2 155, local 199,  7 soft cls unsat (0 at L0), 10561 fixed vars at L0, softCnfl 298, nbFlyRd 842, nbFixedLH 292, nbCompL 0
+c nbHardens 931 (fixed 355672), shorten: 0, prunedLB 0.00, dev 0.00, succRate 0.00, nbSucc 0, lk: 74
+c shorten: 0, quasiC: 1396 (fixed: 244917), fsblEq 41, nbEqUse 130, nbSoftEq 0
+
+
+c ttl#Cnfls 0, avgL 0.00, ttl#CnflFl 0, avgLFl 0.00(ttl 0), ttl#CnflsL 0(0.000), ttl#CnflsFlL 0(0.000)
+
+o 7
+c ends of initiationization by VSIDS at 8063 conflicts with init 9389
+
+
+c activeSoftLits 308, Cardinality clauses: 2693 for UB 7, nbFalse 0
+c UB=7 succs, confls=8453, hconfls=5248, core 395, tier2 259, local 378,  6 soft cls unsat (0 at L0), 10561 fixed vars at L0, softCnfl 299, nbFlyRd 844, nbFixedLH 300, nbCompL 0
+c nbHardens 938 (fixed 357253), shorten: 0, prunedLB 3.91, dev 0.95, succRate 0.20, nbSucc 22, lk: 110
+c shorten: 0, quasiC: 1409 (fixed: 246456), fsblEq 41, nbEqUse 130, nbSoftEq 0
+
+
+c ttl#Cnfls 86, avgL 2.72, ttl#CnflFl 30, avgLFl 7.07(ttl 212), ttl#CnflsL 9(0.105), ttl#CnflsFlL 1(0.033)
+
+o 6
+
+c activeSoftLits 308, Cardinality clauses: 2693 for UB 6, nbFalse 0
+c original clauses 13800, learnts_core 360, learnts_tier2 229, learnts_local 378
+c 68 clauses modified by 6 eqLits (debut 41, total 47) with 26 eqUse and 0 rmSoft, 0 eqSoft
+c UB=6 succs, confls=8471, hconfls=5266, core 336, tier2 199, local 348,  5 soft cls unsat (0 at L0), 10658 fixed vars at L0, softCnfl 299, nbFlyRd 861, nbFixedLH 300, nbCompL 0
+c nbHardens 939 (fixed 357557), shorten: 0, prunedLB 0.00, dev 0.00, succRate 0.00, nbSucc 0, lk: 7
+c shorten: 0, quasiC: 1412 (fixed: 246756), fsblEq 49, nbEqUse 156, nbSoftEq 0
+
+
+c ttl#Cnfls 0, avgL 0.00, ttl#CnflFl 7, avgLFl 7.43(ttl 52), ttl#CnflsL 0(0.000), ttl#CnflsFlL 0(0.000)
+
+o 5
+c 43 clauses modified by 4 eqLits (debut 47, total 51) with 7 eqUse and 0 rmSoft, 0 eqSoft
+
+c activeSoftLits 308, Cardinality clauses: 2694 for UB 5, nbFalse 0
+c UB=5 succs, confls=9831, hconfls=5966, core 1664, tier2 597, local 934,  4 soft cls unsat (0 at L0), 10660 fixed vars at L0, softCnfl 363, nbFlyRd 871, nbFixedLH 439, nbCompL 0
+c nbHardens 1114 (fixed 441937), shorten: 0, prunedLB 2.80, dev 0.76, succRate 0.49, nbSucc 596, lk: 1214
+c shorten: 0, quasiC: 1737 (fixed: 306996), fsblEq 51, nbEqUse 163, nbSoftEq 0
+
+
+c ttl#Cnfls 1669, avgL 3.74, ttl#CnflFl 198, avgLFl 7.35(ttl 1456), ttl#CnflsL 266(0.159), ttl#CnflsFlL 6(0.030)
+
+o 4
+c LRB phase 1: conflicts 1768, phase 20000000, starts 13, UP 269092
+c UB=4 fails, cnfls=9831, hcnfls=5966, core 1664, tier2 597, local 934, quasiC: 1737 (fixed: 306996), nbCompL 0
+c prunedLB 0.00, dev 0.00, succRate 0.00, nbSucc 0, nbHardens 1114 (fixed 441937), lk: 0, shorten: 0, pureSo 363, nbFlyRd 871, nbFixedLH 439
+
+c ttl#Cnfls 0, avgL 0.00, ttl#CnflFl 0, avgLFl 0.00(ttl 0), ttl#CnflsL 0(0.000), ttl#CnflsFlL 0(0.000)
+
+c ===============================================================================
+c initCost: 0, fixedBySearch: 0, optimal: 4, maxsat: 304, hardConflicts: 5966
+c nbLK: 6463, nbSuccLK: 3502(54.19%), nbLKup: 1457229(114.92%), hardens 1114 (fixed 441937), dynVars 1279, shorten: 0
+c ttl nbCnfls 9354, avgL 4.10, ttlnbCnflFl 675, avgLFl 8.32, ttl nbCnflsL 1024(0.11), ttlNbCnflsFlL 26(0.039)
+c #skip 14439, #skipBypr 695, skipLA2 756, #FurtherLA 101, #SuccFurtherLA 31, avgConfls2find 1.00, avgcConflsFound 1.00
+c restarts              : 49
+c conflicts             : 9831           (12436 /sec)
+c decisions             : 24882          (0.00 % random) (31476 /sec)
+c propagations          : 1268050        (1604117 /sec)
+c conflict literals     : 180295         (34.51 % deleted)
+c Memory used           : 40.00 MB
+c CPU time              : 0.790497 s
+c nbSimplifyAll         : 3
+c s_propagations        : 1227371     
+c s_cost_ratio          : 96.79%
+
+s OPTIMUM FOUND
+v 
+c solution checked against the original DIMACS file with correct cost 4 over the total cost 308
