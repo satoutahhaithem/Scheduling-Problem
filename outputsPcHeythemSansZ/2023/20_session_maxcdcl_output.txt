@@ -76,3 +76,18 @@ c ttl#Cnfls 154822, avgL 6.32, ttl#CnflFl 8280, avgLFl 14.79(ttl 122465), ttl#Cn
 c activeSoftLits 518, Cardinality clauses: 4518 for UB 8, nbFalse 0
 c ends of initiationization by VSIDS at 152068 conflicts with init -19
 
+c original clauses 23618, learnts_core 3576, learnts_tier2 1839, learnts_local 15124
+c 154 clauses modified by 1 eqLits (debut 0, total 1) with 23 eqUse and 0 rmSoft, 0 eqSoft
+c LRB phase 3: conflicts 170522, phase 20000000, starts 460, UP 20000064
+c VSIDS phase 1: conflicts 195608, phase 20000000, starts 987, UP 20063637
+c LRB phase 4: conflicts 372776, phase 40000000, starts 667, UP 40031289
+c VSIDS phase 2: conflicts 379943, phase 40000000, starts 1802, UP 40042739
+c original clauses 22434, learnts_core 58022, learnts_tier2 993, learnts_local 26526
+c 1224 clauses modified by 1 eqLits (debut 1, total 2) with 2 eqUse and 0 rmSoft, 0 eqSoft
+c LRB phase 5: conflicts 740555, phase 80000000, starts 1324, UP 80016387
+c VSIDS phase 3: conflicts 768675, phase 80000000, starts 3009, UP 80094852
+c LRB phase 6: conflicts 1461857, phase 160000000, starts 2282, UP 160044907
+c original clauses 22361, learnts_core 119603, learnts_tier2 442, learnts_local 25742
+c 1640 clauses modified by 2 eqLits (debut 2, total 4) with 2 eqUse and 0 rmSoft, 0 eqSoft
+c VSIDS phase 4: conflicts 1549220, phase 160000000, starts 5711, UP 160491111
+c LRB phase 7: conflicts 2672392, phase 320000000, starts 3647, UP 320088309
