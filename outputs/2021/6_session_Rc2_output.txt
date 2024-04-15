@@ -1,2 +1,1 @@
-s OPTIMUM FOUND
-o 0
+Model has cost: 0

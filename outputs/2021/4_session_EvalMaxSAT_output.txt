@@ -1,1 +1,1 @@
-c Total time : 0.00655464s
+c Total time : 0.00571638s

@@ -1,4 +1,5 @@
+Solvers/maxcdcl: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.38' not found (required by Solvers/maxcdcl)
 
-real	120m0,009s
-user	119m58,764s
-sys	0m0,900s
+real	0m0,001s
+user	0m0,001s
+sys	0m0,000s

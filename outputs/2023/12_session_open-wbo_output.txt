@@ -12,7 +12,7 @@ c |                                                                             
 c |  Problem Format:             MaxSAT                                                                   |
 c |  Problem Type:           Unweighted                                                                   |
 c |  Number of variables:         49917                                                                   |
-c |  Number of hard clauses:      74926                                                                   |
+c |  Number of hard clauses:      74922                                                                   |
 c |  Number of soft clauses:        518                                                                   |
 c |  Number of cardinality:           0                                                                   |
 c |  Number of PB :                   0                                                                   |

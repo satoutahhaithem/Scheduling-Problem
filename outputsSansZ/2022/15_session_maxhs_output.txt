@@ -1,0 +1,334 @@
+c MaxHS 4.0.0
+c Instance: instanceSansZ/2022/15_session_file.wcnf
+c Parameter Settings
+c ============================================
+c  A: General MaxHS Options
+c   fbeq = false, printOptions = true, printBstSoln = false, printSoln = false,
+c   printSoln-new-format = true, version = false, abstract-cores2greedy = false, tolerance = 1e-06,
+c   mem-lim = 2147483647, coretype = 0, cpu-lim = 2147483647, verb = 1,
+c   sverb = 0,
+c 
+c  B: MaxHS with abstractions Options
+c   abstract = true, 1st-abstract-gap = 5, abstract-gap = 1, exhaust-cpu-lim = 3,
+c   abs-cpu = 256, abstract-max-ave-size = 100, abstract-max_core_size = 1000, abstract-min-cores = 2,
+c   cplex-greedy = 0, abstract-greedy_cores = 2, abstract-cplex_cores = 2, abstract-minsize = 2,
+c  
+c  C: Disjoint Phase Options
+c   dsjnt = true, dsjnt-cpu-lim = 30, dsjnt-mus-cpu-lim = 10,
+c 
+c  D: Seeding Options
+c   seed-learnts = true, all-seeded_2nd_abs_cpu = 240, all-seeded-1st-abs-cpu = 60, all-seeded-1st-cplex-cpu = 100,
+c   seed_cpu_before_cplex = 200, seed-all-limit = 512, seed-max = 524288, seedtype = 3,
+c  
+c  E: Sequence of Sat Options
+c   lp-harden = true, find-forced = false, improve-model = false, use-ub-mipstart = true,
+c   optcores-cpu-lim = 10, max-cpu-improve-model = 10, max-cpu-before-cplex = 200, relaxfrac = 0.3,
+c   max-size-improve-model = -1, sort-assumps = 0, max-cores-before-cplex = 300, frac-rampup-end = 512,
+c   frac-rampup-start = 128, abstract-assumps = 1, nonopt = 3,
+c 
+c  F: Core Minimization Options
+c   mus-min-red = 0.1, mus-cpu-lim = 2.5, mintype = 1, mverb = 0,
+c  
+c  G: CPLEX Options
+c   cplex-tune = false, cplex-min-ticks = 4, cplex-threads = 1,
+c 
+c  H: CPLEX Solution Pool and Populate Options
+c   cplextime-pop-cpu-lim = 7.5, ub-conflicts = 1, cplex-solnpool-cap = 256, cplex-pop-nsoln = 256,
+c   cplex-populate = 1,
+c 
+c  I: Preprocessing Options
+c   mx-constrain-hs = true, mx-seed-mxes = true, simplify-only = false, wcnf-harden = true,
+c   wcnf-units = true, wcnf-eqs = true, preprocess = true, mx-cpu-lim = 15,
+c   mx-find-mxes = 2, mx-mem-lim = 1536,
+c 
+c  J: Debugging Options
+c   cplex-wrt-model = false, cplex-output = false, cplex-data-chk = true
+c ============================================
+c
+c Instance: instanceSansZ/2022/15_session_file.wcnf
+c Dimacs Vars: 58724
+c Dimacs Clauses: 94798
+c Dimacs Top: 881
+c HARD: #Clauses = 95122, Total Lits = 223938, Ave Len = 2.3542 #units = 1204
+c SOFT: #Clauses = 880, Total Lits = 880, Ave Len = 1.0000
+c Total Soft Clause Weight (+ basecost): 880 (+ 0)
+c SOFT%: 0.9166%
+c #distinct weights: 1, mean = 1.0000, std. dev = 0.0000, min = 1, max = 1
+c Total Clauses: 96002
+c Parse time: 0.009518
+c Wcnf Space Required: 0.0000MB
+c ================================
+c transitionWts = [ ] (0)
+c WCNF hardened 0 soft clauses
+c WCNF eqs: found additional units after scc 3605 pures 3605
+c WCNF units: found 14611 units
+c WCNF SCCs: found 0 strongly connected components
+c WCNF removed: 14611 variables
+c WCNF removed: 29639 hard clauses
+c WCNF removed: 73278 lits from hard clauses
+c WCNF removed: 0 soft clauses
+c WCNF removed: 0 lits from softs clauses
+c WCNF found 0 redundant hards and 0 duplicate or subsumed softs
+c WCNF mutexes: #mutexes found = 0
+c WCNF mx finder used 880 calls to UP engine
+c WCNF mutexes: original #softs 880 #softs after mx-transforms 880
+c WCNF mutexes: reduction in softs 0
+c After WCNF Simplification
+c HARD: #Clauses = 64279, Total Lits = 149456, Ave Len = 2.3251
+c SOFT: #Clauses = 880, Total Lits = 880, Ave Len = 1.0000
+c Total Soft Clause Weight (+ basecost): 880 (+ 0), Dimacs Top = 881
+c #distinct weights: 1, mean = 1.0000, std. dev = 0.0000, min = 1, max = 1
+c Total Clauses: 65159
+c Wcnf Space Required: 0.6154MB
+c ================================
+c Using IBM CPLEX version 22.1.1.0 under IBM's Academic Initiative licencing program
+c Before solving sat solver has 64279 clauses: 0 redundant, 64279 irredundant.
+c New UB found 60
+c Elapsed time 0.0557
+c Init Bnds: SAT Time 0.0403
+c Init Bnds: LB =0 UB = 60
+c Init Bnds: Forced 507 literals.
+c Eqseed start: sat solver has 64692 clauses: 1069 redundant, 63623 irredundant.
+c cadical simplify took 0.0008
+c fixed = 0 substitued = 0 eliminated = 0 total variables removed = 0 clauses in solver = 64761 clauses removed = 0
+c EqSeed: found 0 seedable constraints.
+c EqSeed: 0 cores 0 non-cores 0 mixed-cores 0 ordinary clauses
+c EqSeed: #seeded constraints 0
+c EqSeed: cores            0 Ave length 0.0000
+c EqSeed: non-cores        0 Ave length 0.0000
+c EqSeed: mixed cores      0 Ave length 0.0000
+c EqSeed: ordinary clauses 0 Ave length 0.0000
+c Disjoint Phase
+c New UB found 41
+c Elapsed time 0.9974
+c Dsjnt: #Cores 14 with total weight 14 LB 14 UB 41
+c Dsjnt: Avg Core Size 13.9286
+c Dsjnt: Time 0.9355
+c **********Iter: 0 Elapsed Time = 0.9976
+c CPLEX: += 4 forced bvars; (0 forced summation outputs)
+c CPLEX: += 10 Average size = 19.1000
+c Cplex solve passed UB = 41.000000 current LB = 0.000000
+c CPLEX returns incumbent with cost 14 and lower bound of 14 time = 0.0004
+c CPLEX found optimal solution to its current model
+c after CPLEX bnds: LB = 14 UB = 41 GAP =27
+c LP Bound delta = 14.000000 ub-lb gap = 27.000000 this iteration is good.
+c finding conflicts from cplex solution
+c Cplex concrete solution yielded 6 new conflicts
+c finding conflicts from greedy
+c Add to greedysolver 4 Forced bvars.
+c Greedy: iters=69 concrete conflicts=294 abstract conflicts=0
+c **********Iter: 1 Elapsed Time = 38.5532
+c CPLEX: += 300 Average size = 39.8533
+c Cplex solve passed UB = 41.000000 current LB = 14.000000
+c CPLEX returns incumbent with cost 18 and lower bound of 18 time = 0.4025
+c CPLEX found optimal solution to its current model
+c after CPLEX bnds: LB = 18 UB = 41 GAP =23
+c LP Bound delta = 1.151553 ub-lb gap = 23.000000 this iteration is good.
+c finding conflicts from cplex solution
+c Cplex concrete solution yielded 2 new conflicts
+c finding conflicts from greedy
+c Greedy: iters=86 concrete conflicts=298 abstract conflicts=0
+c **********Iter: 2 Elapsed Time = 92.3711
+c CPLEX: += 300 Average size = 41.1467
+c Cplex solve passed UB = 41.000000 current LB = 18.000000
+c found incumbent of obj cost = 18
+c CPLEX returns incumbent with cost 18 and lower bound of 18 time = 0.5718
+c CPLEX found optimal solution to its current model
+c after CPLEX bnds: LB = 18 UB = 41 GAP =23
+c LP Bound delta = 0.200966 ub-lb gap = 23.000000 this iteration is bad.
+c previous iteration was good.
+c finding conflicts from cplex solution
+c Cplex concrete solution yielded 3 new conflicts
+c finding conflicts from greedy
+c Greedy: iters=91 concrete conflicts=297 abstract conflicts=0
+c **********Iter: 3 Elapsed Time = 165.8985
+c CPLEX: += 300 Average size = 42.1733
+c Cplex solve passed UB = 41.000000 current LB = 18.000000
+c Cplex found better incumbent than UB (19.000000 < 41.000000)
+c Cplex found better incumbent than UB (19.000000 < 41.000000)
+c found incumbent of cost better than UB (= 41)
+c CPLEX returns incumbent with cost 19 and lower bound of 18 time = 4.0029
+c after CPLEX bnds: LB = 18 UB = 41 GAP =23
+c LP Bound delta = 0.034736 ub-lb gap = 23.000000 this iteration is bad.
+c previous iteration was bad.
+c Abstraction: computing an abstraction with 910 new cores
+c Abstraction: added 895807 new edges.
+c Abstraction: Cluster Iter 1. 9 clusters (mod 0.1745)
+c Abstraction: processing cluster of size 77
+c build_sum_1 found conflict. Size = 49
+c build_sum_1. assumps = [ -43104 -43108 -43112 -43116 -43008 -43119 -43125 -43129 -43132 -43134 -43137 -43358 -43014 -43106 -43123 -43347 -43349 -43353 -43357 -43359 -43107 -43120 -43361 -43118 -43113 -43117 -43109 -43121 ] (28) conflict = [ 42690 42986 42987 42989 42991 42992 42993 42995 42997 42999 43000 43001 43002 43003 43005 43007 43009 43010 43011 43012 43013 43015 43016 43017 43099 43101 43103 43105 43122 43124 ...] (49)
+c exhaustSum exhausted sum SRef(0) lb = 1
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(243041,SRef(0))
+c added to build_sum_1: assumps = [ -43104 -43108 -43112 -43116 -43008 -43119 -43125 -43129 -43132 -43134 -43137 -43358 -43014 -43106 -43123 -43347 -43349 -43353 -43357 -43359 -43107 -43120 -43361 -43118 -43113 -43117 -43109 -43121 -243041 ] (29)
+c exhaustSum exhausted sum SRef(1) lb = 0
+c exhaustSum exhausted sum SRef(2) lb = 1
+c Abstraction: 1. built sum 77 inputs, 1 true
+c Abstraction: processing cluster of size 8
+c build_sum_1 found conflict. Size = 8
+c build_sum_1. assumps = [ ] (0) conflict = [ 43090 43091 43092 43093 43094 43095 43096 43097 ] (8)
+c exhaustSum exhausted sum SRef(3) lb = 1
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(243884,SRef(3))
+c Abstraction: 2. built sum 8 inputs, 1 true
+c Abstraction: processing cluster of size 136
+c build_sum_1 found conflict. Size = 18
+c build_sum_1. assumps = [ -42800 -42788 -42790 -42796 -42801 -42642 -42674 -42791 -42793 -42795 -42797 -42799 -42675 -42878 -42880 -42882 -42884 -43026 -42658 -42888 -42877 -42885 -42887 -42610 -43027 -43052 -43056 -43060 -43062 -43064 ...] (118) conflict = [ 42554 42562 42570 42772 42777 42779 42780 42783 42789 42792 42794 42798 42876 42879 42881 42883 42886 42889 ] (18)
+c exhaustSum exhausted sum SRef(4) lb = 1
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(244077,SRef(4))
+c added to build_sum_1: assumps = [ -42800 -42788 -42790 -42796 -42801 -42642 -42674 -42791 -42793 -42795 -42797 -42799 -42675 -42878 -42880 -42882 -42884 -43026 -42658 -42888 -42877 -42885 -42887 -42610 -43027 -43052 -43056 -43060 -43062 -43064 ...] (119)
+c build_sum_1 found conflict. Size = 9
+c build_sum_1. assumps = [ -42801 -42791 -42797 -42675 -42878 -42880 -42882 -42884 -43026 -42658 -42888 -42877 -42885 -42887 -42610 -43027 -43052 -43056 -43060 -43062 -43064 -42643 -42659 -42774 -42776 -42778 -42782 -42784 -42773 -42775 ...] (110) conflict = [ 42642 42674 42788 42790 42793 42795 42796 42799 42800 ] (9)
+c exhaustSum exhausted sum SRef(5) lb = 1
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(244149,SRef(5))
+c added to build_sum_1: assumps = [ -42801 -42791 -42797 -42675 -42878 -42880 -42882 -42884 -43026 -42658 -42888 -42877 -42885 -42887 -42610 -43027 -43052 -43056 -43060 -43062 -43064 -42643 -42659 -42774 -42776 -42778 -42782 -42784 -42773 -42775 ...] (111)
+c build_sum_1 found conflict. Size = 9
+c build_sum_1. assumps = [ -42801 -42791 -42797 -43026 -42885 -42610 -43027 -43052 -43056 -43060 -43062 -43064 -42643 -42659 -42774 -42776 -42778 -42782 -42784 -42773 -42775 -42781 -42785 -42810 -42898 -42634 -42730 -43053 -43057 -43061 ...] (102) conflict = [ 42658 42675 42877 42878 42880 42882 42884 42887 42888 ] (9)
+c exhaustSum exhausted sum SRef(6) lb = 1
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(244213,SRef(6))
+c added to build_sum_1: assumps = [ -42801 -42791 -42797 -43026 -42885 -42610 -43027 -43052 -43056 -43060 -43062 -43064 -42643 -42659 -42774 -42776 -42778 -42782 -42784 -42773 -42775 -42781 -42785 -42810 -42898 -42634 -42730 -43053 -43057 -43061 ...] (103)
+c build_sum_1 found conflict. Size = 5
+c build_sum_1. assumps = [ -42801 -42610 -43027 -43052 -43056 -43060 -43062 -43064 -42643 -42659 -42774 -42776 -42778 -42782 -42784 -42773 -42775 -42781 -42785 -42810 -42898 -42634 -42730 -43053 -43057 -43061 -43063 -43065 -43076 -43080 ...] (98) conflict = [ 42791 42797 42885 43026 244077 ] (5)
+c exhaustSum exhausted sum SRef(7) lb = 0
+c exhaustSum exhausted sum SRef(8) lb = 2
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(244364,SRef(8))
+c added to build_sum_1: assumps = [ -42801 -42610 -43027 -43052 -43056 -43060 -43062 -43064 -42643 -42659 -42774 -42776 -42778 -42782 -42784 -42773 -42775 -42781 -42785 -42810 -42898 -42634 -42730 -43053 -43057 -43061 -43063 -43065 -43076 -43080 ...] (99)
+c build_sum_1 found conflict. Size = 45
+c build_sum_1. assumps = [ -43062 -43064 -42784 -42775 -42785 -42810 -42898 -42730 -43053 -43057 -43061 -43065 -43088 -42811 -42899 -43267 -43085 -43087 -43291 -42949 -43081 -42868 -42840 -42849 -42871 -42873 -43266 -43377 -42865 -43385 ...] (54) conflict = [ 42610 42634 42643 42659 42773 42774 42776 42778 42781 42782 42801 42837 42841 42845 42846 42848 42861 42864 42869 42870 42872 42925 42929 42933 42935 42936 42948 42952 42957 42958 ...] (45)
+c exhaustSum exhausted sum SRef(9) lb = 1
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(245212,SRef(9))
+c added to build_sum_1: assumps = [ -43062 -43064 -42784 -42775 -42785 -42810 -42898 -42730 -43053 -43057 -43061 -43065 -43088 -42811 -42899 -43267 -43085 -43087 -43291 -42949 -43081 -42868 -42840 -42849 -42871 -42873 -43266 -43377 -42865 -43385 ...] (55)
+c build_sum_1 found conflict. Size = 28
+c build_sum_1. assumps = [ -42785 -42898 -43065 -42811 -42899 -43267 -42949 -42849 -42873 -43266 -43089 -42731 -43383 -42928 -42937 -42755 -42836 -42847 -42953 -42961 -42932 -42754 -42959 -43290 -42956 -244364 -245212 ] (27) conflict = [ 42730 42775 42784 42810 42840 42844 42860 42865 42868 42871 42924 42934 43053 43057 43061 43062 43064 43077 43081 43085 43087 43088 43291 43377 43381 43385 244149 244213 ] (28)
+c exhaustSum exhausted sum SRef(10) lb = 0
+c exhaustSum exhausted sum SRef(11) lb = 2
+c exhaustSum exhausted sum SRef(12) lb = 3
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(245856,SRef(12))
+c added to build_sum_1: assumps = [ -42785 -42898 -43065 -42811 -42899 -43267 -42949 -42849 -42873 -43266 -43089 -42731 -43383 -42928 -42937 -42755 -42836 -42847 -42953 -42961 -42932 -42754 -42959 -43290 -42956 -244364 -245212 -245856 ] (28)
+c build_sum_1 found conflict. Size = 2
+c build_sum_1. assumps = [ -42785 -42898 -43065 -42811 -42899 -43267 -42949 -42849 -42873 -43266 -43089 -42731 -43383 -42928 -42937 -42755 -42836 -42847 -42953 -42961 -42932 -42754 -42959 -43290 -42956 -245856 ] (26) conflict = [ 244364 245212 ] (2)
+c exhaustSum exhausted sum SRef(13) lb = 5
+c exhaustSum found 2 addition true outputs
+c Sum from conflict = SOut(246201,SRef(13))
+c added to build_sum_1: assumps = [ -42785 -42898 -43065 -42811 -42899 -43267 -42949 -42849 -42873 -43266 -43089 -42731 -43383 -42928 -42937 -42755 -42836 -42847 -42953 -42961 -42932 -42754 -42959 -43290 -42956 -245856 -246201 ] (27)
+c build_sum_1 found conflict. Size = 3
+c build_sum_1. assumps = [ -42785 -43065 -42811 -42899 -43267 -42949 -42849 -42873 -43266 -43089 -42731 -43383 -42928 -42937 -42755 -42836 -42847 -42953 -42961 -42932 -42754 -42959 -43290 -42956 ] (24) conflict = [ 42898 245856 246201 ] (3)
+c exhaustSum exhausted sum SRef(14) lb = 0
+c exhaustSum exhausted sum SRef(15) lb = 9
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(247364,SRef(16))
+c added to build_sum_1: assumps = [ -42785 -43065 -42811 -42899 -43267 -42949 -42849 -42873 -43266 -43089 -42731 -43383 -42928 -42937 -42755 -42836 -42847 -42953 -42961 -42932 -42754 -42959 -43290 -42956 -247364 ] (25)
+c build_sum_1 found conflict. Size = 1
+c build_sum_1. assumps = [ -42785 -43065 -42811 -42899 -43267 -42949 -42849 -42873 -43266 -43089 -42731 -43383 -42928 -42937 -42755 -42836 -42847 -42953 -42961 -42932 -42754 -42959 -43290 -42956 ] (24) conflict = [ 247364 ] (1)
+c exhaustSum exhausted sum SRef(16) lb = 10
+c Sum from conflict = SOut(247365,SRef(16))
+c added to build_sum_1: assumps = [ -42785 -43065 -42811 -42899 -43267 -42949 -42849 -42873 -43266 -43089 -42731 -43383 -42928 -42937 -42755 -42836 -42847 -42953 -42961 -42932 -42754 -42959 -43290 -42956 -247365 ] (25)
+c build_sum_1 found conflict. Size = 17
+c build_sum_1. assumps = [ -42849 -42873 -43266 -42731 -42937 -42961 -42754 -43290 ] (8) conflict = [ 42755 42785 42811 42836 42847 42899 42928 42932 42949 42953 42956 42959 43065 43089 43267 43383 247365 ] (17)
+c exhaustSum exhausted sum SRef(17) lb = 0
+c exhaustSum exhausted sum SRef(18) lb = 11
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(248218,SRef(18))
+c added to build_sum_1: assumps = [ -42849 -42873 -43266 -42731 -42937 -42961 -42754 -43290 -248218 ] (9)
+c exhaustSum exhausted sum SRef(19) lb = 0
+c exhaustSum exhausted sum SRef(20) lb = 11
+c Abstraction: 3. built sum 136 inputs, 11 true
+c Abstraction: processing cluster of size 119
+c exhaustSum exhausted sum SRef(21) lb = 0
+c Abstraction: 4. built sum 119 inputs, 0 true
+c Abstraction: processing cluster of size 8
+c exhaustSum exhausted sum SRef(22) lb = 0
+c Abstraction: 5. built sum 8 inputs, 0 true
+c Abstraction: processing cluster of size 8
+c exhaustSum exhausted sum SRef(23) lb = 0
+c Abstraction: 6. built sum 8 inputs, 0 true
+c Abstraction: processing cluster of size 3
+c exhaustSum exhausted sum SRef(24) lb = 0
+c Abstraction: 7. built sum 3 inputs, 0 true
+c Abstraction: processing cluster of size 4
+c exhaustSum exhausted sum SRef(25) lb = 0
+c Abstraction: 8. built sum 4 inputs, 0 true
+c Abstraction: processing cluster of size 2
+c exhaustSum exhausted sum SRef(26) lb = 0
+c Abstraction: 9. built sum 2 inputs, 0 true
+c Abstraction: Cluster Iter 2. 6 clusters (mod 0.0045)
+c Abstraction: processing cluster of size 83
+c build_sum_1 found conflict. Size = 2
+c build_sum_1. assumps = [ -251886 ] (1) conflict = [ 243769 251880 ] (2)
+c exhaustSum exhausted sum SRef(27) lb = 2
+c exhaustSum found 1 addition true outputs
+c Sum from conflict = SOut(252211,SRef(27))
+c added to build_sum_1: assumps = [ -251886 -252211 ] (2)
+c exhaustSum exhausted sum SRef(28) lb = 2
+c Abstraction: 1. built sum 83 inputs, 2 true
+c Abstraction: processing cluster of size 8
+c Abstraction: processing cluster of size 136
+c Abstraction: processing cluster of size 122
+c exhaustSum exhausted sum SRef(29) lb = 0
+c Abstraction: 2. built sum 122 inputs, 0 true
+c Abstraction: processing cluster of size 8
+c Abstraction: processing cluster of size 8
+c Abstraction: combining 6 clusters of size 256
+c examining cluster #0 of size 83
+c combining with cluster #1 of size 8
+c combining with cluster #2 of size 136
+c combining with cluster #4 of size 8
+c combining with cluster #5 of size 8
+c examining cluster #3 of size 122
+c final clusters before erase [ [ 43184 42689 42985 42986 42988 42990 42991 42992 42994 42996 42998 42999 43000 43009 43010 43012 43014 43015 43016 43098 43100 43102 43103 43104 43121 43123 43127 43132 43134 43178 ...] (243) [ ] (0) [ ] (0) [ ] (0) [ ] (0) [ ] (0) ] (6)
+c final clusters after erase [ [ 43184 42689 42985 42986 42988 42990 42991 42992 42994 42996 42998 42999 43000 43009 43010 43012 43014 43015 43016 43098 43100 43102 43103 43104 43121 43123 43127 43132 43134 43178 ...] (243) ] (1)
+c Abstraction: Cluster Iter 3. 1 clusters (mod 0.0000)
+c Abstraction: processing cluster of size 243
+c exhaustSum exhausted sum SRef(30) lb = 3
+c exhaustSum exhausted sum SRef(31) lb = 14
+c exhaustSum exhausted sum SRef(32) lb = 14
+c exhaustSum exhausted sum SRef(33) lb = 14
+c Abstraction: 1. built sum 243 inputs, 14 true
+c Abstraction: top_level exhaust with pre exhaust timelimit 60.0000s.
+c Abstraction: top_level exhaust 0 top level exhausts attempted. 0 low level exhausts attempted.
+c Abstraction: 2 summations over 365 soft clauses with 14 true outputs, and 2 exhausted. Summation lower bound wt = 14.000000
+c finding conflicts from cplex solution
+c Cplex abstract solution yielded 1 new conflicts
+c Cplex concrete solution yielded 3 new conflicts
+c finding conflicts from greedy
+c Greedy: iters=30 concrete conflicts=103 abstract conflicts=4
+c **********Iter: 4 Elapsed Time = 379.5828
+c CPLEX: += 14 forced bvars; (14 forced summation outputs)
+c CPLEX: += 111 Average size = 38.3153
+c WARNING. CPLEX Failed to optmize lp relaxation
+c WARNING. CPLEX Error  1016: Community Edition. Problem size limits exceeded. Purchase at http://ibm.biz/error1016.
+
+c Cplex solve passed UB = 41.000000 current LB = 18.000000
+c WARNING. CPLEX Failed to optmize MIP
+c WARNING. CPLEX Error  1016: Community Edition. Problem size limits exceeded. Purchase at http://ibm.biz/error1016.
+
+c ERROR: Cplex::solve() failed
+c unsolved
+c Best LB Found: 18
+c Best UB Found: 41
+o 41
+s UNKNOWN
+c SAT: #calls 62373
+c SAT: Total time 578.9401
+c SAT: #muser calls 1034 (99.2263 % successful)
+c SAT: Minimize time 205.1036 (35.4274%)
+c SAT: Avg constraint minimization 61.4137
+c SAT: number of variables substituted 13
+c GREEDY: #calls 276
+c GREEDY: Total time 0.1243
+c CPLEX: #calls 5
+c CPLEX: Total time 4.9779
+c CPLEX: #constraints 1025
+c CPLEX: Avg constraint size 40.3902
+c CPLEX: #non-core constraints 0
+c LP-Bounds: Total time 0.0285
+c LP-Bounds: #calls 5
+c LP-Bounds: Forced 0 variables
+c MEM MB: 236.0000
+c CPU: 379.6863
