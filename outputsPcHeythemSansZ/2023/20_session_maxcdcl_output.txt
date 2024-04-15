@@ -18,7 +18,7 @@ c |  Eliminated clauses:           1.13 Mb                                      
 c Reduced to 6137 vars, 36669 cls (grow=16)
 c cl_inc_rate=1.187, var_dec_rate=1.120
 c No. effective iterative eliminations: 2
-c |  Simplification time:          0.21 s                                       |
+c |  Simplification time:          0.28 s                                       |
 c |                                                                             |
 c ============================[ Search Statistics ]==============================
 c | Conflicts |          ORIGINAL         |          LEARNT          | Progress |

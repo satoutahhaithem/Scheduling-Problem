@@ -1,0 +1,8 @@
+c formula: 45112 vars, 67754 hard, 308 soft
+c cost: 1; core sz: 98; soft sz: 211
+c cost: 2; core sz: 42; soft sz: 171
+c cost: 3; core sz: 5; soft sz: 169
+c cost: 4; core sz: 3; soft sz: 170
+s OPTIMUM FOUND
+o 4
+c oracle time: 0.5961

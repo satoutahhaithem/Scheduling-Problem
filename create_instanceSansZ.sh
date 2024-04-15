@@ -29,5 +29,5 @@ esac
 
 # Iterate over the selected array
 for max_par in "${max_parallel_sessions_range[@]}"; do
-    python3 Scheduling_ProblemSansZ.py ${yearRodef} ${max_par}
+    python3 Scheduling_Problem.py ${yearRodef} ${max_par}
 done
