@@ -23,16 +23,17 @@ chmod +x "$maxcdclFolder"
 
 
 # Loop through the years and loop through all the instance 
-for yearRodef in {2023..2021}; do
+for yearRodef in {2022..2021}; do
     # output_dir="outputs/${yearRodef}"
     # time_dir="TimeSolver/${yearRodef}"
     # output_dir="outputsPcHeythem/${yearRodef}"
     # time_dir="TimeSolverPcHeythem/${yearRodef}"
     output_dir="outputsPcHeythemChangeEncType/${yearRodef}"
     time_dir="TimeSolverPcHeythemChangeEncType/${yearRodef}"
-    max_parallel_sessions_range_2024=($(seq 16 -1 9))
+    # max_parallel_sessions_range_2024=($(seq 16 -1 9))
+    max_parallel_sessions_range_2024={9}
     max_parallel_sessions_range_2023=($(seq 20 -1 12))
-    max_parallel_sessions_range_2022=($(seq 15 -1 11))
+    max_parallel_sessions_range_2022=($(seq 12 -1 11))
     max_parallel_sessions_range_2021=($(seq 11 -1 5))
     case $yearRodef in
         2024)
@@ -64,7 +65,7 @@ for yearRodef in {2023..2021}; do
 
         # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
         { 
-            time timeout "$timeout_duration" rc2.py -s 'cd' --verbose "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+            time timeout "$timeout_duration" rc2.py -s 'cd' --verbose "$cnf_file_old_format"  >> "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
         } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
 
         { 
