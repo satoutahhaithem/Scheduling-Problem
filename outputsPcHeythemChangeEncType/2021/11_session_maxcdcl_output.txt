@@ -1,0 +1,74 @@
+c This is COMiniSatPS.
+c WARNING: for repeatability, setting FPU to use double precision
+c initial UB: 9223372036854775807
+c initial LB: 0
+c ============================[ Problem Statistics ]=============================
+c |                                                                             |
+c initial UB: 9223372036854775807
+c |  Number of variables:         44612                                         |
+c |  Number of clauses:           64718                                         |
+c |  Parse time:                   0.02 s                                       |
+c Mono: 0, fixed: 0
+c |  Eliminated clauses:           0.50 Mb                                      |
+c Reduced to 9194 vars, 20894 cls (c/v ratio==2.3, grow=0)
+c No iterative elimination performed. (vars=9194, c/v ratio=2.3)
+c |  Simplification time:          0.06 s                                       |
+c |                                                                             |
+c ============================[ Search Statistics ]==============================
+c | Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+c |           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+c ===============================================================================
+c nb soft clauses: 264, of which 264 unit, 0 nonUnit and 0 empty
+c total nb of literals: 75116
+c conflLits 0, conflLits2 0, nbFailedLits 0, fixedVarsBypreproc 0, totalFixedVars 10954
+c 0 isets by partition with total size 0 among the 0 soft lits with nonNeibors
+c finally, there are 0 isets (nb unitIsets: 0) with derived cost 0
+c 0 conflict sets found with length 0
+c fixedCostBySearch 0, nbSatSoftLits 0, derivedCost 0,ttlFixedVars 10954(44612), objForSearch: 264
+
+c variable elimination before search: fixedVars 10954(over 44612), clauses 18551, softLits 264
+c original clauses 17405, learnts_core 0, learnts_tier2 0, learnts_local 0
+c 438 clauses modified by 40 eqLits (debut 0, total 40) with 80 eqUse and 0 rmSoft, 0 eqSoft
+
+c provided LB: 0
+c no UB provided, search from scratch...
+
+c fixedCostBySearch 0, nbSatSoftLits 0, derivedCost 0,ttlFixedVars 11137(44612), objForSearch: 264
+c starting search with 12352 original clauses and 264 softLits...
+
+c original clauses 12159, learnts_core 815, learnts_tier2 328, learnts_local 642
+c 5 clauses modified by 1 eqLits (debut 40, total 41) with 2 eqUse and 0 rmSoft, 0 eqSoft
+c harden from start...
+c UB=1 succs, confls=2421, hconfls=2421, core 747, tier2 305, local 504,  0 soft cls unsat (0 at L0), 11726 fixed vars at L0, softCnfl 0, nbFlyRd 1015, nbFixedLH 0, nbCompL 0
+c nbHardens 1 (fixed 264), shorten: 0, prunedLB 0.00, dev 0.00, succRate 0.00, nbSucc 0, lk: 1
+c shorten: 0, quasiC: 0 (fixed: 0), fsblEq 41, nbEqUse 82, nbSoftEq 0
+
+
+c ttl#Cnfls 0, avgL 0.00, ttl#CnflFl 0, avgLFl 0.00(ttl 0), ttl#CnflsL 0(0.000), ttl#CnflsFlL 0(0.000)
+
+o 0
+c ends of initiationization by VSIDS at 2421 conflicts with init 7579
+
+c UB=0 succ, confls=2421 and hconfls=2421 with 0 soft clauses unsat (0 at level 0) and 11726 fixed vars at level 0,  prunedLB 0.00, dev 0.00, succRate 0.00, nbSucc 0, shortened : 0
+
+c ttl#Cnfls 0, avgL 0.00, ttl#CnflFl 0, avgLFl 0.00(ttl 0), ttl#CnflsL 0(0.000), ttl#CnflsFlL 0(0.000)
+
+c ===============================================================================
+c initCost: 0, fixedBySearch: 0, optimal: 0, maxsat: 264, hardConflicts: 2421
+c nbLK: 1, nbSuccLK: 0(0.00%), nbLKup: 264(0.16%), hardens 1 (fixed 264), dynVars 0, shorten: 0
+c ttl nbCnfls 0, avgL 0.00, ttlnbCnflFl 0, avgLFl 0.00, ttl nbCnflsL 0(0.00), ttlNbCnflsFlL 0(0.000)
+c #skip 0, #skipBypr 0, skipLA2 0, #FurtherLA 0, #SuccFurtherLA 0, avgConfls2find 0.00, avgcConflsFound 0.00
+c restarts              : 7
+c conflicts             : 2421           (9634 /sec)
+c decisions             : 6293           (0.00 % random) (25043 /sec)
+c propagations          : 161285         (641826 /sec)
+c conflict literals     : 31532          (47.79 % deleted)
+c Memory used           : 40.00 MB
+c CPU time              : 0.251291 s
+c nbSimplifyAll         : 1
+c s_propagations        : 1414159     
+c s_cost_ratio          : 876.81%
+
+s OPTIMUM FOUND
+v 
+c solution checked against the original DIMACS file with correct cost 0 over the total cost 264

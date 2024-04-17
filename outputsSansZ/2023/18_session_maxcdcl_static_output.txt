@@ -78,3 +78,4 @@ c original clauses 23112, learnts_core 52736, learnts_tier2 1279, learnts_local 
 c 1320 clauses modified by 1 eqLits (debut 2, total 3) with 1 eqUse and 0 rmSoft, 0 eqSoft
 c LRB phase 5: conflicts 732496, phase 80000000, starts 1333, UP 80011140
 c VSIDS phase 3: conflicts 768750, phase 80000000, starts 3181, UP 80216730
+c LRB phase 6: conflicts 1482674, phase 160000000, starts 2358, UP 160034414
