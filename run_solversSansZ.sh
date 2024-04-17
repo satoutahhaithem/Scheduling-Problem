@@ -157,8 +157,8 @@ done
 
 
 yearRodef=2022 
-max_parallel_sessions_range_2024=($(seq 16 -1 10))
-max_parallel_sessions_range_2023=($(seq 20 -1 12))
+max_parallel_sessions_range_2024=($(seq 15 -1 10))
+max_parallel_sessions_range_2023=($(seq 20 -1 13))
 max_parallel_sessions_range_2022=($(seq 15 -1 11))
 max_parallel_sessions_range_2021=($(seq 11 -1 5))
 case $yearRodef in
@@ -189,8 +189,9 @@ for max_parallel_sessions in "${max_parallel_sessions_range[@]}"; do
     # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
 
     { 
-        time timeout "$timeout_duration" rc2.py -s 'cd' --verbose "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+        time timeout "$timeout_duration" python3 "rc2Solver.py" "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
     } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+
 
 
 
