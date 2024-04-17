@@ -7,12 +7,12 @@ c |                                                                             
 c initial UB: 9223372036854775807
 c |  Number of variables:         90976                                         |
 c |  Number of clauses:          134238                                         |
-c |  Parse time:                   0.04 s                                       |
+c |  Parse time:                   0.03 s                                       |
 c Mono: 0, fixed: 0
 c |  Eliminated clauses:           0.90 Mb                                      |
 c Reduced to 9206 vars, 22669 cls (c/v ratio==2.5, grow=0)
 c No iterative elimination performed. (vars=9206, c/v ratio=2.5)
-c |  Simplification time:          0.09 s                                       |
+c |  Simplification time:          0.10 s                                       |
 c |                                                                             |
 c ============================[ Search Statistics ]==============================
 c | Conflicts |          ORIGINAL         |          LEARNT          | Progress |
@@ -122,12 +122,12 @@ c nbLK: 38957, nbSuccLK: 20241(51.96%), nbLKup: 7514750(113.29%), hardens 8444 (
 c ttl nbCnfls 50252, avgL 4.62, ttlnbCnflFl 3499, avgLFl 9.72, ttl nbCnflsL 4551(0.09), ttlNbCnflsFlL 119(0.034)
 c #skip 76882, #skipBypr 3355, skipLA2 4614, #FurtherLA 1125, #SuccFurtherLA 264, avgConfls2find 1.01, avgcConflsFound 1.00
 c restarts              : 281
-c conflicts             : 56776          (12806 /sec)
-c decisions             : 96400          (0.00 % random) (21744 /sec)
-c propagations          : 6633323        (1496223 /sec)
+c conflicts             : 56776          (11948 /sec)
+c decisions             : 96400          (0.00 % random) (20286 /sec)
+c propagations          : 6633323        (1395900 /sec)
 c conflict literals     : 1313274        (36.32 % deleted)
 c Memory used           : 67.00 MB
-c CPU time              : 4.43338 s
+c CPU time              : 4.75201 s
 c nbSimplifyAll         : 9
 c s_propagations        : 3259718     
 c s_cost_ratio          : 49.14%

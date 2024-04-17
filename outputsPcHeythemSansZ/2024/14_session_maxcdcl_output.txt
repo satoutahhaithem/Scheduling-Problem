@@ -12,7 +12,7 @@ c Mono: 0, fixed: 0
 c |  Eliminated clauses:           0.90 Mb                                      |
 c Reduced to 9180 vars, 22545 cls (c/v ratio==2.5, grow=0)
 c No iterative elimination performed. (vars=9180, c/v ratio=2.5)
-c |  Simplification time:          0.10 s                                       |
+c |  Simplification time:          0.11 s                                       |
 c |                                                                             |
 c ============================[ Search Statistics ]==============================
 c | Conflicts |          ORIGINAL         |          LEARNT          | Progress |
@@ -120,12 +120,12 @@ c nbLK: 38551, nbSuccLK: 20481(53.13%), nbLKup: 7326057(114.88%), hardens 8514 (
 c ttl nbCnfls 49892, avgL 4.74, ttlnbCnflFl 3220, avgLFl 10.06, ttl nbCnflsL 4633(0.09), ttlNbCnflsFlL 71(0.022)
 c #skip 73663, #skipBypr 2828, skipLA2 4635, #FurtherLA 783, #SuccFurtherLA 209, avgConfls2find 1.01, avgcConflsFound 1.00
 c restarts              : 247
-c conflicts             : 53880          (12503 /sec)
-c decisions             : 91512          (0.00 % random) (21236 /sec)
-c propagations          : 6376907        (1479818 /sec)
+c conflicts             : 53880          (11794 /sec)
+c decisions             : 91512          (0.00 % random) (20031 /sec)
+c propagations          : 6376907        (1395860 /sec)
 c conflict literals     : 1300448        (37.09 % deleted)
 c Memory used           : 68.00 MB
-c CPU time              : 4.30925 s
+c CPU time              : 4.56844 s
 c nbSimplifyAll         : 8
 c s_propagations        : 2465931     
 c s_cost_ratio          : 38.67%

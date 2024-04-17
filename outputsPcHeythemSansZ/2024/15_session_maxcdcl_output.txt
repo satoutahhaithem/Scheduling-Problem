@@ -119,12 +119,12 @@ c nbLK: 66555, nbSuccLK: 35887(53.92%), nbLKup: 13289350(140.88%), hardens 11562
 c ttl nbCnfls 96528, avgL 4.30, ttlnbCnflFl 8436, avgLFl 7.78, ttl nbCnflsL 10669(0.11), ttlNbCnflsFlL 319(0.038)
 c #skip 106826, #skipBypr 4097, skipLA2 9995, #FurtherLA 2217, #SuccFurtherLA 470, avgConfls2find 1.03, avgcConflsFound 1.00
 c restarts              : 384
-c conflicts             : 82706          (12076 /sec)
-c decisions             : 130308         (0.00 % random) (19026 /sec)
-c propagations          : 9432861        (1377274 /sec)
+c conflicts             : 82706          (10943 /sec)
+c decisions             : 130308         (0.00 % random) (17242 /sec)
+c propagations          : 9432861        (1248107 /sec)
 c conflict literals     : 1999921        (40.47 % deleted)
 c Memory used           : 77.00 MB
-c CPU time              : 6.84894 s
+c CPU time              : 7.55773 s
 c nbSimplifyAll         : 13
 c s_propagations        : 3487329     
 c s_cost_ratio          : 36.97%

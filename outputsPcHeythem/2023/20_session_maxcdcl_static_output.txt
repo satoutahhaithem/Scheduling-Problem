@@ -7,12 +7,12 @@ c |                                                                             
 c initial UB: 9223372036854775807
 c |  Number of variables:         49917                                         |
 c |  Number of clauses:           72984                                         |
-c |  Parse time:                   0.04 s                                       |
+c |  Parse time:                   0.01 s                                       |
 c Mono: 0, fixed: 0
 c |  Eliminated clauses:           0.56 Mb                                      |
 c Reduced to 9472 vars, 21603 cls (c/v ratio==2.3, grow=0)
 c No iterative elimination performed. (vars=9472, c/v ratio=2.3)
-c |  Simplification time:          0.24 s                                       |
+c |  Simplification time:          0.08 s                                       |
 c |                                                                             |
 c ============================[ Search Statistics ]==============================
 c | Conflicts |          ORIGINAL         |          LEARNT          | Progress |
@@ -165,3 +165,6 @@ c LRB phase 7: conflicts 723288, phase 80000000, starts 1286, UP 80012942
 c original clauses 17499, learnts_core 51276, learnts_tier2 1475, learnts_local 23728
 c 114 clauses modified by 1 eqLits (debut 49, total 50) with 4 eqUse and 0 rmSoft, 0 eqSoft
 c VSIDS phase 5: conflicts 659323, phase 80000000, starts 3810, UP 80055824
+c LRB phase 8: conflicts 1292550, phase 160000000, starts 1914, UP 160031503
+c VSIDS phase 6: conflicts 1324278, phase 160000000, starts 7955, UP 160019373
+c LRB phase 9: conflicts 2768790, phase 320000000, starts 3809, UP 320149883

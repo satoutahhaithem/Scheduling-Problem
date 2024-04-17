@@ -7,7 +7,7 @@ c |                                                                             
 c initial UB: 9223372036854775807
 c |  Number of variables:         95732                                         |
 c |  Number of clauses:          141535                                         |
-c |  Parse time:                   0.04 s                                       |
+c |  Parse time:                   0.03 s                                       |
 c Mono: 0, fixed: 0
 c |  Eliminated clauses:           0.95 Mb                                      |
 c Reduced to 10298 vars, 25134 cls (c/v ratio==2.4, grow=0)
@@ -18,7 +18,7 @@ c |  Eliminated clauses:           1.13 Mb                                      
 c Reduced to 5980 vars, 37224 cls (grow=16)
 c cl_inc_rate=1.185, var_dec_rate=1.149
 c No. effective iterative eliminations: 2
-c |  Simplification time:          0.22 s                                       |
+c |  Simplification time:          0.25 s                                       |
 c |                                                                             |
 c ============================[ Search Statistics ]==============================
 c | Conflicts |          ORIGINAL         |          LEARNT          | Progress |

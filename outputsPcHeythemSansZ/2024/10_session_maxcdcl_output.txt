@@ -7,12 +7,12 @@ c |                                                                             
 c initial UB: 9223372036854775807
 c |  Number of variables:         90976                                         |
 c |  Number of clauses:          134238                                         |
-c |  Parse time:                   0.03 s                                       |
+c |  Parse time:                   0.04 s                                       |
 c Mono: 0, fixed: 0
 c |  Eliminated clauses:           0.90 Mb                                      |
 c Reduced to 9130 vars, 22435 cls (c/v ratio==2.5, grow=0)
 c No iterative elimination performed. (vars=9130, c/v ratio=2.5)
-c |  Simplification time:          0.10 s                                       |
+c |  Simplification time:          0.12 s                                       |
 c |                                                                             |
 c ============================[ Search Statistics ]==============================
 c | Conflicts |          ORIGINAL         |          LEARNT          | Progress |
@@ -127,12 +127,12 @@ c nbLK: 562918, nbSuccLK: 273961(48.67%), nbLKup: 173893268(52.42%), hardens 523
 c ttl nbCnfls 1065436, avgL 4.15, ttlnbCnflFl 218393, avgLFl 6.86, ttl nbCnflsL 209965(0.20), ttlNbCnflsFlL 23642(0.108)
 c #skip 2257145, #skipBypr 270038, skipLA2 102179, #FurtherLA 42595, #SuccFurtherLA 14568, avgConfls2find 1.07, avgcConflsFound 1.01
 c restarts              : 7909
-c conflicts             : 1697210        (9142 /sec)
-c decisions             : 3509833        (0.00 % random) (18907 /sec)
-c propagations          : 331717760      (1786877 /sec)
+c conflicts             : 1697210        (8649 /sec)
+c decisions             : 3509833        (0.00 % random) (17887 /sec)
+c propagations          : 331717760      (1690521 /sec)
 c conflict literals     : 114329634      (37.03 % deleted)
 c Memory used           : 142.00 MB
-c CPU time              : 185.641 s
+c CPU time              : 196.222 s
 c nbSimplifyAll         : 47
 c s_propagations        : 25876518    
 c s_cost_ratio          : 7.80%
