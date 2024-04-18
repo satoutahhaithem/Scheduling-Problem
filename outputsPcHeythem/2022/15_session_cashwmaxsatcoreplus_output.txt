@@ -1,0 +1,14 @@
+c Parsing MaxSAT file...
+c Using SCIP solver, version 8.0.3, https://www.scipopt.org
+c scip_time = 0.000000
+c Starting SCIP solver in a separate thread (with time-limit = 0s) ...
+c Using COMiniSatPS SAT solver by Chanseok Oh (2016)
+o 147
+c ============================[  Problem Statistics ]============================
+c |  Number of variables:          8086                                         |
+c |  Number of clauses:           18152 (incl.          147 soft in queue)      |
+c ===============================================================================
+o 43
+o 36
+o 34
+o 29
