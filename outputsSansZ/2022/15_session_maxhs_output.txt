@@ -310,7 +310,7 @@ c WARNING. CPLEX Error  1016: Community Edition. Problem size limits exceeded. P
 
 c ERROR: Cplex::solve() failed
 c unsolved
-c Best LB Found: 18
+c Best LB Found: 18 
 c Best UB Found: 41
 o 41
 s UNKNOWN

@@ -42,7 +42,7 @@
 
 # create insatnce of all years 
 #######################################################################################
-for yearRodef in {2021..2024}; do
+for yearRodef in {2022..2022}; do
     source /home/haithem-sattoutah/haithemVirtualEnv/bin/activate
 
     # Define the session ranges for each year
