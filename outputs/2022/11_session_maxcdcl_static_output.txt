@@ -114,3 +114,4 @@ c LRB phase 4: conflicts 1012120, phase 80000000, starts 1729, UP 81674133
 c VSIDS phase 3: conflicts 438097, phase 80000000, starts 1706, UP 81699628
 c LRB phase 5: conflicts 1889457, phase 160000000, starts 3194, UP 160037764
 c VSIDS phase 4: conflicts 860566, phase 160000000, starts 1898, UP 166183271
+c LRB phase 6: conflicts 5777510, phase 320000000, starts 8770, UP 320214773
