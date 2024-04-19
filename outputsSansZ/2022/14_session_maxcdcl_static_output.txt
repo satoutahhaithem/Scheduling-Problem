@@ -84,3 +84,14 @@ o 29
 c VSIDS phase 1: conflicts 120238, phase 20000000, starts 702, UP 21106563
 c LRB phase 3: conflicts 232665, phase 40000000, starts 518, UP 40022192
 c VSIDS phase 2: conflicts 238892, phase 40000000, starts 968, UP 40002044
+c LRB phase 4: conflicts 692688, phase 80000000, starts 1273, UP 80493909
+c VSIDS phase 3: conflicts 476397, phase 80000000, starts 2117, UP 81452772
+c original clauses 13731, learnts_core 49499, learnts_tier2 665, learnts_local 29148
+c 294 clauses modified by 1 eqLits (debut 0, total 1) with 3 eqUse and 0 rmSoft, 0 eqSoft
+c LRB phase 5: conflicts 1130810, phase 160000000, starts 2047, UP 168012015
+c VSIDS phase 4: conflicts 965321, phase 160000000, starts 4456, UP 160003060
+c original clauses 13687, learnts_core 79052, learnts_tier2 426, learnts_local 29513
+c 17015 clauses modified by 1 eqLits (debut 1, total 2) with 2 eqUse and 0 rmSoft, 0 eqSoft
+c original clauses 13685, learnts_core 80041, learnts_tier2 1440, learnts_local 15625
+c 595 clauses modified by 1 eqLits (debut 2, total 3) with 25 eqUse and 0 rmSoft, 0 eqSoft
+c LRB phase 6: conflicts 3183150, phase 320000000, starts 4098, UP 355728905
