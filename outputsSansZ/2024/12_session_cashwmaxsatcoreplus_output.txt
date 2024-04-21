@@ -1,0 +1,8 @@
+c Parsing MaxSAT file...
+c Using COMiniSatPS SAT solver by Chanseok Oh (2016)
+o 55
+c ============================[  Problem Statistics ]============================
+c |  Number of variables:          9155                                         |
+c |  Number of clauses:           22546 (incl.           55 soft in queue)      |
+c ===============================================================================
+o 14

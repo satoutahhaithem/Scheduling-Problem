@@ -13,6 +13,6 @@ Traceback (most recent call last):
     self.status = pysolvers.cadical103_solve(self.cadical, assumptions,
 pysolvers.error: Caught keyboard interrupt
 
-real	60m0,053s
-user	59m59,513s
-sys	0m0,392s
+real	60m0,042s
+user	59m59,632s
+sys	0m0,292s
