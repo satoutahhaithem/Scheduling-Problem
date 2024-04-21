@@ -35,7 +35,7 @@ elif data_set_choice == "2023":
     else:
         conference_sessions, slots, papers_range, working_groups, np, npMax, session_groups = data_for_2023() 
 elif data_set_choice == "2022":
-    if (max_parallel_sessions < 11 ): 
+    if (max_parallel_sessions < 10 ): 
         print ("max_parallel_sessions must be more than 11")
         sys.exit(1) 
     else:
@@ -55,8 +55,8 @@ else:
 
 
 length_of_paper_range = len(papers_range)
-# globalEncType = EncType.cardnetwrk
-globalEncType = EncType.sortnetwrk
+globalEncType = EncType.cardnetwrk
+# globalEncType = EncType.sortnetwrk
 
 
 
@@ -120,8 +120,8 @@ for s in range(1, conference_sessions +1):
         for l in range(1,length_of_paper_range+1):
             aux_vars.append(var_x(s, c, l))
             aux_weight.append(papers_range[l-1])
-    # eq_clause = PBEnc.equals(lits=aux_vars, weights=aux_weight,bound=np[s-1], top_id=y_var, encoding=pbenc.best)
-    eq_clause = PBEnc.equals(lits=aux_vars, weights=aux_weight,bound=np[s-1], top_id=y_var, encoding=pbenc.sortnetwrk)
+    eq_clause = PBEnc.equals(lits=aux_vars, weights=aux_weight,bound=np[s-1], top_id=y_var, encoding=pbenc.best)
+    # eq_clause = PBEnc.equals(lits=aux_vars, weights=aux_weight,bound=np[s-1], top_id=y_var, encoding=pbenc.sortnetwrk)
     y_var=eq_clause.nv
     constraints.extend(eq_clause.clauses)
 ####################################################################################
@@ -217,8 +217,8 @@ if (data_set_choice=="2024"):
         constraints.append([var_z(34,i)])
 # ####################################################################################
 
-constraints.to_file("instance/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.wcnf")
-# constraints.to_file("instanceChangeEncType/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.wcnf")
+# constraints.to_file("instance/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.wcnf")
+constraints.to_file("instanceChangeEncType/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.wcnf")
 
 
 
@@ -265,11 +265,11 @@ def convert_cnf_format(old_file_path, new_file_path):
                 new_file.write(line)
 
 # Specify the old and new file paths
-# old_file_path = "./instanceChangeEncType/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.wcnf"
-# new_file_path = "./instanceChangeEncType/"+data_set_choice+"/"+str(max_parallel_sessions)+'_session_file_new_format.wcnf'
+old_file_path = "./instanceChangeEncType/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.wcnf"
+new_file_path = "./instanceChangeEncType/"+data_set_choice+"/"+str(max_parallel_sessions)+'_session_file_new_format.wcnf'
 
-old_file_path = "./instance/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.wcnf"
-new_file_path = "./instance/"+data_set_choice+"/"+str(max_parallel_sessions)+'_session_file_new_format.wcnf'
+# old_file_path = "./instance/"+data_set_choice+"/"+str(max_parallel_sessions)+"_session_file.wcnf"
+# new_file_path = "./instance/"+data_set_choice+"/"+str(max_parallel_sessions)+'_session_file_new_format.wcnf'
 
 
 # Call the function to convert the file format
