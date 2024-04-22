@@ -129,13 +129,15 @@ case $yearRodef in
         echo "Year not supported"
         exit 1
 esac
-output_dir="outputs/${yearRodef}"
-time_dir="TimeSolver/${yearRodef}"
+output_dir="outputsPcHeythem/${yearRodef}"
+time_dir="TimeSolverPcHeythem/${yearRodef}"
 # output_dir="outputsPcHeythem/${yearRodef}"
 # time_dir="TimeSolverPcHeythem/${yearRodef}"
+max_parallel_sessions=10
+
 for max_parallel_sessions in "${max_parallel_sessions_range[@]}";  do
-    cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
-    cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
+# cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
+cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
     # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
 
@@ -144,10 +146,15 @@ for max_parallel_sessions in "${max_parallel_sessions_range[@]}";  do
     # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_time.txt"
 
 
-    { 
-        time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-    } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
 
+
+    # { 
+    #     time timeout "$timeout_duration" "$evalMaxSatFolder" --timeUB 0 --minRefTime 5 "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_SCIP_output.txt"
+    # } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_SCIP_time.txt"
+
+      { 
+         time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+      } 2>     "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
 
     # { 
     #     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
