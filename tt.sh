@@ -1,3 +1,24 @@
+#!/bin/bash
+
+
+
+
+
+timeout_duration="3600"
+solver_dir="Solvers"
+# output_dir="outputsPcHeythem/${yearRodef}"
+# time_dir="TimeSolverPcHeythem/${yearRodef}"
+# output_dir="outputsPcHeythem/${yearRodef}"
+# time_dir="TimeSolverPcHeythem/${yearRodef}"
+evalMaxSatFolder="EvalMaxSAT/bin/EvalMaxSAT"
+maxcdclFolder="./MaxCDCL/bin/maxcdcl-scip-maxhs"
+
+chmod +x "$solver_dir/EvalMaxSAT"
+chmod +x "$solver_dir/maxcdcl"
+chmod +x "$solver_dir/open-wbo"
+chmod +x "$evalMaxSatFolder"
+chmod +x "$maxcdclFolder"
+
 for yearRodef in {2021..2024}; do
     if [ "$yearRodef" -eq 2022 ]; then
         continue  # Skip the rest of the loop for year 2022
