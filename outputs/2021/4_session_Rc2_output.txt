@@ -1,0 +1,1 @@
+c formula: 44612 vars, 66807 hard, 264 soft

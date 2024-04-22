@@ -1,4 +1,14 @@
-
-real	0m
-user	0m0,625s0,670s
-sys	0m0,044s
+Traceback (most recent call last):
+  File "/home/mis/Bureau/Scheduling Problem/./myenv/bin/rc2.py", line 1778, in <module>
+    for i, model in enumerate(rc2.enumerate(block=block), 1):
+  File "/home/mis/Bureau/Scheduling Problem/./myenv/bin/rc2.py", line 539, in enumerate
+    model = self.compute()
+  File "/home/mis/Bureau/Scheduling Problem/./myenv/bin/rc2.py", line 477, in compute
+    res = self.compute_()
+  File "/home/mis/Bureau/Scheduling Problem/./myenv/bin/rc2.py", line 594, in compute_
+    while not self.oracle.solve(assumptions=self.sels + self.sums):
+  File "/home/mis/Bureau/Scheduling Problem/myenv/lib/python3.10/site-packages/pysat/solvers.py", line 747, in solve
+    return self.solver.solve(assumptions)
+  File "/home/mis/Bureau/Scheduling Problem/myenv/lib/python3.10/site-packages/pysat/solvers.py", line 1610, in solve
+    self.status = pysolvers.cadical103_solve(self.cadical, assumptions,
+pysolvers.error: Caught keyboard interrupt
