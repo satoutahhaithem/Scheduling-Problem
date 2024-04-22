@@ -1,0 +1,24 @@
+c formula: 58724 vars, 93918 hard, 880 soft
+c cost: 1; core sz: 1; soft sz: 879
+c cost: 2; core sz: 8; soft sz: 872
+c cost: 3; core sz: 104; soft sz: 769
+c cost: 4; core sz: 1; soft sz: 768
+c cost: 5; core sz: 94; soft sz: 676
+c cost: 6; core sz: 1; soft sz: 675
+c cost: 7; core sz: 1; soft sz: 674
+c cost: 8; core sz: 30; soft sz: 647
+c cost: 9; core sz: 24; soft sz: 627
+c cost: 10; core sz: 44; soft sz: 587
+c cost: 11; core sz: 34; soft sz: 559
+c cost: 12; core sz: 20; soft sz: 545
+c cost: 13; core sz: 7; soft sz: 543
+c cost: 14; core sz: 8; soft sz: 543
+c cost: 15; core sz: 9; soft sz: 543
+c cost: 16; core sz: 8; soft sz: 544
+c cost: 17; core sz: 6; soft sz: 545
+c cost: 18; core sz: 6; soft sz: 546
+c cost: 19; core sz: 10; soft sz: 547
+c cost: 20; core sz: 9; soft sz: 548
+c cost: 21; core sz: 7; soft sz: 549
+c cost: 22; core sz: 9; soft sz: 550
+c cost: 23; core sz: 11; soft sz: 550

@@ -35,13 +35,13 @@ elif data_set_choice == "2023":
     else:
         conference_sessions, slots, papers_range, working_groups, np, npMax, session_groups = data_for_2023() 
 elif data_set_choice == "2022":
-    if (max_parallel_sessions < 11 ): 
+    if (max_parallel_sessions < 10 ): 
         print ("max_parallel_sessions must be more than 11")
         sys.exit(1) 
     else:
         conference_sessions, slots, papers_range, working_groups, np, npMax, session_groups = data_for_2022() 
 elif  data_set_choice == "2021":
-    if (max_parallel_sessions < 5 ): 
+    if (max_parallel_sessions < 4 ): 
         print ("max_parallel_sessions must be more than 5")
         sys.exit(1) 
     else:

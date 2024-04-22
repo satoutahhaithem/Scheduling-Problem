@@ -47,12 +47,12 @@ c ==============================================================================
 c initCost: 0, fixedBySearch: 0, optimal: 0, maxsat: 264, hardConflicts: 25
 c nbLK: 1, nbSuccLK: 0(0.00%), nbLKup: 264(4.73%), hardens 2 (fixed 264), dynVars 0, shorten: 0
 c restarts              : 1
-c conflicts             : 25             (593 /sec)
-c decisions             : 424            (0.00 % random) (10064 /sec)
-c propagations          : 5583           (132518 /sec)
+c conflicts             : 25             (540 /sec)
+c decisions             : 424            (0.00 % random) (9157 /sec)
+c propagations          : 5583           (120575 /sec)
 c conflict literals     : 243            (9.33 % deleted)
 c Memory used           : 14.00 MB
-c CPU time              : 0.04213 s
+c CPU time              : 0.046303 s
 c nbSimplifyAll         : 0
 c s_propagations        : 178413      
 c s_cost_ratio          : 3195.65%
