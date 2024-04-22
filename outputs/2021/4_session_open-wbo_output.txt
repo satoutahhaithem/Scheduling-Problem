@@ -11,12 +11,12 @@ c ========================================[ Problem Statistics ]================
 c |                                                                                                       |
 c |  Problem Format:             MaxSAT                                                                   |
 c |  Problem Type:           Unweighted                                                                   |
-c |  Number of variables:         95732                                                                   |
-c |  Number of hard clauses:     150263                                                                   |
-c |  Number of soft clauses:        518                                                                   |
+c |  Number of variables:         44612                                                                   |
+c |  Number of hard clauses:      66807                                                                   |
+c |  Number of soft clauses:        264                                                                   |
 c |  Number of cardinality:           0                                                                   |
 c |  Number of PB :                   0                                                                   |
-c |  Parse time:                   0.02 s                                                                 |
+c |  Parse time:                   0.00 s                                                                 |
 c |                                                                                                       |
 c ==========================================[ Solver Settings ]============================================
 c |                                                                                                       |

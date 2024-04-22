@@ -1,6 +1,7 @@
 timeout: impossible d'exécuter la commande «./loandra»: Aucun fichier ou dossier de ce nom
 timeout: impossible d'exécuter la commande «./nuwls»: Aucun fichier ou dossier de ce nom
+./runAll.sh : ligne 551 : 1198599 Processus arrêté      timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
 
-real	120m0,149s
-user	119m22,720s
-sys	0m37,014s
+real	15m37,973s
+user	15m30,836s
+sys	0m7,074s
