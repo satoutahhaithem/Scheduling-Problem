@@ -1,3 +1,0 @@
-c This is COMiniSatPS.
-c WARNING: for repeatability, setting FPU to use double precision
-c ERROR! Could not open file: instance/2021/3_session_file.wcnf

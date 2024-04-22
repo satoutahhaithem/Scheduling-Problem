@@ -1,1 +1,4 @@
-Model has cost: 0
+c formula: 44612 vars, 66807 hard, 264 soft
+s OPTIMUM FOUND
+o 0
+c oracle time: 0.3747

@@ -1,0 +1,4 @@
+c formula: 10173 vars, 17463 hard, 264 soft
+s OPTIMUM FOUND
+o 0
+c oracle time: 0.0104

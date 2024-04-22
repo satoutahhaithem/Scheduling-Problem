@@ -1,4 +1,3 @@
-import numpy as np
 from pysat.formula import *
 from pysat.pb import EncType as pbenc
 from pysat.pb import *
@@ -42,7 +41,7 @@ elif data_set_choice == "2022":
     else:
         conference_sessions, slots, papers_range, working_groups, np, npMax, session_groups = data_for_2022() 
 elif  data_set_choice == "2021":
-    if (max_parallel_sessions < 5 ): 
+    if (max_parallel_sessions < 4 ): 
         print ("max_parallel_sessions must be more than 5")
         sys.exit(1) 
     else:
