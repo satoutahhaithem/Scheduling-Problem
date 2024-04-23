@@ -55,7 +55,7 @@ c Total Soft Clause Weight (+ basecost): 308 (+ 0)
 c SOFT%: 0.4463%
 c #distinct weights: 1, mean = 1.0000, std. dev = 0.0000, min = 1, max = 1
 c Total Clauses: 69010
-c Parse time: 0.003506
+c Parse time: 0.007403
 c Wcnf Space Required: 0.0000MB
 c ================================
 c transitionWts = [ ] (0)
@@ -90,7 +90,7 @@ c Best UB Found: 308
 o 308
 s UNKNOWN
 c SAT: #calls 0
-c SAT: Total time 3599.2646
+c SAT: Total time 3599.2226
 c SAT: #muser calls 0 (0.0000 % successful)
 c SAT: Minimize time 0.0000 (0.0000%)
 c SAT: Avg constraint minimization 0.0000
@@ -105,4 +105,4 @@ c LP-Bounds: Total time 0.0000
 c LP-Bounds: #calls 0
 c LP-Bounds: Forced 0 variables
 c MEM MB: 270.0000
-c CPU: 3599.3648
+c CPU: 3599.3251

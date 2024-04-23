@@ -1,6 +1,6 @@
 timeout: impossible d'exécuter la commande «./loandra»: Aucun fichier ou dossier de ce nom
 timeout: impossible d'exécuter la commande «./nuwls»: Aucun fichier ou dossier de ce nom
 
-real	0m2,178s
-user	0m1,997s
-sys	0m0,181s
+real	8m20,527s
+user	8m20,250s
+sys	0m0,253s

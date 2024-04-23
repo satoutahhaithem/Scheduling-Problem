@@ -648,7 +648,7 @@ for yearRodef in {2021..2024}; do
     # output_dir="outputsPcHeythemSansZ/${yearRodef}"
     # time_dir="TimeSolverPcHeythemSansZ/${yearRodef}"
     for max_parallel_sessions in "${max_parallel_sessions_range[@]}"; do
-        cnf_file="instance/${yearRodef542717}/${max_parallel_sessions}_session_file_new_format.wcnf"
+        cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
         cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
         # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
@@ -719,7 +719,7 @@ for yearRodef in {2021..2024}; do
     # output_dir="outputsPcHeythemSansZ/${yearRodef}"
     # time_dir="TimeSolverPcHeythemSansZ/${yearRodef}"
     for max_parallel_sessions in "${max_parallel_sessions_range[@]}"; do
-        cnf_file="instanceChangeEncType/${yearRodef542717}/${max_parallel_sessions}_session_file_new_format.wcnf"
+        cnf_file="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
         cnf_file_old_format="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
         # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
