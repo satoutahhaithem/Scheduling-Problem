@@ -152,9 +152,13 @@ cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file
     #     time timeout "$timeout_duration" "$evalMaxSatFolder" --timeUB 0 --minRefTime 5 "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_SCIP_output.txt"
     # } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_SCIP_time.txt"
 
-      { 
-         time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-      } 2>     "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+    #   { 
+    #      time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+    #   } 2>     "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+
+    { 
+        time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
+    } 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
 
     # { 
     #     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
