@@ -928,8 +928,12 @@ cnf_file_old_format="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}
 } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
 
 { 
-    time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-} 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+    time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
+} 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
+
+# { 
+#     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
 
 
 { 
@@ -959,9 +963,12 @@ cnf_file_old_format="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}
     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
 } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
 
+# { 
+#     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
 { 
-    time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-} 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+    time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
+} 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
 
 
 { 
@@ -992,10 +999,12 @@ cnf_file_old_format="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}
     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
 } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
 
+# { 
+#     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
 { 
-    time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-} 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
-
+    time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
+} 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
 
 { 
     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
