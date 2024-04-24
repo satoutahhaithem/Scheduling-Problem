@@ -1,2 +1,7 @@
 timeout: impossible d'exécuter la commande «./loandra»: Aucun fichier ou dossier de ce nom
 timeout: impossible d'exécuter la commande «./nuwls»: Aucun fichier ou dossier de ce nom
+Error : solution no SAT !
+
+real	60m0,032s
+user	59m59,113s
+sys	0m0,780s

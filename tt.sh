@@ -21,6 +21,7 @@ chmod +x "$maxcdclFolder"
 
 for yearRodef in {2021..2024}; do
     if [[ "$yearRodef" -eq 2024 || "$yearRodef" -eq 2023 || "$yearRodef" -eq 2021 ]]; then
+    # if [ "$yearRodef" -eq 2022 ]; then
         continue  # Skip the rest of the loop for year 2022
     fi
     max_parallel_sessions_range_2024=($(seq 15 -1 10))
