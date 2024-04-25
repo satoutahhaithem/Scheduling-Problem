@@ -1,0 +1,5 @@
+c formula: 11007 vars, 20209 hard, 308 soft
+c cost: 1; core sz: 34; soft sz: 275
+c cost: 2; core sz: 66; soft sz: 211
+c cost: 3; core sz: 6; soft sz: 208
+c cost: 4; core sz: 3; soft sz: 209
