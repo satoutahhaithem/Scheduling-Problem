@@ -17,13 +17,13 @@ c [1mOptimal solution: 4[0m
 c _______________________________________________________________________________
 c 
 c restarts               : 279
-c conflicts              : 7724           (21389 /sec)
-c decisions              : 67402          (0.00 % random) (186648 /sec)
-c propagations           : 758952         (2101673 /sec)
+c conflicts              : 7724           (21458 /sec)
+c decisions              : 67402          (0.00 % random) (187245 /sec)
+c propagations           : 758952         (2108399 /sec)
 c conflict literals      : 162426         (11.62 % deleted)
 c =======================[ UWrMaxSat resources usage ]===========================
 c Memory used            : 183.00 MB
-c CPU time               : 0.361118 s
+c CPU time               : 0.359966 s
 c Wall clock time        : 0 s
 c OptExp Enc: Srt/BDD/Add: 9 0 0
 c _______________________________________________________________________________

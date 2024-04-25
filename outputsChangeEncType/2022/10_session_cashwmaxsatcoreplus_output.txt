@@ -1,0 +1,24 @@
+c Parsing MaxSAT file...
+c Using SCIP solver, version 8.0.3, https://www.scipopt.org
+c scip_time = 0.000000
+c Starting SCIP solver in a separate thread (with time-limit = 0s) ...
+c Using COMiniSatPS SAT solver by Chanseok Oh (2016)
+c ============================[  Problem Statistics ]============================
+c |  Number of variables:          2978                                         |
+c |  Number of clauses:            5640                                         |
+c ===============================================================================
+c *** TERMINATED by signal 15 ***
+c _______________________________________________________________________________
+c 
+c restarts               : 169849
+c conflicts              : 37624054       (5227 /sec)
+c decisions              : 71380846       (0.00 % random) (9917 /sec)
+c propagations           : 5063869155     (703527 /sec)
+c conflict literals      : 3933384884     (15.50 % deleted)
+c =======================[ UWrMaxSat resources usage ]===========================
+c Memory used            : 1372.00 MB
+c CPU time               : 7197.83 s
+c Wall clock time        : 3600 s
+c OptExp Enc: Srt/BDD/Add: 6 0 0
+c _______________________________________________________________________________
+s UNKNOWN
