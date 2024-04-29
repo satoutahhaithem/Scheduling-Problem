@@ -64,3 +64,14 @@ c ends of initiationization by VSIDS at 14538 conflicts with init -1
 
 c LRB phase 1: conflicts 133098, phase 20000000, starts 364, UP 20078740
 c VSIDS phase 1: conflicts 132762, phase 20000000, starts 977, UP 20002326
+c original clauses 6023, learnts_core 28691, learnts_tier2 5714, learnts_local 19299
+c 49 clauses modified by 2 eqLits (debut 33, total 35) with 1 eqUse and 0 rmSoft, 0 eqSoft
+c LRB phase 2: conflicts 264482, phase 40000000, starts 592, UP 40394458
+c VSIDS phase 2: conflicts 275287, phase 40000000, starts 1622, UP 40002536
+c LRB phase 3: conflicts 493575, phase 80000000, starts 960, UP 80855025
+c VSIDS phase 3: conflicts 595700, phase 80000000, starts 2737, UP 80008449
+c LRB phase 4: conflicts 1364994, phase 160000000, starts 2178, UP 161262908
+c VSIDS phase 4: conflicts 1295398, phase 160000000, starts 4688, UP 160001734
+c LRB phase 5: conflicts 3102881, phase 320000000, starts 4191, UP 320158448
+c VSIDS phase 5: conflicts 2907533, phase 320000000, starts 8140, UP 320001018
+c LRB phase 6: conflicts 5304484, phase 640000000, starts 8097, UP 652901355
