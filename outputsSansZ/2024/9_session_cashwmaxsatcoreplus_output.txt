@@ -1,0 +1,21 @@
+c Parsing MaxSAT file...
+c Using COMiniSatPS SAT solver by Chanseok Oh (2016)
+c ============================[  Problem Statistics ]============================
+c |  Number of variables:          8529                                         |
+c |  Number of clauses:           20747                                         |
+c ===============================================================================
+c *** TERMINATED by signal 15 ***
+c _______________________________________________________________________________
+c 
+c restarts               : 119335
+c conflicts              : 24649186       (6848 /sec)
+c decisions              : 42960984       (0.00 % random) (11936 /sec)
+c propagations           : 8817752722     (2449783 /sec)
+c conflict literals      : 2222868423     (20.83 % deleted)
+c =======================[ UWrMaxSat resources usage ]===========================
+c Memory used            : 236.00 MB
+c CPU time               : 3599.4 s
+c Wall clock time        : 3600 s
+c OptExp Enc: Srt/BDD/Add: 1 0 0
+c _______________________________________________________________________________
+s UNKNOWN
