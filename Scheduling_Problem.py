@@ -249,8 +249,8 @@ with RC2(constraints, solver="Cadical153") as solver:
         print('Model has cost:', solver.cost)
         # print('Model:', solver.model)
 
-        display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions)
-        break  
+#         display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions)
+#         break  
 
 def convert_cnf_format(old_file_path, new_file_path):
     with open(old_file_path, 'r') as old_file, open(new_file_path, 'w') as new_file:
