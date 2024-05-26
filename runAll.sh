@@ -1,9 +1,5 @@
 #!/bin/bash
 
-
-
-
-
 timeout_duration="3600"
 solver_dir="Solvers"
 # output_dir="outputsPcHeythem/${yearRodef}"
