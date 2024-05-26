@@ -221,82 +221,82 @@ chmod +x "$maxcdclFolder"
 
 ################################################################################################################
 
-echo "start 2021 4 sansZ"
-yearRodef=2021
-max_parallel_sessions=4
-output_dir="outputsSansZ/${yearRodef}"
-time_dir="TimeSolverSansZ/${yearRodef}"
-# output_dir="outputsPcHeythemSansZ/${yearRodef}"
-# time_dir="TimeSolverPcHeythemSansZ/${yearRodef}"
+# echo "start 2021 4 sansZ"
+# yearRodef=2021
+# max_parallel_sessions=4
+# output_dir="outputsSansZ/${yearRodef}"
+# time_dir="TimeSolverSansZ/${yearRodef}"
+# # output_dir="outputsPcHeythemSansZ/${yearRodef}"
+# # time_dir="TimeSolverPcHeythemSansZ/${yearRodef}"
 
 
-cnf_file="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
-cnf_file_old_format="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
+# cnf_file="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
+# cnf_file_old_format="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
-# This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
+# # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
 
-# { 
-#     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+# # { 
+# #     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
 
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
-
-{ 
-    time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
-} 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
-
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
 
 # { 
-#     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
+#     time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
+
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
+
+# echo "finish 2021 4 sansZ"
+# echo "start 2022 10 sansZ"
+# yearRodef=2022
+# max_parallel_sessions=11
+# output_dir="outputsSansZ/${yearRodef}"
+# time_dir="TimeSolverSansZ/${yearRodef}"
+# cnf_file="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
+# cnf_file_old_format="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
+
+# # { 
+# #     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
 
 # { 
-#     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+#     time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
 
 
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
 
-echo "finish 2021 4 sansZ"
-echo "start 2022 10 sansZ"
-yearRodef=2022
-max_parallel_sessions=11
-output_dir="outputsSansZ/${yearRodef}"
-time_dir="TimeSolverSansZ/${yearRodef}"
-cnf_file="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
-cnf_file_old_format="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
-
-# { 
-#     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
-
-{ 
-    time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
-} 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
 
 
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
 
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
-
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
-
-echo "finish 2022 10 sansZ"
+# echo "finish 2022 10 sansZ"
 echo "start 2023 12 sansZ"
 yearRodef=2023
 max_parallel_sessions=12
@@ -334,117 +334,117 @@ cnf_file_old_format="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session
 
 echo "finish 2023 12 sansZ"
 
-echo "start 2024 9 sansZ"
-yearRodef=2024
-max_parallel_sessions=9
-output_dir="outputsSansZ/${yearRodef}"
-time_dir="TimeSolverSansZ/${yearRodef}"
-cnf_file="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
-cnf_file_old_format="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
+# echo "start 2024 9 sansZ"
+# yearRodef=2024
+# max_parallel_sessions=9
+# output_dir="outputsSansZ/${yearRodef}"
+# time_dir="TimeSolverSansZ/${yearRodef}"
+# cnf_file="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
+# cnf_file_old_format="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
 
-# { 
-#     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+# # { 
+# #     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
 
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
-
-{ 
-    time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
-} 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
-
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
 
 # { 
-#     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
+#     time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
+
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
+# echo "finish 2024 9 sansZ"
+
+# ################################################################################################################
+# echo "start 2021 4 with z"
+# yearRodef=2021
+# max_parallel_sessions=4
+
+# output_dir="outputs/${yearRodef}"
+# time_dir="TimeSolver/${yearRodef}"
+# cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
+# cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
+
+# # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
+
+# # { 
+# #     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
+# { 
+#     time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
+
+
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
+
+# echo "finish 2021 4 with z"
+# echo "start 2022 10 with z"
+# yearRodef=2022
+# max_parallel_sessions=11
+# output_dir="outputs/${yearRodef}"
+# time_dir="TimeSolver/${yearRodef}"
+# cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
+# cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
+
+
+# # { 
+# #     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
 
 # { 
-#     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+#     time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
 
 
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
-echo "finish 2024 9 sansZ"
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
 
-################################################################################################################
-echo "start 2021 4 with z"
-yearRodef=2021
-max_parallel_sessions=4
-
-output_dir="outputs/${yearRodef}"
-time_dir="TimeSolver/${yearRodef}"
-cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
-cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
-
-# This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
-
-# { 
-#     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
-{ 
-    time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
-} 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
 
 
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
 
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
-
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
-
-echo "finish 2021 4 with z"
-echo "start 2022 10 with z"
-yearRodef=2022
-max_parallel_sessions=11
-output_dir="outputs/${yearRodef}"
-time_dir="TimeSolver/${yearRodef}"
-cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
-cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
-
-
-# { 
-#     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
-
-{ 
-    time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
-} 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
-
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
-
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
-
-echo "finish 2022 10 with z"
+# echo "finish 2022 10 with z"
 echo "start 2023 12 with z"
 yearRodef=2023
 max_parallel_sessions=12
@@ -484,90 +484,90 @@ echo "finish 2023 12 with z"
 
 
 
-echo "start 2024 9 with z"
-yearRodef=2024
-max_parallel_sessions=9
-output_dir="outputs/${yearRodef}"
-time_dir="TimeSolver/${yearRodef}"
-cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
-cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
+# echo "start 2024 9 with z"
+# yearRodef=2024
+# max_parallel_sessions=9
+# output_dir="outputs/${yearRodef}"
+# time_dir="TimeSolver/${yearRodef}"
+# cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
+# cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
+
+
+# # { 
+# #     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
+
+# { 
+#     time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
+
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
+
+# # # { 
+# # #     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+# # # } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
+
+# echo "finish 2024 9 with z"
+
+
+
+
+
+
+# # ################################################################################################################
+# echo "start 2021 4 with z best enc"
+# yearRodef=2021
+# max_parallel_sessions=4
+
+# output_dir="outputsChangeEncType/${yearRodef}"
+# time_dir="TimeSolverChangeEncType/${yearRodef}"
+# cnf_file="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
+# cnf_file_old_format="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
+
+
+
+
+# # This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
+
+# # { 
+# #     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
 
 
 # { 
-#     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+#     time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
 
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
-
-{ 
-    time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
-} 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
-
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
 
 # # { 
 # #     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
 # # } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
 
 
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
 
-echo "finish 2024 9 with z"
-
-
-
-
-
-
-# ################################################################################################################
-echo "start 2021 4 with z best enc"
-yearRodef=2021
-max_parallel_sessions=4
-
-output_dir="outputsChangeEncType/${yearRodef}"
-time_dir="TimeSolverChangeEncType/${yearRodef}"
-cnf_file="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
-cnf_file_old_format="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
-
-
-
-
-# This command of rc2 is "rc2.py -s 'cd' instance/2023/10_session_file.wcnf" for 10 par exemple work with rc2.py
-
-# { 
-#     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
-
-
-{ 
-    time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
-} 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
-
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
-
-echo "finish 2021 4 with z best enc"
+# echo "finish 2021 4 with z best enc"
 
 
 
@@ -793,50 +793,14 @@ echo "finish 2021 4 with z best enc"
 # done
 
 
-echo "start 2022 10 with z best enc"
-yearRodef=2022
-max_parallel_sessions=11
-output_dir="outputsChangeEncType/${yearRodef}"
-time_dir="TimeSolverChangeEncType/${yearRodef}"
-cnf_file="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
-cnf_file_old_format="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
-
-
-
-# { 
-#     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
-
-
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
-
-{ 
-    time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
-} 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
-
-
-# { 
-#     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
-# } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
-echo "finish 2022 10 with z best enc"
-# echo "starrt 2023 12 with z best enc"
-# yearRodef=2023
-# max_parallel_sessions=12
+# echo "start 2022 10 with z best enc"
+# yearRodef=2022
+# max_parallel_sessions=11
 # output_dir="outputsChangeEncType/${yearRodef}"
 # time_dir="TimeSolverChangeEncType/${yearRodef}"
 # cnf_file="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
 # cnf_file_old_format="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
+
 
 
 # # { 
@@ -853,19 +817,55 @@ echo "finish 2022 10 with z best enc"
 # #     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
 # # } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
 
-# # { 
-# #     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
-# # } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
 # { 
 #     time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
 # } 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
+
+# # { 
+# #     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+# # } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
 
 
 # # { 
 # #     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
 # # } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
+# echo "finish 2022 10 with z best enc"
+echo "starrt 2023 12 with z best enc"
+yearRodef=2023
+max_parallel_sessions=12
+output_dir="outputsChangeEncType/${yearRodef}"
+time_dir="TimeSolverChangeEncType/${yearRodef}"
+cnf_file="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
+cnf_file_old_format="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
-# echo "finish 2023 12 with z best enc"
+
+# { 
+#     time timeout --signal=INT "$timeout_duration" python3 "./myenv/bin/rc2.py" --verbose -s 'cd' "$cnf_file_old_format"  > "$output_dir/${max_parallel_sessions}_session_Rc2_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_Rc2_time.txt"
+
+# { 
+#     time timeout "$timeout_duration" "$solver_dir/maxhs" -no-printSoln "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxhs_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_maxhs_time.txt"
+
+
+
+# { 
+#     time timeout "$timeout_duration" "$solver_dir/maxcdcl_static" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_maxcdcl_static_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_maxcdcl_static_time.txt"
+
+# { 
+#     time timeout "$timeout_duration" "$solver_dir/EvalMaxSAT" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_EvalMaxSAT_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_EvalMaxSAT_time.txt"
+{ 
+    time timeout "$timeout_duration" "$solver_dir/cashwmaxsatcoreplus" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_output.txt"
+} 2> "$time_dir/${max_parallel_sessions}_session_cashwmaxsatcoreplus_time.txt"
+
+
+# { 
+#     time timeout "$timeout_duration" "$solver_dir/open-wbo" "$cnf_file_old_format" > "$output_dir/${max_parallel_sessions}_session_open-wbo_output.txt"
+# } 2> "$time_dir/${max_parallel_sessions}_session_open-wbo_time.txt"
+
+echo "finish 2023 12 with z best enc"
 # echo "start 2024 9 with z best enc"
 # yearRodef=2024
 # max_parallel_sessions=9
