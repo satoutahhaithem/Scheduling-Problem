@@ -27,8 +27,10 @@ chmod +x "$maxcdclFolder"
 echo "start 2023 12 sansZ"
 yearRodef=2023
 max_parallel_sessions=12
-output_dir="outputsSansZ/${yearRodef}"
-time_dir="TimeSolverSansZ/${yearRodef}"
+# output_dir="outputsSansZ/${yearRodef}"
+# time_dir="TimeSolverSansZ/${yearRodef}"
+output_dir="outputsPcHeythemSansZ/${yearRodef}"
+time_dir="TimeSolverPcHeythemSansZ/${yearRodef}"
 cnf_file="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
 cnf_file_old_format="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
@@ -63,8 +65,10 @@ echo "finish 2023 12 sansZ"
 echo "start 2023 12 with z"
 yearRodef=2023
 max_parallel_sessions=12
-output_dir="outputs/${yearRodef}"
-time_dir="TimeSolver/${yearRodef}"
+# output_dir="outputs/${yearRodef}"
+# time_dir="TimeSolver/${yearRodef}"
+output_dir="outputsPcHeythem/${yearRodef}"
+time_dir="TimeSolverPcHeythem/${yearRodef}"
 cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
 cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
@@ -99,8 +103,10 @@ echo "finish 2023 12 with z"
 echo "starrt 2023 12 with z best enc"
 yearRodef=2023
 max_parallel_sessions=12
-output_dir="outputsChangeEncType/${yearRodef}"
-time_dir="TimeSolverChangeEncType/${yearRodef}"
+# output_dir="outputsChangeEncType/${yearRodef}"
+# time_dir="TimeSolverChangeEncType/${yearRodef}"
+output_dir="outputsPcHeythemChangeEncType/${yearRodef}"
+time_dir="TimeSolverPcHeythemChangeEncType/${yearRodef}"
 cnf_file="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
 cnf_file_old_format="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
@@ -175,8 +181,10 @@ echo "finish 2023 12 with z best enc"
 echo "start 2023 11 sansZ"
 yearRodef=2023
 max_parallel_sessions=11
-output_dir="outputsSansZ/${yearRodef}"
-time_dir="TimeSolverSansZ/${yearRodef}"
+# output_dir="outputsSansZ/${yearRodef}"
+# time_dir="TimeSolverSansZ/${yearRodef}"
+output_dir="outputsPcHeythemSansZ/${yearRodef}"
+time_dir="TimeSolverPcHeythemSansZ/${yearRodef}"
 cnf_file="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
 cnf_file_old_format="instanceSansZ/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
@@ -211,8 +219,10 @@ echo "finish 2023 11 sansZ"
 echo "start 2023 11 with z"
 yearRodef=2023
 max_parallel_sessions=11
-output_dir="outputs/${yearRodef}"
-time_dir="TimeSolver/${yearRodef}"
+# output_dir="outputs/${yearRodef}"
+# time_dir="TimeSolver/${yearRodef}"
+output_dir="outputsPcHeythem/${yearRodef}"
+time_dir="TimeSolverPcHeythem/${yearRodef}"
 cnf_file="instance/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
 cnf_file_old_format="instance/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
@@ -247,8 +257,10 @@ echo "finish 2023 11 with z"
 echo "starrt 2023 11 with z best enc"
 yearRodef=2023
 max_parallel_sessions=11
-output_dir="outputsChangeEncType/${yearRodef}"
-time_dir="TimeSolverChangeEncType/${yearRodef}"
+# output_dir="outputsChangeEncType/${yearRodef}"
+# time_dir="TimeSolverChangeEncType/${yearRodef}"
+output_dir="outputsPcHeythemChangeEncType/${yearRodef}"
+time_dir="TimeSolverPcHeythemChangeEncType/${yearRodef}"
 cnf_file="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file_new_format.wcnf"
 cnf_file_old_format="instanceChangeEncType/${yearRodef}/${max_parallel_sessions}_session_file.wcnf"
 
