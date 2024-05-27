@@ -6,5 +6,5 @@ c Contributors:	 Miguel Neves, Saurabh Joshi, Norbert Manthey, Mikolas Janota
 c Contact:	 open-wbo@sat.inesc-id.pt -- http://sat.inesc-id.pt/open-wbo/
 c
 c WARNING: for repeatability, setting FPU to use double precision
-c ERROR! Could not open file: instance/2023/11_session_file.wcnf
+c ERROR! Could not open file: instanceChangeEncType/2023/11_session_file.wcnf
 s UNKNOWN

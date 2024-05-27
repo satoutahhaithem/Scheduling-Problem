@@ -11,8 +11,8 @@ Traceback (most recent call last):
     self.open(name, mode=mode, compression=compression)
   File "/home/mis/Bureau/Scheduling Problem/myenv/lib/python3.10/site-packages/pysat/_fileio.py", line 123, in open
     self.fp = open(name, mode)
-FileNotFoundError: [Errno 2] No such file or directory: 'instance/2023/11_session_file.wcnf'
+FileNotFoundError: [Errno 2] No such file or directory: 'instanceSansZ/2023/11_session_file.wcnf'
 
-real	0m0,098s
-user	0m0,085s
-sys	0m0,012s
+real	0m0,097s
+user	0m0,093s
+sys	0m0,004s

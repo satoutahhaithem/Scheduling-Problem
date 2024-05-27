@@ -29,7 +29,7 @@ if data_set_choice == "2024":
     else:
         conference_sessions, slots, papers_range, working_groups, np, npMax, session_groups = data_for_2024() 
 elif data_set_choice == "2023":
-    if (max_parallel_sessions < 12 ): 
+    if (max_parallel_sessions < 11 ): 
         print ("max_parallel_sessions must be more than 12")
         sys.exit(1) 
     else:
@@ -244,12 +244,12 @@ def display_assignments_by_slot_with_counts(model, slots, papers_range, conferen
 #         print('Model has cost:', solver.cost)
 #         # print('Model:', solver.model)
 
-with RC2(constraints, solver="Cadical153") as solver:
-    for model in solver.enumerate():
-        print('Model has cost:', solver.cost)
-        # print('Model:', solver.model)
+# with RC2(constraints, solver="Cadical153") as solver:
+#     for model in solver.enumerate():
+#         print('Model has cost:', solver.cost)
+#         # print('Model:', solver.model)
 
-#         display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions)
+# #         display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions)
 #         break  
 
 def convert_cnf_format(old_file_path, new_file_path):
