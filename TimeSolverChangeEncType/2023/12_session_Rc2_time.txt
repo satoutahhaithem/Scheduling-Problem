@@ -14,5 +14,5 @@ Traceback (most recent call last):
 pysolvers.error: Caught keyboard interrupt
 
 real	60m0,037s
-user	59m56,770s
-sys	0m3,136s
+user	59m57,225s
+sys	0m2,588s

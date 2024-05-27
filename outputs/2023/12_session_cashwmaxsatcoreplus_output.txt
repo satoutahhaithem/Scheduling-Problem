@@ -10,14 +10,14 @@ c ==============================================================================
 c *** TERMINATED by signal 15 ***
 c _______________________________________________________________________________
 c 
-c restarts               : 154554
-c conflicts              : 26374215       (3669 /sec)
-c decisions              : 58255815       (0.00 % random) (8105 /sec)
-c propagations           : 7935844293     (1104118 /sec)
-c conflict literals      : 4395165804     (14.95 % deleted)
+c restarts               : 155007
+c conflicts              : 26429387       (3675 /sec)
+c decisions              : 58397593       (0.00 % random) (8121 /sec)
+c propagations           : 7953085516     (1106024 /sec)
+c conflict literals      : 4404373186     (14.95 % deleted)
 c =======================[ UWrMaxSat resources usage ]===========================
-c Memory used            : 2047.00 MB
-c CPU time               : 7187.5 s
+c Memory used            : 1976.00 MB
+c CPU time               : 7190.7 s
 c Wall clock time        : 3600 s
 c OptExp Enc: Srt/BDD/Add: 3 0 0
 c _______________________________________________________________________________

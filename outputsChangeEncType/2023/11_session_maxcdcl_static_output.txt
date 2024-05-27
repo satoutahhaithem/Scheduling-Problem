@@ -1,0 +1,3 @@
+c This is COMiniSatPS.
+c WARNING: for repeatability, setting FPU to use double precision
+c ERROR! Could not open file: instanceChangeEncType/2023/11_session_file.wcnf
