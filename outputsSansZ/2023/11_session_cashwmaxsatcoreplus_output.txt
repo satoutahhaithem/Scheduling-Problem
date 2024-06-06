@@ -1,2 +1,21 @@
 c Parsing MaxSAT file...
-c ERROR! Could not open file for reading: instanceSansZ/2023/11_session_file.wcnf
+c Using COMiniSatPS SAT solver by Chanseok Oh (2016)
+c ============================[  Problem Statistics ]============================
+c |  Number of variables:          5707                                         |
+c |  Number of clauses:           34474                                         |
+c ===============================================================================
+c *** TERMINATED by signal 15 ***
+c _______________________________________________________________________________
+c 
+c restarts               : 144928
+c conflicts              : 29674576       (8254 /sec)
+c decisions              : 60932024       (0.00 % random) (16948 /sec)
+c propagations           : 7121752251     (1980917 /sec)
+c conflict literals      : 4298658259     (15.87 % deleted)
+c =======================[ UWrMaxSat resources usage ]===========================
+c Memory used            : 266.00 MB
+c CPU time               : 3595.18 s
+c Wall clock time        : 3600 s
+c OptExp Enc: Srt/BDD/Add: 2 0 0
+c _______________________________________________________________________________
+s UNKNOWN

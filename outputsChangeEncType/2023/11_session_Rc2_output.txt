@@ -1,0 +1,10 @@
+c formula: 12309 vars, 22640 hard, 518 soft
+c cost: 1; core sz: 105; soft sz: 414
+c cost: 2; core sz: 43; soft sz: 373
+c cost: 3; core sz: 2; soft sz: 374
+c cost: 4; core sz: 196; soft sz: 179
+c cost: 5; core sz: 10; soft sz: 171
+c cost: 6; core sz: 2; soft sz: 172
+c cost: 7; core sz: 2; soft sz: 172
+c cost: 8; core sz: 5; soft sz: 169
+c cost: 9; core sz: 3; soft sz: 169
