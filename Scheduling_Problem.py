@@ -224,19 +224,61 @@ constraints.to_file("instance/"+data_set_choice+"/"+str(max_parallel_sessions)+"
 
 # Assuming other parts of your code (constraint definitions, SAT model setup) are correctly implemented
 
-def display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions):
-    print("enter display assignement")
-    slot_assignments = {c: {} for c in range(1, slots + 1)}  # Initialize dictionaries for each slot
+# def display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions):
+#     print("enter display assignement")
+#     slot_assignments = {c: {} for c in range(1, slots + 1)}  # Initialize dictionaries for each slot
 
-    # Processing the model to populate slot assignments
-    for var in range(max_var_x):
-        modelI= model[var]
-        if modelI > 0:
-            s, c, l = decode_var_x(model[var], slots, length_of_paper_range)
-            print(f"  Conference Session {s} in slot {c} with {papers_range[l-1]} papers ")          
+#     # Processing the model to populate slot assignments
+#     for var in range(max_var_x):
+#         modelI= model[var]
+#         if modelI > 0:
+#             s, c, l = decode_var_x(model[var], slots, length_of_paper_range)
+#             print(f"  Conference Session {s} in slot {c} with {papers_range[l-1]} papers ")          
         
+# def display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions):
+#     slot_assignments = {c: [] for c in range(1, slots + 1)}  # Initialize dictionaries for each slot
+
+#     # Processing the model to populate slot assignments
+#     for var in range(max_var_x):
+#         if model[var] > 0:
+#             s, c, l = decode_var_x(model[var], slots, length_of_paper_range)
+#             slot_assignments[c].append((s, papers_range[l-1]))
+
+#     # Display the slot assignments
+#     for slot, assignments in slot_assignments.items():
+#         slot_str = f"slot{slot} : " + " ".join(f"(s{s},{p})" for s, p in assignments)
+#         print(slot_str)
 
 
+def display_assignments_by_slot_and_session(model, slots, papers_range, conference_sessions):
+    slot_assignments = {c: [] for c in range(1, slots + 1)}  # Initialize dictionaries for each slot
+    session_assignments = {s: [] for s in range(1, conference_sessions + 1)}  # Initialize dictionaries for each session
+
+    # Processing the model to populate slot and session assignments
+    for var in range(max_var_x):
+        if model[var] > 0:
+            s, c, l = decode_var_x(model[var], slots, length_of_paper_range)
+            slot_assignments[c].append((s, papers_range[l-1]))
+            session_assignments[s].append((c, papers_range[l-1]))
+
+    # Display the slot assignments
+    for slot, assignments in slot_assignments.items():
+        slot_str = f"slot{slot} : " + " ".join(f"(s{s},{p})" for s, p in assignments)
+        print(slot_str)
+    print("_" * 25)
+
+    # Display the session assignments
+    for session, assignments in session_assignments.items():
+        session_str = f"session{session} : " + " ".join(f"(c{c},{p})" for c, p in assignments)
+        print(session_str)
+    print("_" * 25)
+
+# Example usage with a model
+with RC2(constraints, solver="Cadical153") as solver:
+    for model in solver.enumerate():
+        print('Model has cost:', solver.cost)
+        display_assignments_by_slot_and_session(model, slots, papers_range, conference_sessions)
+        break
 # print(constraints)
 # with RC2(constraints, solver="Cadical153") as solver:
 #     for model in solver.enumerate():
@@ -244,13 +286,7 @@ def display_assignments_by_slot_with_counts(model, slots, papers_range, conferen
 #         print('Model has cost:', solver.cost)
 #         # print('Model:', solver.model)
 
-# with RC2(constraints, solver="Cadical153") as solver:
-#     for model in solver.enumerate():
-#         print('Model has cost:', solver.cost)
-#         # print('Model:', solver.model)
 
-# #         display_assignments_by_slot_with_counts(model, slots, papers_range, conference_sessions)
-#         break  
 
 def convert_cnf_format(old_file_path, new_file_path):
     with open(old_file_path, 'r') as old_file, open(new_file_path, 'w') as new_file:
